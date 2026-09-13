@@ -1,0 +1,238 @@
+/* Gameplay polish. Kept separate so the shared shell styles remain stable. */
+.game-screen .game-topbar { background: rgba(5, 19, 32, .95); }
+.game-screen .typing-console { background: rgba(7, 24, 39, .96); }
+.game-screen .game-progress {
+  padding: .65rem .9rem;
+  background: rgba(5, 19, 32, .93);
+  border: 1px solid rgba(158, 210, 220, .2);
+  border-radius: 999px;
+  color: #c3d9e3;
+  font-size: .72rem;
+  letter-spacing: 0;
+}
+.game-screen .game-progress b { font-size: .85rem; }
+.game-screen .progress-track { height: 4px; }
+.game-screen .score-card span, .game-screen .streak-card span { color: #bdd1da; font-size: .7rem; letter-spacing: 0; }
+.game-screen .hint-block .eyebrow { font-size: .72rem; letter-spacing: .04em; }
+.game-screen .coordinates { font-size: .66rem; color: #a1bfce; }
+.game-screen .typing-console .console-instruction { font-size: .75rem; color: #a9c0cd; }
+.game-screen .typing-console .typing-action { min-height: 44px; font-size: .76rem; }
+.game-screen .typing-console .typing-action-help { font-size: .67rem; color: #9fbbc9; }
+.game-screen .answer-field input::placeholder { color: #8baab9; }
+.game-screen .mission-readout .eyebrow { font-size: .64rem; letter-spacing: .05em; }
+.game-screen .mission-readout strong { font-size: .94rem; }
+.game-screen .game-topbar,
+.game-screen .game-progress,
+.game-screen .score-stack,
+.game-screen .typing-console {
+  isolation: isolate;
+}
+
+.game-screen .mission-readout {
+  min-width: min(34vw, 22rem);
+}
+
+.game-screen .mission-readout strong {
+  max-width: min(34vw, 22rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.game-screen .typing-language-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(99, 245, 204, .3);
+  border-radius: 999px;
+  padding: .24rem .55rem;
+  color: #dffff6;
+  background: rgba(35, 113, 99, .2);
+  font-size: .58rem;
+  font-weight: 800;
+}
+
+.game-screen .phase-chip {
+  min-height: 1.8rem;
+  white-space: nowrap;
+}
+
+.game-screen .phase-chip.ready {
+  color: var(--gold);
+  border-color: rgba(255, 209, 102, .3);
+  background: rgba(129, 97, 27, .12);
+}
+
+.game-screen .phase-chip.resolving-correct {
+  color: var(--cyan);
+}
+
+.game-screen .phase-chip.resolving-miss {
+  color: var(--coral);
+}
+
+.game-screen .console-instruction {
+  min-height: 1.1rem;
+}
+
+.game-screen .typing-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .45rem;
+  margin-top: .7rem;
+}
+
+.game-screen .typing-action {
+  min-width: 0;
+  min-height: 2.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .35rem;
+  border: 1px solid rgba(99, 245, 204, .28);
+  border-radius: .55rem;
+  padding: .42rem .55rem;
+  color: #dcfff7;
+  background: rgba(30, 102, 91, .16);
+  font-size: .62rem;
+  font-weight: 750;
+  line-height: 1.2;
+  text-align: center;
+  transition: border-color .18s ease, background-color .18s ease, opacity .18s ease;
+}
+
+.game-screen .typing-action:hover:not(:disabled),
+.game-screen .typing-action:focus-visible {
+  border-color: var(--cyan);
+  background: rgba(43, 143, 126, .28);
+}
+
+.game-screen .typing-action:focus-visible {
+  outline: 2px solid rgba(99, 245, 204, .65);
+  outline-offset: 2px;
+}
+
+.game-screen .typing-action:disabled {
+  opacity: .42;
+  cursor: not-allowed;
+}
+
+.game-screen .skip-action {
+  border-color: rgba(255, 113, 139, .28);
+  color: #ffcbd4;
+  background: rgba(125, 38, 63, .13);
+}
+
+.game-screen .skip-action:hover:not(:disabled),
+.game-screen .skip-action:focus-visible {
+  border-color: var(--coral);
+  background: rgba(145, 43, 70, .24);
+}
+
+.game-screen .typing-action-help {
+  min-height: 1rem;
+  margin: .35rem 0 0;
+  color: var(--muted-2);
+  font-size: .55rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.game-screen .verdict-code {
+  margin-left: .35rem;
+  color: var(--muted-2);
+  font-size: .48rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  opacity: .72;
+}
+
+.game-screen .verdict strong {
+  overflow-wrap: anywhere;
+}
+
+.game-screen .toast {
+  max-width: min(32rem, calc(100vw - 2rem));
+  line-height: 1.45;
+}
+
+.game-screen .typing-console {
+  min-height: 20rem;
+}
+
+@media (max-width: 880px) {
+  .game-screen .game-progress { top: 4.35rem; padding: .5rem .65rem; }
+  .game-screen .score-stack { top: 7.1rem; }
+  .game-screen .typing-console .coordinates { font-size: .6rem; }
+  .game-screen .typing-console .console-instruction { font-size: .66rem; }
+  .game-screen .typing-console .typing-action { font-size: .7rem; }
+  .game-screen .typing-language-chip {
+    display: none;
+  }
+
+  .game-screen .game-progress {
+    min-height: 2.2rem;
+  }
+
+  .game-screen .console-status {
+    align-items: flex-start;
+  }
+
+  .game-screen .phase-chip {
+    max-width: 62%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .game-screen .hint-mask {
+    min-height: 2.6rem;
+  }
+
+  .game-screen .typing-console {
+    min-height: 19rem;
+  }
+
+  .game-screen .verdict-code {
+    display: inline;
+    font-size: .42rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .game-screen .console-instruction {
+    font-size: .6rem;
+  }
+
+  .game-screen .verdict {
+    gap: .65rem;
+  }
+
+  .game-screen .verdict > span {
+    width: 2.65rem;
+    height: 2.65rem;
+  }
+
+  .game-screen .verdict strong {
+    font-size: 1.3rem;
+  }
+
+  .game-screen .typing-action {
+    padding-inline: .35rem;
+    font-size: .57rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .game-screen .typing-console {
+    min-height: 20.6rem;
+  }
+
+  .game-screen .typing-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-screen .verdict-code {
+    opacity: .9;
+  }
+}

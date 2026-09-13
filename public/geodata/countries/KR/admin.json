@@ -1,0 +1,384 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "custom:admin1:KR-11",
+      "source": "custom",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureType": "admin1",
+      "name": "Seoul",
+      "localizedNames": {
+        "ko": "서울특별시",
+        "en": "Seoul"
+      },
+      "aliases": [
+        "서울"
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.76,
+              37.43
+            ],
+            [
+              126.82,
+              37.65
+            ],
+            [
+              127.04,
+              37.7
+            ],
+            [
+              127.18,
+              37.63
+            ],
+            [
+              127.18,
+              37.47
+            ],
+            [
+              127.02,
+              37.43
+            ],
+            [
+              126.76,
+              37.43
+            ]
+          ]
+        ]
+      },
+      "centroid": [
+        126.98013303807758,
+        37.55152254261158
+      ],
+      "bbox": [
+        126.76,
+        37.43,
+        127.18,
+        37.7
+      ],
+      "parentIds": [
+        "custom:country:KR"
+      ],
+      "countryCode": "KR",
+      "adminCodes": [
+        "KR-11"
+      ],
+      "population": 9334000,
+      "importance": 1,
+      "recommendedMinZoom": 6,
+      "recommendedMaxZoom": 11
+    },
+    {
+      "id": "custom:admin1:KR-51",
+      "source": "custom",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureType": "admin1",
+      "name": "Gangwon State",
+      "localizedNames": {
+        "ko": "강원특별자치도",
+        "en": "Gangwon State"
+      },
+      "aliases": [
+        "강원도"
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.05,
+              37.02
+            ],
+            [
+              127.62,
+              38.3
+            ],
+            [
+              128.65,
+              38.6
+            ],
+            [
+              129.35,
+              37.25
+            ],
+            [
+              128.55,
+              36.85
+            ],
+            [
+              127.05,
+              37.02
+            ]
+          ]
+        ]
+      },
+      "centroid": [
+        128.21674162685395,
+        37.61794565062513
+      ],
+      "bbox": [
+        127.05,
+        36.85,
+        129.35,
+        38.6
+      ],
+      "parentIds": [
+        "custom:country:KR"
+      ],
+      "countryCode": "KR",
+      "adminCodes": [
+        "KR-51"
+      ],
+      "importance": 0.7,
+      "recommendedMinZoom": 6,
+      "recommendedMaxZoom": 11
+    },
+    {
+      "id": "custom:admin2:KR-11-jongno",
+      "source": "custom",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureType": "admin2",
+      "name": "Jongno-gu",
+      "localizedNames": {
+        "ko": "종로구",
+        "en": "Jongno-gu"
+      },
+      "aliases": [
+        "종로"
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.94,
+              37.57
+            ],
+            [
+              126.96,
+              37.63
+            ],
+            [
+              127.02,
+              37.63
+            ],
+            [
+              127.03,
+              37.57
+            ],
+            [
+              126.94,
+              37.57
+            ]
+          ]
+        ]
+      },
+      "centroid": [
+        126.98733332899599,
+        37.59799999871723
+      ],
+      "bbox": [
+        126.94,
+        37.57,
+        127.03,
+        37.63
+      ],
+      "parentIds": [
+        "custom:admin1:KR-11"
+      ],
+      "countryCode": "KR",
+      "adminCodes": [
+        "KR-11-110"
+      ],
+      "importance": 0.75,
+      "recommendedMinZoom": 9,
+      "recommendedMaxZoom": 14
+    },
+    {
+      "id": "custom:admin2:KR-11-jung",
+      "source": "custom",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureType": "admin2",
+      "name": "Jung-gu",
+      "localizedNames": {
+        "ko": "중구",
+        "en": "Jung-gu"
+      },
+      "aliases": [
+        "서울 중구"
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.96,
+              37.54
+            ],
+            [
+              126.99,
+              37.57
+            ],
+            [
+              127.03,
+              37.57
+            ],
+            [
+              127.02,
+              37.54
+            ],
+            [
+              126.96,
+              37.54
+            ]
+          ]
+        ]
+      },
+      "centroid": [
+        126.99933333756663,
+        37.5540000012459
+      ],
+      "bbox": [
+        126.96,
+        37.54,
+        127.03,
+        37.57
+      ],
+      "parentIds": [
+        "custom:admin1:KR-11"
+      ],
+      "countryCode": "KR",
+      "adminCodes": [
+        "KR-11-140"
+      ],
+      "importance": 0.75,
+      "recommendedMinZoom": 9,
+      "recommendedMaxZoom": 14
+    },
+    {
+      "id": "custom:admin2:KR-11-yongsan",
+      "source": "custom",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureType": "admin2",
+      "name": "Yongsan-gu",
+      "localizedNames": {
+        "ko": "용산구",
+        "en": "Yongsan-gu"
+      },
+      "aliases": [
+        "용산"
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.94,
+              37.49
+            ],
+            [
+              126.96,
+              37.55
+            ],
+            [
+              127.03,
+              37.54
+            ],
+            [
+              127.02,
+              37.49
+            ],
+            [
+              126.94,
+              37.49
+            ]
+          ]
+        ]
+      },
+      "centroid": [
+        126.98619047308193,
+        37.5171428562231
+      ],
+      "bbox": [
+        126.94,
+        37.49,
+        127.03,
+        37.55
+      ],
+      "parentIds": [
+        "custom:admin1:KR-11"
+      ],
+      "countryCode": "KR",
+      "adminCodes": [
+        "KR-11-170"
+      ],
+      "importance": 0.73,
+      "recommendedMinZoom": 9,
+      "recommendedMaxZoom": 14
+    },
+    {
+      "id": "custom:admin2:KR-11-mapo",
+      "source": "custom",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureType": "admin2",
+      "name": "Mapo-gu",
+      "localizedNames": {
+        "ko": "마포구",
+        "en": "Mapo-gu"
+      },
+      "aliases": [
+        "마포"
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.84,
+              37.53
+            ],
+            [
+              126.88,
+              37.59
+            ],
+            [
+              126.96,
+              37.58
+            ],
+            [
+              126.95,
+              37.52
+            ],
+            [
+              126.84,
+              37.53
+            ]
+          ]
+        ]
+      },
+      "centroid": [
+        126.9064705834918,
+        37.55352941035931
+      ],
+      "bbox": [
+        126.84,
+        37.52,
+        126.96,
+        37.59
+      ],
+      "parentIds": [
+        "custom:admin1:KR-11"
+      ],
+      "countryCode": "KR",
+      "adminCodes": [
+        "KR-11-440"
+      ],
+      "importance": 0.72,
+      "recommendedMinZoom": 9,
+      "recommendedMaxZoom": 14
+    }
+  ]
+}

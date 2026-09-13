@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "natural-earth-populated-places-5.1.2",
+  "generatedAt": "2026-09-13T00:00:00.000Z",
+  "source": {
+    "name": "Natural Earth 1:10m Populated Places",
+    "version": "5.1.2",
+    "scale": "1:10m",
+    "sourcePageUrl": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/",
+    "downloadUrl": "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_populated_places.zip",
+    "license": "Public domain",
+    "archiveSha256": "cd149186f03d2603e0410da399b980a4357d0ac32d3a2305a49ed3dffcc41d7b",
+    "sourceDbfSha256": "eff834a8727e06f28fc52b04393c462d074aecf9a7acd1b870e766240a995b6c"
+  },
+  "featureCount": 7293,
+  "countryCount": 219,
+  "capitalCount": 213,
+  "featureTypeCounts": {
+    "city": 4203,
+    "town": 3090
+  },
+  "languageFieldCounts": {
+    "ko": 7293,
+    "en": 7293,
+    "romanized": 7293,
+    "nativeProfile": 822
+  },
+  "sourceFeatureCount": 7342,
+  "skipped": {
+    "Historic place": 6,
+    "Scientific station": 40,
+    "unmatched-country:SJM": 1,
+    "unmatched-country:TKL": 1,
+    "Meteorological Station": 1
+  },
+  "geoJsonSha256": "07450069d016ae4091242511b9210c64562effb3593e4f30b53c4c495a2dfdf7",
+  "geoJsonByteSize": 6435789
+}

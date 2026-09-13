@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "custom:town:jeongseon-eup",
+      "source": "custom",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureType": "town",
+      "name": "Jeongseon-eup",
+      "localizedNames": {
+        "ko": "정선읍",
+        "en": "Jeongseon-eup"
+      },
+      "aliases": [
+        "정선"
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6608,
+          37.3807
+        ]
+      },
+      "centroid": [
+        128.6608,
+        37.3807
+      ],
+      "bbox": [
+        128.6608,
+        37.3807,
+        128.6608,
+        37.3807
+      ],
+      "parentIds": [
+        "custom:admin1:KR-51"
+      ],
+      "countryCode": "KR",
+      "population": 10700,
+      "importance": 0.38,
+      "recommendedMinZoom": 10,
+      "recommendedMaxZoom": 16
+    }
+  ]
+}

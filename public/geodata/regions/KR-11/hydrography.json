@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "custom:river:han-seoul",
+      "source": "custom",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureType": "river",
+      "name": "Han River",
+      "localizedNames": {
+        "ko": "한강",
+        "en": "Han River"
+      },
+      "aliases": [
+        "한강 서울 구간"
+      ],
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.79,
+            37.56
+          ],
+          [
+            126.86,
+            37.55
+          ],
+          [
+            126.93,
+            37.52
+          ],
+          [
+            127.01,
+            37.52
+          ],
+          [
+            127.09,
+            37.53
+          ],
+          [
+            127.17,
+            37.55
+          ]
+        ]
+      },
+      "centroid": [
+        126.97943412439038,
+        37.53453917112012
+      ],
+      "bbox": [
+        126.79,
+        37.52,
+        127.17,
+        37.56
+      ],
+      "parentIds": [
+        "custom:admin1:KR-11"
+      ],
+      "countryCode": "KR",
+      "importance": 0.9,
+      "recommendedMinZoom": 9,
+      "recommendedMaxZoom": 16
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "custom:continent:asia",
+      "source": "custom",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureType": "continent",
+      "name": "Asia",
+      "localizedNames": {
+        "ko": "아시아",
+        "en": "Asia"
+      },
+      "aliases": [
+        "아시아 대륙"
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              26,
+              -10
+            ],
+            [
+              180,
+              -10
+            ],
+            [
+              180,
+              80
+            ],
+            [
+              26,
+              80
+            ],
+            [
+              26,
+              -10
+            ]
+          ]
+        ]
+      },
+      "centroid": [
+        103,
+        35
+      ],
+      "bbox": [
+        26,
+        -10,
+        180,
+        80
+      ],
+      "parentIds": [],
+      "importance": 1,
+      "recommendedMinZoom": 0,
+      "recommendedMaxZoom": 4
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "dev-fixture-v1",
+  "generatedAt": "2026-07-19T00:00:00.000Z",
+  "scopeLabel": "Development fixture: Asia → Republic of Korea → Seoul/Gangwon subset",
+  "scopeComplete": false,
+  "disclaimer": "DEVELOPMENT FIXTURE ONLY. Simplified custom geometry for pipeline, hierarchy, and UI tests; not authoritative or globally complete.",
+  "sourceVersions": {
+    "custom": "development-fixture-2026-07-19"
+  },
+  "totals": {
+    "shardCount": 6,
+    "featureCount": 13,
+    "byteSize": 15650
+  },
+  "shards": [
+    {
+      "id": "world-continents",
+      "path": "/geodata/world/continents.json",
+      "checksum": "sha256:5dc3d44a91a128e04ca48accc057a86fc457da0c3b5b0f47f959c580a4dccc5c",
+      "byteSize": 1054,
+      "featureCount": 1,
+      "compression": "none",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureTypes": [
+        "continent"
+      ],
+      "scopeFeatureIds": [
+        "custom:continent:asia",
+        "custom:country:KR",
+        "custom:admin1:KR-11",
+        "custom:admin1:KR-51",
+        "custom:admin2:KR-11-jongno",
+        "custom:admin2:KR-11-jung",
+        "custom:admin2:KR-11-yongsan",
+        "custom:admin2:KR-11-mapo",
+        "custom:town:jeongseon-eup",
+        "custom:station:seoul",
+        "custom:river:han-seoul",
+        "custom:road:sejong-daero",
+        "custom:landmark:gyeongbokgung"
+      ],
+      "countryCodes": [],
+      "dependsOn": []
+    },
+    {
+      "id": "world-countries",
+      "path": "/geodata/world/countries.json",
+      "checksum": "sha256:1b5c67b71261e73b1bef336cae1716cfe283ac7cbfc1134e2e7e7d3b7b361a8b",
+      "byteSize": 1901,
+      "featureCount": 1,
+      "compression": "none",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureTypes": [
+        "country"
+      ],
+      "scopeFeatureIds": [
+        "custom:continent:asia",
+        "custom:country:KR",
+        "custom:admin1:KR-11",
+        "custom:admin1:KR-51",
+        "custom:admin2:KR-11-jongno",
+        "custom:admin2:KR-11-jung",
+        "custom:admin2:KR-11-yongsan",
+        "custom:admin2:KR-11-mapo",
+        "custom:town:jeongseon-eup",
+        "custom:station:seoul",
+        "custom:river:han-seoul",
+        "custom:road:sejong-daero",
+        "custom:landmark:gyeongbokgung"
+      ],
+      "countryCodes": [
+        "KR"
+      ],
+      "dependsOn": [
+        "world-continents"
+      ]
+    },
+    {
+      "id": "kr-admin",
+      "path": "/geodata/countries/KR/admin.json",
+      "checksum": "sha256:3b6aecbddffce4cf5cda2feb1c82e7688964e176979c612e229b2ea651e50f39",
+      "byteSize": 7432,
+      "featureCount": 6,
+      "compression": "none",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureTypes": [
+        "admin1",
+        "admin2"
+      ],
+      "scopeFeatureIds": [
+        "custom:continent:asia",
+        "custom:country:KR",
+        "custom:admin1:KR-11",
+        "custom:admin1:KR-51",
+        "custom:admin2:KR-11-jongno",
+        "custom:admin2:KR-11-jung",
+        "custom:admin2:KR-11-yongsan",
+        "custom:admin2:KR-11-mapo"
+      ],
+      "countryCodes": [
+        "KR"
+      ],
+      "dependsOn": [
+        "world-countries"
+      ]
+    },
+    {
+      "id": "kr-populated-places",
+      "path": "/geodata/countries/KR/populated-places.json",
+      "checksum": "sha256:6b9b7e9eb7d73873a53aa417fcc73532b265cff507028a35a265bec265cc5fea",
+      "byteSize": 875,
+      "featureCount": 1,
+      "compression": "none",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureTypes": [
+        "town"
+      ],
+      "scopeFeatureIds": [
+        "custom:continent:asia",
+        "custom:country:KR",
+        "custom:admin1:KR-51",
+        "custom:town:jeongseon-eup"
+      ],
+      "countryCodes": [
+        "KR"
+      ],
+      "dependsOn": [
+        "kr-admin"
+      ]
+    },
+    {
+      "id": "seoul-hydrography",
+      "path": "/geodata/regions/KR-11/hydrography.json",
+      "checksum": "sha256:536fcc7ad14c07aa42b8c4034553b6e89f55500445b05f92a1a301f6922cc9cb",
+      "byteSize": 1203,
+      "featureCount": 1,
+      "compression": "none",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureTypes": [
+        "river"
+      ],
+      "scopeFeatureIds": [
+        "custom:continent:asia",
+        "custom:country:KR",
+        "custom:admin1:KR-11",
+        "custom:river:han-seoul"
+      ],
+      "countryCodes": [
+        "KR"
+      ],
+      "dependsOn": [
+        "kr-admin"
+      ]
+    },
+    {
+      "id": "seoul-places",
+      "path": "/geodata/regions/KR-11/places.json",
+      "checksum": "sha256:806cca26fe10fef6030cb60e5dc0e6e3db24d4579aa4727a649a645b974d0038",
+      "byteSize": 3185,
+      "featureCount": 3,
+      "compression": "none",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureTypes": [
+        "station",
+        "road",
+        "landmark"
+      ],
+      "scopeFeatureIds": [
+        "custom:continent:asia",
+        "custom:country:KR",
+        "custom:admin1:KR-11",
+        "custom:station:seoul",
+        "custom:road:sejong-daero",
+        "custom:landmark:gyeongbokgung"
+      ],
+      "countryCodes": [
+        "KR"
+      ],
+      "dependsOn": [
+        "kr-admin"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8125 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "natural-earth-admin0-countries-5.1.1",
+  "generatedAt": "2026-07-19T00:00:00.000Z",
+  "source": {
+    "name": "Natural Earth Admin 0 – Countries",
+    "version": "5.1.1",
+    "scale": "1:10m",
+    "sourcePageUrl": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+    "downloadUrl": "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries.zip",
+    "license": "Public domain",
+    "archiveSha256": "ce1ac7036499a0edd641fbc093cd209a98f96a49d2eca8480aaacad35138a7f6",
+    "countriesGeoJsonSha256": "fd4cb879c1a164e98b154b98f272c344859920b2d59a301f78a02a268bab8102",
+    "countriesGeoJsonByteSize": 12567178
+  },
+  "countryCount": 258,
+  "isoCodeCounts": {
+    "alpha2": 238,
+    "alpha3": 238,
+    "withoutIso": 20
+  },
+  "continentCount": 7,
+  "continents": [
+    {
+      "id": "natural-earth:continent:asia",
+      "code": "asia",
+      "nameKo": "아시아",
+      "nameEn": "Asia",
+      "countryCount": 60,
+      "countryIds": [
+        "natural-earth:country:IDN",
+        "natural-earth:country:MYS",
+        "natural-earth:country:ESB",
+        "natural-earth:country:CYP",
+        "natural-earth:country:IND",
+        "natural-earth:country:CHN",
+        "natural-earth:country:ISR",
+        "natural-earth:country:PSX",
+        "natural-earth:country:LBN",
+        "natural-earth:country:SYR",
+        "natural-earth:country:KOR",
+        "natural-earth:country:PRK",
+        "natural-earth:country:BTN",
+        "natural-earth:country:OMN",
+        "natural-earth:country:UZB",
+        "natural-earth:country:KAZ",
+        "natural-earth:country:TJK",
+        "natural-earth:country:MNG",
+        "natural-earth:country:VNM",
+        "natural-earth:country:KHM",
+        "natural-earth:country:ARE",
+        "natural-earth:country:GEO",
+        "natural-earth:country:AZE",
+        "natural-earth:country:TUR",
+        "natural-earth:country:LAO",
+        "natural-earth:country:KGZ",
+        "natural-earth:country:ARM",
+        "natural-earth:country:IRQ",
+        "natural-earth:country:IRN",
+        "natural-earth:country:QAT",
+        "natural-earth:country:SAU",
+        "natural-earth:country:PAK",
+        "natural-earth:country:THA",
+        "natural-earth:country:KWT",
+        "natural-earth:country:TLS",
+        "natural-earth:country:BRN",
+        "natural-earth:country:MMR",
+        "natural-earth:country:BGD",
+        "natural-earth:country:AFG",
+        "natural-earth:country:TKM",
+        "natural-earth:country:JOR",
+        "natural-earth:country:NPL",
+        "natural-earth:country:YEM",
+        "natural-earth:country:HKG",
+        "natural-earth:country:CYN",
+        "natural-earth:country:CNM",
+        "natural-earth:country:KAS",
+        "natural-earth:country:KAB",
+        "natural-earth:country:WSB",
+        "natural-earth:country:PHL",
+        "natural-earth:country:LKA",
+        "natural-earth:country:TWN",
+        "natural-earth:country:JPN",
+        "natural-earth:country:IOA",
+        "natural-earth:country:SGP",
+        "natural-earth:country:MDV",
+        "natural-earth:country:BHR",
+        "natural-earth:country:PGA",
+        "natural-earth:country:MAC",
+        "natural-earth:country:SCR"
+      ],
+      "centroid": [
+        76.02520518333334,
+        26.257808916666672
+      ],
+      "bbox": [
+        25.663259,
+        -12.199965,
+        153.985606,
+        55.43455
+      ]
+    },
+    {
+      "id": "natural-earth:continent:europe",
+      "code": "europe",
+      "nameKo": "유럽",
+      "nameEn": "Europe",
+      "countryCount": 51,
+      "countryIds": [
+        "natural-earth:country:FRA",
+        "natural-earth:country:UKR",
+        "natural-earth:country:BLR",
+        "natural-earth:country:LTU",
+        "natural-earth:country:RUS",
+        "natural-earth:country:CZE",
+        "natural-earth:country:DEU",
+        "natural-earth:country:EST",
+        "natural-earth:country:LVA",
+        "natural-earth:country:NOR",
+        "natural-earth:country:SWE",
+        "natural-earth:country:FIN",
+        "natural-earth:country:LUX",
+        "natural-earth:country:BEL",
+        "natural-earth:country:MKD",
+        "natural-earth:country:ALB",
+        "natural-earth:country:KOS",
+        "natural-earth:country:ESP",
+        "natural-earth:country:DNK",
+        "natural-earth:country:ROU",
+        "natural-earth:country:HUN",
+        "natural-earth:country:SVK",
+        "natural-earth:country:POL",
+        "natural-earth:country:IRL",
+        "natural-earth:country:GBR",
+        "natural-earth:country:GRC",
+        "natural-earth:country:AUT",
+        "natural-earth:country:ITA",
+        "natural-earth:country:CHE",
+        "natural-earth:country:NLD",
+        "natural-earth:country:LIE",
+        "natural-earth:country:SRB",
+        "natural-earth:country:HRV",
+        "natural-earth:country:SVN",
+        "natural-earth:country:BGR",
+        "natural-earth:country:SMR",
+        "natural-earth:country:MCO",
+        "natural-earth:country:AND",
+        "natural-earth:country:MNE",
+        "natural-earth:country:BIH",
+        "natural-earth:country:PRT",
+        "natural-earth:country:MDA",
+        "natural-earth:country:GIB",
+        "natural-earth:country:VAT",
+        "natural-earth:country:ISL",
+        "natural-earth:country:MLT",
+        "natural-earth:country:JEY",
+        "natural-earth:country:GGY",
+        "natural-earth:country:IMN",
+        "natural-earth:country:ALD",
+        "natural-earth:country:FRO"
+      ],
+      "centroid": [
+        12.712814019607839,
+        49.17217994117646
+      ],
+      "bbox": [
+        -180,
+        -54.462498,
+        180,
+        81.85871
+      ]
+    },
+    {
+      "id": "natural-earth:continent:africa",
+      "code": "africa",
+      "nameKo": "아프리카",
+      "nameEn": "Africa",
+      "countryCount": 61,
+      "countryIds": [
+        "natural-earth:country:ETH",
+        "natural-earth:country:SDS",
+        "natural-earth:country:SOM",
+        "natural-earth:country:KEN",
+        "natural-earth:country:MWI",
+        "natural-earth:country:TZA",
+        "natural-earth:country:SOL",
+        "natural-earth:country:MAR",
+        "natural-earth:country:SAH",
+        "natural-earth:country:COG",
+        "natural-earth:country:COD",
+        "natural-earth:country:NAM",
+        "natural-earth:country:ZAF",
+        "natural-earth:country:LBY",
+        "natural-earth:country:TUN",
+        "natural-earth:country:ZMB",
+        "natural-earth:country:SLE",
+        "natural-earth:country:GIN",
+        "natural-earth:country:LBR",
+        "natural-earth:country:CAF",
+        "natural-earth:country:SDN",
+        "natural-earth:country:DJI",
+        "natural-earth:country:ERI",
+        "natural-earth:country:CIV",
+        "natural-earth:country:MLI",
+        "natural-earth:country:SEN",
+        "natural-earth:country:NGA",
+        "natural-earth:country:BEN",
+        "natural-earth:country:AGO",
+        "natural-earth:country:BWA",
+        "natural-earth:country:ZWE",
+        "natural-earth:country:TCD",
+        "natural-earth:country:DZA",
+        "natural-earth:country:MOZ",
+        "natural-earth:country:SWZ",
+        "natural-earth:country:BDI",
+        "natural-earth:country:RWA",
+        "natural-earth:country:UGA",
+        "natural-earth:country:LSO",
+        "natural-earth:country:CMR",
+        "natural-earth:country:GAB",
+        "natural-earth:country:NER",
+        "natural-earth:country:BFA",
+        "natural-earth:country:TGO",
+        "natural-earth:country:GHA",
+        "natural-earth:country:GNB",
+        "natural-earth:country:EGY",
+        "natural-earth:country:MRT",
+        "natural-earth:country:GNQ",
+        "natural-earth:country:GMB",
+        "natural-earth:country:BRT",
+        "natural-earth:country:MDG",
+        "natural-earth:country:ATF",
+        "natural-earth:country:SYC",
+        "natural-earth:country:HMD",
+        "natural-earth:country:SHN",
+        "natural-earth:country:MUS",
+        "natural-earth:country:COM",
+        "natural-earth:country:STP",
+        "natural-earth:country:CPV",
+        "natural-earth:country:IOT"
+      ],
+      "centroid": [
+        19.883324967213113,
+        1.5636362950819658
+      ],
+      "bbox": [
+        -25.360422,
+        -53.19256,
+        77.585216,
+        37.345201
+      ]
+    },
+    {
+      "id": "natural-earth:continent:north-america",
+      "code": "north-america",
+      "nameKo": "북아메리카",
+      "nameEn": "North America",
+      "countryCount": 43,
+      "countryIds": [
+        "natural-earth:country:CRI",
+        "natural-earth:country:NIC",
+        "natural-earth:country:MAF",
+        "natural-earth:country:SXM",
+        "natural-earth:country:HTI",
+        "natural-earth:country:DOM",
+        "natural-earth:country:SLV",
+        "natural-earth:country:GTM",
+        "natural-earth:country:USG",
+        "natural-earth:country:CUB",
+        "natural-earth:country:HND",
+        "natural-earth:country:USA",
+        "natural-earth:country:CAN",
+        "natural-earth:country:MEX",
+        "natural-earth:country:BLZ",
+        "natural-earth:country:PAN",
+        "natural-earth:country:GRL",
+        "natural-earth:country:CUW",
+        "natural-earth:country:ABW",
+        "natural-earth:country:BHS",
+        "natural-earth:country:TCA",
+        "natural-earth:country:SPM",
+        "natural-earth:country:TTO",
+        "natural-earth:country:GRD",
+        "natural-earth:country:VCT",
+        "natural-earth:country:BRB",
+        "natural-earth:country:LCA",
+        "natural-earth:country:DMA",
+        "natural-earth:country:UMI",
+        "natural-earth:country:MSR",
+        "natural-earth:country:ATG",
+        "natural-earth:country:KNA",
+        "natural-earth:country:VIR",
+        "natural-earth:country:BLM",
+        "natural-earth:country:PRI",
+        "natural-earth:country:AIA",
+        "natural-earth:country:VGB",
+        "natural-earth:country:JAM",
+        "natural-earth:country:CYM",
+        "natural-earth:country:BMU",
+        "natural-earth:country:CLP",
+        "natural-earth:country:BJN",
+        "natural-earth:country:SER"
+      ],
+      "centroid": [
+        -67.68762643023257,
+        20.40878772093024
+      ],
+      "bbox": [
+        -179.143503,
+        -0.388767,
+        179.780935,
+        83.634101
+      ]
+    },
+    {
+      "id": "natural-earth:continent:south-america",
+      "code": "south-america",
+      "nameKo": "남아메리카",
+      "nameEn": "South America",
+      "countryCount": 16,
+      "countryIds": [
+        "natural-earth:country:CHL",
+        "natural-earth:country:BOL",
+        "natural-earth:country:PER",
+        "natural-earth:country:ARG",
+        "natural-earth:country:SUR",
+        "natural-earth:country:GUY",
+        "natural-earth:country:BRA",
+        "natural-earth:country:URY",
+        "natural-earth:country:ECU",
+        "natural-earth:country:COL",
+        "natural-earth:country:PRY",
+        "natural-earth:country:BRI",
+        "natural-earth:country:VEN",
+        "natural-earth:country:SPI",
+        "natural-earth:country:SGS",
+        "natural-earth:country:FLK"
+      ],
+      "centroid": [
+        -61.950804375,
+        -21.028502250000003
+      ],
+      "bbox": [
+        -109.453725,
+        -59.472752,
+        -26.239329,
+        15.702948
+      ]
+    },
+    {
+      "id": "natural-earth:continent:oceania",
+      "code": "oceania",
+      "nameKo": "오세아니아",
+      "nameEn": "Oceania",
+      "countryCount": 26,
+      "countryIds": [
+        "natural-earth:country:PNG",
+        "natural-earth:country:AUS",
+        "natural-earth:country:FJI",
+        "natural-earth:country:NZL",
+        "natural-earth:country:NCL",
+        "natural-earth:country:PCN",
+        "natural-earth:country:PYF",
+        "natural-earth:country:KIR",
+        "natural-earth:country:MHL",
+        "natural-earth:country:NFK",
+        "natural-earth:country:COK",
+        "natural-earth:country:TON",
+        "natural-earth:country:WLF",
+        "natural-earth:country:WSM",
+        "natural-earth:country:SLB",
+        "natural-earth:country:TUV",
+        "natural-earth:country:NRU",
+        "natural-earth:country:FSM",
+        "natural-earth:country:VUT",
+        "natural-earth:country:NIU",
+        "natural-earth:country:ASM",
+        "natural-earth:country:PLW",
+        "natural-earth:country:GUM",
+        "natural-earth:country:MNP",
+        "natural-earth:country:CSI",
+        "natural-earth:country:ATC"
+      ],
+      "centroid": [
+        46.35028273076924,
+        -11.433473384615382
+      ],
+      "bbox": [
+        -180,
+        -54.750421,
+        180,
+        20.555406
+      ]
+    },
+    {
+      "id": "natural-earth:continent:antarctica",
+      "code": "antarctica",
+      "nameKo": "남극",
+      "nameEn": "Antarctica",
+      "countryCount": 1,
+      "countryIds": [
+        "natural-earth:country:ATA"
+      ],
+      "centroid": [
+        35.885455,
+        -79.843222
+      ],
+      "bbox": [
+        -180,
+        -90,
+        180,
+        -60.516209
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "id": "natural-earth:country:IDN",
+      "naturalEarthCode": "IDN",
+      "isoAlpha2": "ID",
+      "isoAlpha3": "IDN",
+      "name": "인도네시아",
+      "nameKo": "인도네시아",
+      "nameEn": "Indonesia",
+      "nameLocal": "Indonesia",
+      "aliases": [
+        "인도네시아",
+        "Indonesia",
+        "Indo.",
+        "Republic of Indonesia",
+        "ID",
+        "IDN"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        101.892949,
+        -0.954404
+      ],
+      "bbox": [
+        95.012706,
+        -10.922621,
+        140.977627,
+        5.910102
+      ]
+    },
+    {
+      "id": "natural-earth:country:MYS",
+      "naturalEarthCode": "MYS",
+      "isoAlpha2": "MY",
+      "isoAlpha3": "MYS",
+      "name": "말레이시아",
+      "nameKo": "말레이시아",
+      "nameEn": "Malaysia",
+      "nameLocal": "Malaysia",
+      "aliases": [
+        "말레이시아",
+        "Malaysia",
+        "Malay.",
+        "MY",
+        "MYS"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        113.83708,
+        2.528667
+      ],
+      "bbox": [
+        99.645228,
+        0.85137,
+        119.278087,
+        7.35578
+      ]
+    },
+    {
+      "id": "natural-earth:country:CHL",
+      "naturalEarthCode": "CHL",
+      "isoAlpha2": "CL",
+      "isoAlpha3": "CHL",
+      "name": "칠레",
+      "nameKo": "칠레",
+      "nameEn": "Chile",
+      "nameLocal": "Chile",
+      "aliases": [
+        "칠레",
+        "Chile",
+        "Republic of Chile",
+        "CL",
+        "CHL"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -72.318871,
+        -38.151771
+      ],
+      "bbox": [
+        -109.453725,
+        -55.918504,
+        -66.420806,
+        -17.506588
+      ]
+    },
+    {
+      "id": "natural-earth:country:BOL",
+      "naturalEarthCode": "BOL",
+      "isoAlpha2": "BO",
+      "isoAlpha3": "BOL",
+      "name": "볼리비아",
+      "nameKo": "볼리비아",
+      "nameEn": "Bolivia",
+      "nameLocal": "Bolivia",
+      "aliases": [
+        "볼리비아",
+        "Bolivia",
+        "Plurinational State of Bolivia",
+        "BO",
+        "BOL"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -64.593433,
+        -16.666015
+      ],
+      "bbox": [
+        -69.666492,
+        -22.897258,
+        -57.465661,
+        -9.679821
+      ]
+    },
+    {
+      "id": "natural-earth:country:PER",
+      "naturalEarthCode": "PER",
+      "isoAlpha2": "PE",
+      "isoAlpha3": "PER",
+      "name": "페루",
+      "nameKo": "페루",
+      "nameEn": "Peru",
+      "nameLocal": "Peru",
+      "aliases": [
+        "페루",
+        "Peru",
+        "Republic of Peru",
+        "PE",
+        "PER"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -72.90016,
+        -12.976679
+      ],
+      "bbox": [
+        -81.337558,
+        -18.337746,
+        -68.684252,
+        -0.029093
+      ]
+    },
+    {
+      "id": "natural-earth:country:ARG",
+      "naturalEarthCode": "ARG",
+      "isoAlpha2": "AR",
+      "isoAlpha3": "ARG",
+      "name": "아르헨티나",
+      "nameKo": "아르헨티나",
+      "nameEn": "Argentina",
+      "nameLocal": "Argentina",
+      "aliases": [
+        "아르헨티나",
+        "Argentina",
+        "Arg.",
+        "Argentine Republic",
+        "AR",
+        "ARG"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -64.173331,
+        -33.501159
+      ],
+      "bbox": [
+        -73.57274,
+        -55.052016,
+        -53.661552,
+        -21.786938
+      ]
+    },
+    {
+      "id": "natural-earth:country:ESB",
+      "naturalEarthCode": "ESB",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "데켈리아 지역",
+      "nameKo": "데켈리아 지역",
+      "nameEn": "Dhekelia Cantonment",
+      "nameLocal": "Dhekelia Cantonment",
+      "aliases": [
+        "데켈리아 지역",
+        "Dhekelia Cantonment",
+        "Dhekelia",
+        "Dhekelia Sovereign Base Area",
+        "Dhek.",
+        "ESB"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        33.790583,
+        35.011042
+      ],
+      "bbox": [
+        33.674099,
+        34.937893,
+        33.921474,
+        35.118994
+      ]
+    },
+    {
+      "id": "natural-earth:country:CYP",
+      "naturalEarthCode": "CYP",
+      "isoAlpha2": "CY",
+      "isoAlpha3": "CYP",
+      "name": "키프로스",
+      "nameKo": "키프로스",
+      "nameEn": "Cyprus",
+      "nameLocal": "Cyprus",
+      "aliases": [
+        "키프로스",
+        "Cyprus",
+        "Cyp.",
+        "Republic of Cyprus",
+        "CY",
+        "CYP"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        33.084182,
+        34.913329
+      ],
+      "bbox": [
+        32.271739,
+        34.625019,
+        34.099132,
+        35.187082
+      ]
+    },
+    {
+      "id": "natural-earth:country:IND",
+      "naturalEarthCode": "IND",
+      "isoAlpha2": "IN",
+      "isoAlpha3": "IND",
+      "name": "인도",
+      "nameKo": "인도",
+      "nameEn": "India",
+      "nameLocal": "India",
+      "aliases": [
+        "인도",
+        "India",
+        "Republic of India",
+        "IN",
+        "IND"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        79.358105,
+        22.686852
+      ],
+      "bbox": [
+        68.143403,
+        6.745551,
+        97.362253,
+        35.495406
+      ]
+    },
+    {
+      "id": "natural-earth:country:CHN",
+      "naturalEarthCode": "CHN",
+      "isoAlpha2": "CN",
+      "isoAlpha3": "CHN",
+      "name": "중화인민공화국",
+      "nameKo": "중화인민공화국",
+      "nameEn": "People's Republic of China",
+      "nameLocal": "People's Republic of China",
+      "aliases": [
+        "중화인민공화국",
+        "People's Republic of China",
+        "China",
+        "CN",
+        "CHN"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        106.337289,
+        32.498178
+      ],
+      "bbox": [
+        73.602256,
+        15.775377,
+        134.772579,
+        53.569444
+      ]
+    },
+    {
+      "id": "natural-earth:country:ISR",
+      "naturalEarthCode": "ISR",
+      "isoAlpha2": "IL",
+      "isoAlpha3": "ISR",
+      "name": "이스라엘",
+      "nameKo": "이스라엘",
+      "nameEn": "Israel",
+      "nameLocal": "Israel",
+      "aliases": [
+        "이스라엘",
+        "Israel",
+        "Isr.",
+        "State of Israel",
+        "IL",
+        "ISR"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        34.847915,
+        30.911148
+      ],
+      "bbox": [
+        34.248351,
+        29.489691,
+        35.888073,
+        33.406722
+      ]
+    },
+    {
+      "id": "natural-earth:country:PSX",
+      "naturalEarthCode": "PSX",
+      "isoAlpha2": "PS",
+      "isoAlpha3": "PSE",
+      "name": "팔레스타인",
+      "nameKo": "팔레스타인",
+      "nameEn": "Palestine",
+      "nameLocal": "Palestine",
+      "aliases": [
+        "팔레스타인",
+        "Palestine",
+        "Palestine (West Bank and Gaza)",
+        "Pal.",
+        "West Bank and Gaza",
+        "PS",
+        "PSE",
+        "PSX"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        35.291341,
+        32.047431
+      ],
+      "bbox": [
+        34.200269,
+        31.211449,
+        35.572536,
+        32.54264
+      ]
+    },
+    {
+      "id": "natural-earth:country:LBN",
+      "naturalEarthCode": "LBN",
+      "isoAlpha2": "LB",
+      "isoAlpha3": "LBN",
+      "name": "레바논",
+      "nameKo": "레바논",
+      "nameEn": "Lebanon",
+      "nameLocal": "Lebanon",
+      "aliases": [
+        "레바논",
+        "Lebanon",
+        "Leb.",
+        "Lebanese Republic",
+        "LB",
+        "LBN"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        35.992892,
+        34.133368
+      ],
+      "bbox": [
+        35.09962,
+        33.05558,
+        36.604101,
+        34.687548
+      ]
+    },
+    {
+      "id": "natural-earth:country:ETH",
+      "naturalEarthCode": "ETH",
+      "isoAlpha2": "ET",
+      "isoAlpha3": "ETH",
+      "name": "에티오피아",
+      "nameKo": "에티오피아",
+      "nameEn": "Ethiopia",
+      "nameLocal": "Ethiopia",
+      "aliases": [
+        "에티오피아",
+        "Ethiopia",
+        "Eth.",
+        "Federal Democratic Republic of Ethiopia",
+        "ET",
+        "ETH"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        39.0886,
+        8.032795
+      ],
+      "bbox": [
+        32.9898,
+        3.403333,
+        47.979169,
+        14.879532
+      ]
+    },
+    {
+      "id": "natural-earth:country:SDS",
+      "naturalEarthCode": "SDS",
+      "isoAlpha2": "SS",
+      "isoAlpha3": "SSD",
+      "name": "남수단",
+      "nameKo": "남수단",
+      "nameEn": "South Sudan",
+      "nameLocal": "South Sudan",
+      "aliases": [
+        "남수단",
+        "South Sudan",
+        "S. Sudan",
+        "S. Sud.",
+        "Republic of South Sudan",
+        "SS",
+        "SSD",
+        "SDS"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        30.390151,
+        7.230477
+      ],
+      "bbox": [
+        24.121556,
+        3.490202,
+        35.920835,
+        12.216155
+      ]
+    },
+    {
+      "id": "natural-earth:country:SOM",
+      "naturalEarthCode": "SOM",
+      "isoAlpha2": "SO",
+      "isoAlpha3": "SOM",
+      "name": "소말리아",
+      "nameKo": "소말리아",
+      "nameEn": "Somalia",
+      "nameLocal": "Somalia",
+      "aliases": [
+        "소말리아",
+        "Somalia",
+        "Som.",
+        "Federal Republic of Somalia",
+        "SO",
+        "SOM"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        45.19238,
+        3.568925
+      ],
+      "bbox": [
+        40.965385,
+        -1.696303,
+        51.417038,
+        11.989119
+      ]
+    },
+    {
+      "id": "natural-earth:country:KEN",
+      "naturalEarthCode": "KEN",
+      "isoAlpha2": "KE",
+      "isoAlpha3": "KEN",
+      "name": "케냐",
+      "nameKo": "케냐",
+      "nameEn": "Kenya",
+      "nameLocal": "Kenya",
+      "aliases": [
+        "케냐",
+        "Kenya",
+        "Ken.",
+        "Republic of Kenya",
+        "KE",
+        "KEN"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        37.907632,
+        0.549043
+      ],
+      "bbox": [
+        33.890468,
+        -4.677504,
+        41.885019,
+        5.030376
+      ]
+    },
+    {
+      "id": "natural-earth:country:MWI",
+      "naturalEarthCode": "MWI",
+      "isoAlpha2": "MW",
+      "isoAlpha3": "MWI",
+      "name": "말라위",
+      "nameKo": "말라위",
+      "nameEn": "Malawi",
+      "nameLocal": "Malawi",
+      "aliases": [
+        "말라위",
+        "Malawi",
+        "Mal.",
+        "Republic of Malawi",
+        "MW",
+        "MWI"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        33.608082,
+        -13.386737
+      ],
+      "bbox": [
+        32.663308,
+        -17.135335,
+        35.904299,
+        -9.381235
+      ]
+    },
+    {
+      "id": "natural-earth:country:TZA",
+      "naturalEarthCode": "TZA",
+      "isoAlpha2": "TZ",
+      "isoAlpha3": "TZA",
+      "name": "탄자니아",
+      "nameKo": "탄자니아",
+      "nameEn": "Tanzania",
+      "nameLocal": "Tanzania",
+      "aliases": [
+        "탄자니아",
+        "Tanzania",
+        "Tanz.",
+        "United Republic of Tanzania",
+        "TZ",
+        "TZA"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        34.959183,
+        -6.051866
+      ],
+      "bbox": [
+        29.321032,
+        -11.731272,
+        40.449392,
+        -0.98583
+      ]
+    },
+    {
+      "id": "natural-earth:country:SYR",
+      "naturalEarthCode": "SYR",
+      "isoAlpha2": "SY",
+      "isoAlpha3": "SYR",
+      "name": "시리아",
+      "nameKo": "시리아",
+      "nameEn": "Syria",
+      "nameLocal": "Syria",
+      "aliases": [
+        "시리아",
+        "Syria",
+        "Syrian Arab Republic",
+        "SY",
+        "SYR"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        38.277783,
+        35.006636
+      ],
+      "bbox": [
+        35.723399,
+        32.313042,
+        42.377186,
+        37.324906
+      ]
+    },
+    {
+      "id": "natural-earth:country:SOL",
+      "naturalEarthCode": "SOL",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "소말릴란드",
+      "nameKo": "소말릴란드",
+      "nameEn": "Somaliland",
+      "nameLocal": "Somaliland",
+      "aliases": [
+        "소말릴란드",
+        "Somaliland",
+        "Solnd.",
+        "Republic of Somaliland",
+        "SOL"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        46.731595,
+        9.443889
+      ],
+      "bbox": [
+        42.647247,
+        7.996516,
+        48.939112,
+        11.498928
+      ]
+    },
+    {
+      "id": "natural-earth:country:FRA",
+      "naturalEarthCode": "FRA",
+      "isoAlpha2": "FR",
+      "isoAlpha3": "FRA",
+      "name": "프랑스",
+      "nameKo": "프랑스",
+      "nameEn": "France",
+      "nameLocal": "France",
+      "aliases": [
+        "프랑스",
+        "France",
+        "Fr.",
+        "French Republic",
+        "FR",
+        "FRA"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        2.552275,
+        46.696113
+      ],
+      "bbox": [
+        -61.797841,
+        -21.370782,
+        55.854503,
+        51.087541
+      ]
+    },
+    {
+      "id": "natural-earth:country:SUR",
+      "naturalEarthCode": "SUR",
+      "isoAlpha2": "SR",
+      "isoAlpha3": "SUR",
+      "name": "수리남",
+      "nameKo": "수리남",
+      "nameEn": "Suriname",
+      "nameLocal": "Suriname",
+      "aliases": [
+        "수리남",
+        "Suriname",
+        "Sur.",
+        "Republic of Suriname",
+        "SR",
+        "SUR"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -55.91094,
+        4.143987
+      ],
+      "bbox": [
+        -58.067691,
+        1.833507,
+        -53.986357,
+        6.011574
+      ]
+    },
+    {
+      "id": "natural-earth:country:GUY",
+      "naturalEarthCode": "GUY",
+      "isoAlpha2": "GY",
+      "isoAlpha3": "GUY",
+      "name": "가이아나",
+      "nameKo": "가이아나",
+      "nameEn": "Guyana",
+      "nameLocal": "Guyana",
+      "aliases": [
+        "가이아나",
+        "Guyana",
+        "Guy.",
+        "Co-operative Republic of Guyana",
+        "GY",
+        "GUY"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -58.942643,
+        5.124317
+      ],
+      "bbox": [
+        -61.396713,
+        1.18582,
+        -56.481819,
+        8.55801
+      ]
+    },
+    {
+      "id": "natural-earth:country:KOR",
+      "naturalEarthCode": "KOR",
+      "isoAlpha2": "KR",
+      "isoAlpha3": "KOR",
+      "name": "대한민국",
+      "nameKo": "대한민국",
+      "nameEn": "South Korea",
+      "nameLocal": "South Korea",
+      "aliases": [
+        "대한민국",
+        "South Korea",
+        "Republic of Korea",
+        "Korea, Rep.",
+        "S.K.",
+        "KR",
+        "KOR"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        128.129504,
+        36.384924
+      ],
+      "bbox": [
+        124.613617,
+        33.197577,
+        131.862522,
+        38.624335
+      ]
+    },
+    {
+      "id": "natural-earth:country:PRK",
+      "naturalEarthCode": "PRK",
+      "isoAlpha2": "KP",
+      "isoAlpha3": "PRK",
+      "name": "조선민주주의인민공화국",
+      "nameKo": "조선민주주의인민공화국",
+      "nameEn": "North Korea",
+      "nameLocal": "North Korea",
+      "aliases": [
+        "조선민주주의인민공화국",
+        "North Korea",
+        "Dem. Rep. Korea",
+        "Korea, Dem. Rep.",
+        "N.K.",
+        "Democratic People's Republic of Korea",
+        "KP",
+        "PRK"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        126.444516,
+        39.885252
+      ],
+      "bbox": [
+        124.211316,
+        37.675605,
+        130.699962,
+        43.01027
+      ]
+    },
+    {
+      "id": "natural-earth:country:MAR",
+      "naturalEarthCode": "MAR",
+      "isoAlpha2": "MA",
+      "isoAlpha3": "MAR",
+      "name": "모로코",
+      "nameKo": "모로코",
+      "nameEn": "Morocco",
+      "nameLocal": "Morocco",
+      "aliases": [
+        "모로코",
+        "Morocco",
+        "Mor.",
+        "Kingdom of Morocco",
+        "MA",
+        "MAR"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -7.187296,
+        31.650723
+      ],
+      "bbox": [
+        -17.013743,
+        21.419971,
+        -1.031999,
+        35.926519
+      ]
+    },
+    {
+      "id": "natural-earth:country:SAH",
+      "naturalEarthCode": "SAH",
+      "isoAlpha2": "EH",
+      "isoAlpha3": "ESH",
+      "name": "서사하라",
+      "nameKo": "서사하라",
+      "nameEn": "Western Sahara",
+      "nameLocal": "Western Sahara",
+      "aliases": [
+        "서사하라",
+        "Western Sahara",
+        "W. Sahara",
+        "W. Sah.",
+        "Sahrawi Arab Democratic Republic",
+        "EH",
+        "ESH",
+        "SAH"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -12.630304,
+        23.967592
+      ],
+      "bbox": [
+        -17.104644,
+        20.766913,
+        -8.680809,
+        27.661465
+      ]
+    },
+    {
+      "id": "natural-earth:country:CRI",
+      "naturalEarthCode": "CRI",
+      "isoAlpha2": "CR",
+      "isoAlpha3": "CRI",
+      "name": "코스타리카",
+      "nameKo": "코스타리카",
+      "nameEn": "Costa Rica",
+      "nameLocal": "Costa Rica",
+      "aliases": [
+        "코스타리카",
+        "Costa Rica",
+        "C.R.",
+        "Republic of Costa Rica",
+        "CR",
+        "CRI"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -84.077922,
+        10.0651
+      ],
+      "bbox": [
+        -87.117665,
+        5.515082,
+        -82.562837,
+        11.209937
+      ]
+    },
+    {
+      "id": "natural-earth:country:NIC",
+      "naturalEarthCode": "NIC",
+      "isoAlpha2": "NI",
+      "isoAlpha3": "NIC",
+      "name": "니카라과",
+      "nameKo": "니카라과",
+      "nameEn": "Nicaragua",
+      "nameLocal": "Nicaragua",
+      "aliases": [
+        "니카라과",
+        "Nicaragua",
+        "Nic.",
+        "Republic of Nicaragua",
+        "NI",
+        "NIC"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -85.069347,
+        12.670697
+      ],
+      "bbox": [
+        -87.685821,
+        10.713482,
+        -82.725697,
+        15.03097
+      ]
+    },
+    {
+      "id": "natural-earth:country:COG",
+      "naturalEarthCode": "COG",
+      "isoAlpha2": "CG",
+      "isoAlpha3": "COG",
+      "name": "콩고 공화국",
+      "nameKo": "콩고 공화국",
+      "nameEn": "Republic of the Congo",
+      "nameLocal": "Republic of the Congo",
+      "aliases": [
+        "콩고 공화국",
+        "Republic of the Congo",
+        "Congo",
+        "Congo, Rep.",
+        "Rep. Congo",
+        "CG",
+        "COG"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        15.9005,
+        0.142331
+      ],
+      "bbox": [
+        11.114016,
+        -5.019631,
+        18.642407,
+        3.708276
+      ]
+    },
+    {
+      "id": "natural-earth:country:COD",
+      "naturalEarthCode": "COD",
+      "isoAlpha2": "CD",
+      "isoAlpha3": "COD",
+      "name": "콩고 민주 공화국",
+      "nameKo": "콩고 민주 공화국",
+      "nameEn": "Democratic Republic of the Congo",
+      "nameLocal": "Democratic Republic of the Congo",
+      "aliases": [
+        "콩고 민주 공화국",
+        "Democratic Republic of the Congo",
+        "Dem. Rep. Congo",
+        "Congo, Dem. Rep.",
+        "D.R.C.",
+        "CD",
+        "COD"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        23.458829,
+        -1.858167
+      ],
+      "bbox": [
+        12.210541,
+        -13.458351,
+        31.280447,
+        5.37528
+      ]
+    },
+    {
+      "id": "natural-earth:country:BTN",
+      "naturalEarthCode": "BTN",
+      "isoAlpha2": "BT",
+      "isoAlpha3": "BTN",
+      "name": "부탄",
+      "nameKo": "부탄",
+      "nameEn": "Bhutan",
+      "nameLocal": "Bhutan",
+      "aliases": [
+        "부탄",
+        "Bhutan",
+        "Kingdom of Bhutan",
+        "BT",
+        "BTN"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        90.040294,
+        27.536685
+      ],
+      "bbox": [
+        88.730067,
+        26.696149,
+        92.088776,
+        28.358399
+      ]
+    },
+    {
+      "id": "natural-earth:country:UKR",
+      "naturalEarthCode": "UKR",
+      "isoAlpha2": "UA",
+      "isoAlpha3": "UKR",
+      "name": "우크라이나",
+      "nameKo": "우크라이나",
+      "nameEn": "Ukraine",
+      "nameLocal": "Ukraine",
+      "aliases": [
+        "우크라이나",
+        "Ukraine",
+        "Ukr.",
+        "UA",
+        "UKR"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        32.140865,
+        49.724739
+      ],
+      "bbox": [
+        22.13284,
+        45.213568,
+        40.159543,
+        52.368949
+      ]
+    },
+    {
+      "id": "natural-earth:country:BLR",
+      "naturalEarthCode": "BLR",
+      "isoAlpha2": "BY",
+      "isoAlpha3": "BLR",
+      "name": "벨라루스",
+      "nameKo": "벨라루스",
+      "nameEn": "Belarus",
+      "nameLocal": "Belarus",
+      "aliases": [
+        "벨라루스",
+        "Belarus",
+        "Bela.",
+        "Republic of Belarus",
+        "BY",
+        "BLR"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        28.417701,
+        53.821888
+      ],
+      "bbox": [
+        23.165645,
+        51.235168,
+        32.719532,
+        56.156806
+      ]
+    },
+    {
+      "id": "natural-earth:country:NAM",
+      "naturalEarthCode": "NAM",
+      "isoAlpha2": "NA",
+      "isoAlpha3": "NAM",
+      "name": "나미비아",
+      "nameKo": "나미비아",
+      "nameEn": "Namibia",
+      "nameLocal": "Namibia",
+      "aliases": [
+        "나미비아",
+        "Namibia",
+        "Nam.",
+        "Republic of Namibia",
+        "NA",
+        "NAM"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        17.108166,
+        -20.575298
+      ],
+      "bbox": [
+        11.717621,
+        -28.959368,
+        25.259781,
+        -16.951057
+      ]
+    },
+    {
+      "id": "natural-earth:country:ZAF",
+      "naturalEarthCode": "ZAF",
+      "isoAlpha2": "ZA",
+      "isoAlpha3": "ZAF",
+      "name": "남아프리카 공화국",
+      "nameKo": "남아프리카 공화국",
+      "nameEn": "South Africa",
+      "nameLocal": "South Africa",
+      "aliases": [
+        "남아프리카 공화국",
+        "South Africa",
+        "S.Af.",
+        "Republic of South Africa",
+        "ZA",
+        "ZAF"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        23.665734,
+        -29.708776
+      ],
+      "bbox": [
+        16.469981,
+        -46.965753,
+        37.977794,
+        -22.126452
+      ]
+    },
+    {
+      "id": "natural-earth:country:MAF",
+      "naturalEarthCode": "MAF",
+      "isoAlpha2": "MF",
+      "isoAlpha3": "MAF",
+      "name": "생마르탱",
+      "nameKo": "생마르탱",
+      "nameEn": "Saint Martin",
+      "nameLocal": "Saint Martin",
+      "aliases": [
+        "생마르탱",
+        "Saint Martin",
+        "St-Martin",
+        "Saint-Martin",
+        "St. Martin (French part)",
+        "St. M.",
+        "Saint-Martin (French part)",
+        "MF",
+        "MAF"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -63.049399,
+        18.081302
+      ],
+      "bbox": [
+        -63.14684,
+        18.033391,
+        -63.010732,
+        18.122138
+      ]
+    },
+    {
+      "id": "natural-earth:country:SXM",
+      "naturalEarthCode": "SXM",
+      "isoAlpha2": "SX",
+      "isoAlpha3": "SXM",
+      "name": "신트마르턴",
+      "nameKo": "신트마르턴",
+      "nameEn": "Sint Maarten",
+      "nameLocal": "Sint Maarten",
+      "aliases": [
+        "신트마르턴",
+        "Sint Maarten",
+        "St. Maarten (Dutch part)",
+        "St. M.",
+        "Sint Maarten (Dutch part)",
+        "SX",
+        "SXM"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -63.070133,
+        18.04088
+      ],
+      "bbox": [
+        -63.118886,
+        18.01911,
+        -63.017569,
+        18.06212
+      ]
+    },
+    {
+      "id": "natural-earth:country:OMN",
+      "naturalEarthCode": "OMN",
+      "isoAlpha2": "OM",
+      "isoAlpha3": "OMN",
+      "name": "오만",
+      "nameKo": "오만",
+      "nameEn": "Oman",
+      "nameLocal": "Oman",
+      "aliases": [
+        "오만",
+        "Oman",
+        "Sultanate of Oman",
+        "OM",
+        "OMN"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        57.336553,
+        22.120427
+      ],
+      "bbox": [
+        51.978615,
+        16.642401,
+        59.844574,
+        26.385972
+      ]
+    },
+    {
+      "id": "natural-earth:country:UZB",
+      "naturalEarthCode": "UZB",
+      "isoAlpha2": "UZ",
+      "isoAlpha3": "UZB",
+      "name": "우즈베키스탄",
+      "nameKo": "우즈베키스탄",
+      "nameEn": "Uzbekistan",
+      "nameLocal": "Uzbekistan",
+      "aliases": [
+        "우즈베키스탄",
+        "Uzbekistan",
+        "Uzb.",
+        "Republic of Uzbekistan",
+        "UZ",
+        "UZB"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        64.005429,
+        41.693603
+      ],
+      "bbox": [
+        55.975839,
+        37.185147,
+        73.148641,
+        45.558719
+      ]
+    },
+    {
+      "id": "natural-earth:country:KAZ",
+      "naturalEarthCode": "KAZ",
+      "isoAlpha2": "KZ",
+      "isoAlpha3": "KAZ",
+      "name": "카자흐스탄",
+      "nameKo": "카자흐스탄",
+      "nameEn": "Kazakhstan",
+      "nameLocal": "Kazakhstan",
+      "aliases": [
+        "카자흐스탄",
+        "Kazakhstan",
+        "Kaz.",
+        "Republic of Kazakhstan",
+        "KZ",
+        "KAZ"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        68.685548,
+        49.054149
+      ],
+      "bbox": [
+        46.478279,
+        40.584656,
+        87.323796,
+        55.43455
+      ]
+    },
+    {
+      "id": "natural-earth:country:TJK",
+      "naturalEarthCode": "TJK",
+      "isoAlpha2": "TJ",
+      "isoAlpha3": "TJK",
+      "name": "타지키스탄",
+      "nameKo": "타지키스탄",
+      "nameEn": "Tajikistan",
+      "nameLocal": "Tajikistan",
+      "aliases": [
+        "타지키스탄",
+        "Tajikistan",
+        "Tjk.",
+        "Republic of Tajikistan",
+        "TJ",
+        "TJK"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        72.587276,
+        38.199835
+      ],
+      "bbox": [
+        67.34269,
+        36.678641,
+        75.164125,
+        41.039977
+      ]
+    },
+    {
+      "id": "natural-earth:country:LTU",
+      "naturalEarthCode": "LTU",
+      "isoAlpha2": "LT",
+      "isoAlpha3": "LTU",
+      "name": "리투아니아",
+      "nameKo": "리투아니아",
+      "nameEn": "Lithuania",
+      "nameLocal": "Lithuania",
+      "aliases": [
+        "리투아니아",
+        "Lithuania",
+        "Lith.",
+        "Republic of Lithuania",
+        "LT",
+        "LTU"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        24.089932,
+        55.103703
+      ],
+      "bbox": [
+        20.924569,
+        53.886841,
+        26.80072,
+        56.442602
+      ]
+    },
+    {
+      "id": "natural-earth:country:BRA",
+      "naturalEarthCode": "BRA",
+      "isoAlpha2": "BR",
+      "isoAlpha3": "BRA",
+      "name": "브라질",
+      "nameKo": "브라질",
+      "nameEn": "Brazil",
+      "nameLocal": "Brazil",
+      "aliases": [
+        "브라질",
+        "Brazil",
+        "Federative Republic of Brazil",
+        "BR",
+        "BRA"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -49.55945,
+        -12.098687
+      ],
+      "bbox": [
+        -74.018475,
+        -33.74228,
+        -28.877065,
+        5.267225
+      ]
+    },
+    {
+      "id": "natural-earth:country:URY",
+      "naturalEarthCode": "URY",
+      "isoAlpha2": "UY",
+      "isoAlpha3": "URY",
+      "name": "우루과이",
+      "nameKo": "우루과이",
+      "nameEn": "Uruguay",
+      "nameLocal": "Uruguay",
+      "aliases": [
+        "우루과이",
+        "Uruguay",
+        "Ury.",
+        "Oriental Republic of Uruguay",
+        "UY",
+        "URY"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -55.966942,
+        -32.961127
+      ],
+      "bbox": [
+        -58.439361,
+        -34.973403,
+        -53.110836,
+        -30.09687
+      ]
+    },
+    {
+      "id": "natural-earth:country:MNG",
+      "naturalEarthCode": "MNG",
+      "isoAlpha2": "MN",
+      "isoAlpha3": "MNG",
+      "name": "몽골",
+      "nameKo": "몽골",
+      "nameEn": "Mongolia",
+      "nameLocal": "Mongolia",
+      "aliases": [
+        "몽골",
+        "Mongolia",
+        "Mong.",
+        "MN",
+        "MNG"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        104.150405,
+        45.997488
+      ],
+      "bbox": [
+        87.735709,
+        41.586145,
+        119.907027,
+        52.129584
+      ]
+    },
+    {
+      "id": "natural-earth:country:RUS",
+      "naturalEarthCode": "RUS",
+      "isoAlpha2": "RU",
+      "isoAlpha3": "RUS",
+      "name": "러시아",
+      "nameKo": "러시아",
+      "nameEn": "Russia",
+      "nameLocal": "Russia",
+      "aliases": [
+        "러시아",
+        "Russia",
+        "Russian Federation",
+        "Rus.",
+        "RU",
+        "RUS"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        44.686469,
+        58.249357
+      ],
+      "bbox": [
+        -180,
+        41.192681,
+        180,
+        81.85871
+      ]
+    },
+    {
+      "id": "natural-earth:country:CZE",
+      "naturalEarthCode": "CZE",
+      "isoAlpha2": "CZ",
+      "isoAlpha3": "CZE",
+      "name": "체코",
+      "nameKo": "체코",
+      "nameEn": "Czech Republic",
+      "nameLocal": "Czech Republic",
+      "aliases": [
+        "체코",
+        "Czech Republic",
+        "Czechia",
+        "Česko",
+        "Cz.",
+        "CZ",
+        "CZE"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        15.377555,
+        49.882364
+      ],
+      "bbox": [
+        12.076141,
+        48.557916,
+        18.837434,
+        51.040012
+      ]
+    },
+    {
+      "id": "natural-earth:country:DEU",
+      "naturalEarthCode": "DEU",
+      "isoAlpha2": "DE",
+      "isoAlpha3": "DEU",
+      "name": "독일",
+      "nameKo": "독일",
+      "nameEn": "Germany",
+      "nameLocal": "Germany",
+      "aliases": [
+        "독일",
+        "Germany",
+        "Ger.",
+        "Federal Republic of Germany",
+        "DE",
+        "DEU"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        9.678348,
+        50.961733
+      ],
+      "bbox": [
+        5.85249,
+        47.271121,
+        15.022059,
+        55.065334
+      ]
+    },
+    {
+      "id": "natural-earth:country:EST",
+      "naturalEarthCode": "EST",
+      "isoAlpha2": "EE",
+      "isoAlpha3": "EST",
+      "name": "에스토니아",
+      "nameKo": "에스토니아",
+      "nameEn": "Estonia",
+      "nameLocal": "Estonia",
+      "aliases": [
+        "에스토니아",
+        "Estonia",
+        "Est.",
+        "Republic of Estonia",
+        "EE",
+        "EST"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        25.867126,
+        58.724865
+      ],
+      "bbox": [
+        21.832367,
+        57.515819,
+        28.186475,
+        59.670885
+      ]
+    },
+    {
+      "id": "natural-earth:country:LVA",
+      "naturalEarthCode": "LVA",
+      "isoAlpha2": "LV",
+      "isoAlpha3": "LVA",
+      "name": "라트비아",
+      "nameKo": "라트비아",
+      "nameEn": "Latvia",
+      "nameLocal": "Latvia",
+      "aliases": [
+        "라트비아",
+        "Latvia",
+        "Lat.",
+        "Republic of Latvia",
+        "LV",
+        "LVA"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        25.458723,
+        57.066872
+      ],
+      "bbox": [
+        20.968598,
+        55.666991,
+        28.217275,
+        58.075138
+      ]
+    },
+    {
+      "id": "natural-earth:country:NOR",
+      "naturalEarthCode": "NOR",
+      "isoAlpha2": "NO",
+      "isoAlpha3": "NOR",
+      "name": "노르웨이",
+      "nameKo": "노르웨이",
+      "nameEn": "Norway",
+      "nameLocal": "Norway",
+      "aliases": [
+        "노르웨이",
+        "Norway",
+        "Nor.",
+        "Kingdom of Norway",
+        "NO",
+        "NOR"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        9.679975,
+        61.357092
+      ],
+      "bbox": [
+        -9.117421,
+        -54.462498,
+        33.640391,
+        80.770087
+      ]
+    },
+    {
+      "id": "natural-earth:country:SWE",
+      "naturalEarthCode": "SWE",
+      "isoAlpha2": "SE",
+      "isoAlpha3": "SWE",
+      "name": "스웨덴",
+      "nameKo": "스웨덴",
+      "nameEn": "Sweden",
+      "nameLocal": "Sweden",
+      "aliases": [
+        "스웨덴",
+        "Sweden",
+        "Swe.",
+        "Kingdom of Sweden",
+        "SE",
+        "SWE"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        19.01705,
+        65.85918
+      ],
+      "bbox": [
+        11.108165,
+        55.342678,
+        24.163414,
+        69.036356
+      ]
+    },
+    {
+      "id": "natural-earth:country:FIN",
+      "naturalEarthCode": "FIN",
+      "isoAlpha2": "FI",
+      "isoAlpha3": "FIN",
+      "name": "핀란드",
+      "nameKo": "핀란드",
+      "nameEn": "Finland",
+      "nameLocal": "Finland",
+      "aliases": [
+        "핀란드",
+        "Finland",
+        "Fin.",
+        "Republic of Finland",
+        "FI",
+        "FIN"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        27.276449,
+        63.252361
+      ],
+      "bbox": [
+        20.623165,
+        59.811225,
+        31.569525,
+        70.07531
+      ]
+    },
+    {
+      "id": "natural-earth:country:VNM",
+      "naturalEarthCode": "VNM",
+      "isoAlpha2": "VN",
+      "isoAlpha3": "VNM",
+      "name": "베트남",
+      "nameKo": "베트남",
+      "nameEn": "Vietnam",
+      "nameLocal": "Vietnam",
+      "aliases": [
+        "베트남",
+        "Vietnam",
+        "Viet.",
+        "Socialist Republic of Vietnam",
+        "VN",
+        "VNM"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        105.387292,
+        21.715416
+      ],
+      "bbox": [
+        102.118655,
+        8.565579,
+        109.472423,
+        23.366275
+      ]
+    },
+    {
+      "id": "natural-earth:country:KHM",
+      "naturalEarthCode": "KHM",
+      "isoAlpha2": "KH",
+      "isoAlpha3": "KHM",
+      "name": "캄보디아",
+      "nameKo": "캄보디아",
+      "nameEn": "Cambodia",
+      "nameLocal": "Cambodia",
+      "aliases": [
+        "캄보디아",
+        "Cambodia",
+        "Camb.",
+        "Kingdom of Cambodia",
+        "KH",
+        "KHM"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        104.50487,
+        12.647584
+      ],
+      "bbox": [
+        102.313424,
+        10.415774,
+        107.610516,
+        14.704582
+      ]
+    },
+    {
+      "id": "natural-earth:country:LUX",
+      "naturalEarthCode": "LUX",
+      "isoAlpha2": "LU",
+      "isoAlpha3": "LUX",
+      "name": "룩셈부르크",
+      "nameKo": "룩셈부르크",
+      "nameEn": "Luxembourg",
+      "nameLocal": "Luxembourg",
+      "aliases": [
+        "룩셈부르크",
+        "Luxembourg",
+        "Lux.",
+        "Grand Duchy of Luxembourg",
+        "LU",
+        "LUX"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        6.07762,
+        49.733732
+      ],
+      "bbox": [
+        5.714927,
+        49.441324,
+        6.502579,
+        50.174975
+      ]
+    },
+    {
+      "id": "natural-earth:country:ARE",
+      "naturalEarthCode": "ARE",
+      "isoAlpha2": "AE",
+      "isoAlpha3": "ARE",
+      "name": "아랍에미리트",
+      "nameKo": "아랍에미리트",
+      "nameEn": "United Arab Emirates",
+      "nameLocal": "United Arab Emirates",
+      "aliases": [
+        "아랍에미리트",
+        "United Arab Emirates",
+        "U.A.E.",
+        "AE",
+        "ARE"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        54.547256,
+        23.466285
+      ],
+      "bbox": [
+        51.569347,
+        22.620946,
+        56.383637,
+        26.074792
+      ]
+    },
+    {
+      "id": "natural-earth:country:BEL",
+      "naturalEarthCode": "BEL",
+      "isoAlpha2": "BE",
+      "isoAlpha3": "BEL",
+      "name": "벨기에",
+      "nameKo": "벨기에",
+      "nameEn": "Belgium",
+      "nameLocal": "Belgium",
+      "aliases": [
+        "벨기에",
+        "Belgium",
+        "Belg.",
+        "Kingdom of Belgium",
+        "BE",
+        "BEL"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        4.800448,
+        50.785392
+      ],
+      "bbox": [
+        2.5218,
+        49.495223,
+        6.374525,
+        51.496238
+      ]
+    },
+    {
+      "id": "natural-earth:country:GEO",
+      "naturalEarthCode": "GEO",
+      "isoAlpha2": "GE",
+      "isoAlpha3": "GEO",
+      "name": "조지아",
+      "nameKo": "조지아",
+      "nameEn": "Georgia",
+      "nameLocal": "Georgia",
+      "aliases": [
+        "조지아",
+        "Georgia",
+        "Geo.",
+        "GE",
+        "GEO"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        43.735724,
+        41.870087
+      ],
+      "bbox": [
+        39.985976,
+        41.044111,
+        46.694803,
+        43.575843
+      ]
+    },
+    {
+      "id": "natural-earth:country:MKD",
+      "naturalEarthCode": "MKD",
+      "isoAlpha2": "MK",
+      "isoAlpha3": "MKD",
+      "name": "북마케도니아",
+      "nameKo": "북마케도니아",
+      "nameEn": "North Macedonia",
+      "nameLocal": "North Macedonia",
+      "aliases": [
+        "북마케도니아",
+        "North Macedonia",
+        "N. Mac.",
+        "Republic of North Macedonia",
+        "MK",
+        "MKD"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        21.555839,
+        41.558223
+      ],
+      "bbox": [
+        20.444157,
+        40.849394,
+        23.009582,
+        42.370335
+      ]
+    },
+    {
+      "id": "natural-earth:country:ALB",
+      "naturalEarthCode": "ALB",
+      "isoAlpha2": "AL",
+      "isoAlpha3": "ALB",
+      "name": "알바니아",
+      "nameKo": "알바니아",
+      "nameEn": "Albania",
+      "nameLocal": "Albania",
+      "aliases": [
+        "알바니아",
+        "Albania",
+        "Alb.",
+        "Republic of Albania",
+        "AL",
+        "ALB"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        20.11384,
+        40.654855
+      ],
+      "bbox": [
+        19.272033,
+        39.637013,
+        21.036679,
+        42.654814
+      ]
+    },
+    {
+      "id": "natural-earth:country:AZE",
+      "naturalEarthCode": "AZE",
+      "isoAlpha2": "AZ",
+      "isoAlpha3": "AZE",
+      "name": "아제르바이잔",
+      "nameKo": "아제르바이잔",
+      "nameEn": "Azerbaijan",
+      "nameLocal": "Azerbaijan",
+      "aliases": [
+        "아제르바이잔",
+        "Azerbaijan",
+        "Aze.",
+        "Republic of Azerbaijan",
+        "AZ",
+        "AZE"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        47.210994,
+        40.402387
+      ],
+      "bbox": [
+        44.774559,
+        38.392645,
+        50.625743,
+        41.890442
+      ]
+    },
+    {
+      "id": "natural-earth:country:KOS",
+      "naturalEarthCode": "KOS",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "코소보",
+      "nameKo": "코소보",
+      "nameEn": "Kosovo",
+      "nameLocal": "Kosovo",
+      "aliases": [
+        "코소보",
+        "Kosovo",
+        "Kos.",
+        "Republic of Kosovo",
+        "KOS"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        20.860719,
+        42.593587
+      ],
+      "bbox": [
+        20.024751,
+        41.84401,
+        21.772758,
+        43.263071
+      ]
+    },
+    {
+      "id": "natural-earth:country:TUR",
+      "naturalEarthCode": "TUR",
+      "isoAlpha2": "TR",
+      "isoAlpha3": "TUR",
+      "name": "터키",
+      "nameKo": "터키",
+      "nameEn": "Turkey",
+      "nameLocal": "Turkey",
+      "aliases": [
+        "터키",
+        "Turkey",
+        "Tur.",
+        "Republic of Turkey",
+        "TR",
+        "TUR"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        34.508268,
+        39.345388
+      ],
+      "bbox": [
+        25.663259,
+        35.819779,
+        44.806993,
+        42.098782
+      ]
+    },
+    {
+      "id": "natural-earth:country:ESP",
+      "naturalEarthCode": "ESP",
+      "isoAlpha2": "ES",
+      "isoAlpha3": "ESP",
+      "name": "스페인",
+      "nameKo": "스페인",
+      "nameEn": "Spain",
+      "nameLocal": "Spain",
+      "aliases": [
+        "스페인",
+        "Spain",
+        "Sp.",
+        "Kingdom of Spain",
+        "ES",
+        "ESP"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        -3.464718,
+        40.090953
+      ],
+      "bbox": [
+        -18.167226,
+        27.642239,
+        4.337087,
+        43.793443
+      ]
+    },
+    {
+      "id": "natural-earth:country:LAO",
+      "naturalEarthCode": "LAO",
+      "isoAlpha2": "LA",
+      "isoAlpha3": "LAO",
+      "name": "라오스",
+      "nameKo": "라오스",
+      "nameEn": "Laos",
+      "nameLocal": "Laos",
+      "aliases": [
+        "라오스",
+        "Laos",
+        "Lao PDR",
+        "Lao People's Democratic Republic",
+        "LA",
+        "LAO"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        102.533912,
+        19.431821
+      ],
+      "bbox": [
+        100.097073,
+        13.915457,
+        107.664363,
+        22.496044
+      ]
+    },
+    {
+      "id": "natural-earth:country:KGZ",
+      "naturalEarthCode": "KGZ",
+      "isoAlpha2": "KG",
+      "isoAlpha3": "KGZ",
+      "name": "키르기스스탄",
+      "nameKo": "키르기스스탄",
+      "nameEn": "Kyrgyzstan",
+      "nameLocal": "Kyrgyzstan",
+      "aliases": [
+        "키르기스스탄",
+        "Kyrgyzstan",
+        "Kyrgyz Republic",
+        "Kgz.",
+        "KG",
+        "KGZ"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        74.532637,
+        41.66854
+      ],
+      "bbox": [
+        69.226296,
+        39.189237,
+        80.257561,
+        43.261702
+      ]
+    },
+    {
+      "id": "natural-earth:country:ARM",
+      "naturalEarthCode": "ARM",
+      "isoAlpha2": "AM",
+      "isoAlpha3": "ARM",
+      "name": "아르메니아",
+      "nameKo": "아르메니아",
+      "nameEn": "Armenia",
+      "nameLocal": "Armenia",
+      "aliases": [
+        "아르메니아",
+        "Armenia",
+        "Arm.",
+        "Republic of Armenia",
+        "AM",
+        "ARM"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        44.800564,
+        40.459077
+      ],
+      "bbox": [
+        43.436294,
+        38.863701,
+        46.602612,
+        41.290452
+      ]
+    },
+    {
+      "id": "natural-earth:country:DNK",
+      "naturalEarthCode": "DNK",
+      "isoAlpha2": "DK",
+      "isoAlpha3": "DNK",
+      "name": "덴마크",
+      "nameKo": "덴마크",
+      "nameEn": "Denmark",
+      "nameLocal": "Denmark",
+      "aliases": [
+        "덴마크",
+        "Denmark",
+        "Den.",
+        "Kingdom of Denmark",
+        "DK",
+        "DNK"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        9.018163,
+        55.966965
+      ],
+      "bbox": [
+        8.094005,
+        54.56859,
+        15.151378,
+        57.751166
+      ]
+    },
+    {
+      "id": "natural-earth:country:LBY",
+      "naturalEarthCode": "LBY",
+      "isoAlpha2": "LY",
+      "isoAlpha3": "LBY",
+      "name": "리비아",
+      "nameKo": "리비아",
+      "nameEn": "Libya",
+      "nameLocal": "Libya",
+      "aliases": [
+        "리비아",
+        "Libya",
+        "LY",
+        "LBY"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        18.011015,
+        26.638944
+      ],
+      "bbox": [
+        9.286544,
+        19.496124,
+        25.156261,
+        33.181225
+      ]
+    },
+    {
+      "id": "natural-earth:country:TUN",
+      "naturalEarthCode": "TUN",
+      "isoAlpha2": "TN",
+      "isoAlpha3": "TUN",
+      "name": "튀니지",
+      "nameKo": "튀니지",
+      "nameEn": "Tunisia",
+      "nameLocal": "Tunisia",
+      "aliases": [
+        "튀니지",
+        "Tunisia",
+        "Tun.",
+        "Republic of Tunisia",
+        "TN",
+        "TUN"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        9.007881,
+        33.687263
+      ],
+      "bbox": [
+        7.479832,
+        30.228905,
+        11.564131,
+        37.345201
+      ]
+    },
+    {
+      "id": "natural-earth:country:ROU",
+      "naturalEarthCode": "ROU",
+      "isoAlpha2": "RO",
+      "isoAlpha3": "ROU",
+      "name": "루마니아",
+      "nameKo": "루마니아",
+      "nameEn": "Romania",
+      "nameLocal": "Romania",
+      "aliases": [
+        "루마니아",
+        "Romania",
+        "Rom.",
+        "RO",
+        "ROU"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        24.972624,
+        45.733237
+      ],
+      "bbox": [
+        20.242826,
+        43.65005,
+        29.699555,
+        48.274832
+      ]
+    },
+    {
+      "id": "natural-earth:country:HUN",
+      "naturalEarthCode": "HUN",
+      "isoAlpha2": "HU",
+      "isoAlpha3": "HUN",
+      "name": "헝가리",
+      "nameKo": "헝가리",
+      "nameEn": "Hungary",
+      "nameLocal": "Hungary",
+      "aliases": [
+        "헝가리",
+        "Hungary",
+        "Hun.",
+        "Republic of Hungary",
+        "HU",
+        "HUN"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        19.447867,
+        47.086841
+      ],
+      "bbox": [
+        16.094035,
+        45.741343,
+        22.877601,
+        48.569233
+      ]
+    },
+    {
+      "id": "natural-earth:country:SVK",
+      "naturalEarthCode": "SVK",
+      "isoAlpha2": "SK",
+      "isoAlpha3": "SVK",
+      "name": "슬로바키아",
+      "nameKo": "슬로바키아",
+      "nameEn": "Slovakia",
+      "nameLocal": "Slovakia",
+      "aliases": [
+        "슬로바키아",
+        "Slovakia",
+        "Slovak Republic",
+        "Svk.",
+        "SK",
+        "SVK"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        19.049868,
+        48.734044
+      ],
+      "bbox": [
+        16.84448,
+        47.750006,
+        22.539637,
+        49.60178
+      ]
+    },
+    {
+      "id": "natural-earth:country:POL",
+      "naturalEarthCode": "POL",
+      "isoAlpha2": "PL",
+      "isoAlpha3": "POL",
+      "name": "폴란드",
+      "nameKo": "폴란드",
+      "nameEn": "Poland",
+      "nameLocal": "Poland",
+      "aliases": [
+        "폴란드",
+        "Poland",
+        "Pol.",
+        "Republic of Poland",
+        "PL",
+        "POL"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        19.490468,
+        51.990316
+      ],
+      "bbox": [
+        14.123923,
+        48.994013,
+        24.143156,
+        54.838324
+      ]
+    },
+    {
+      "id": "natural-earth:country:IRL",
+      "naturalEarthCode": "IRL",
+      "isoAlpha2": "IE",
+      "isoAlpha3": "IRL",
+      "name": "아일랜드",
+      "nameKo": "아일랜드",
+      "nameEn": "Ireland",
+      "nameLocal": "Ireland",
+      "aliases": [
+        "아일랜드",
+        "Ireland",
+        "Ire.",
+        "IE",
+        "IRL"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        -7.798588,
+        53.078726
+      ],
+      "bbox": [
+        -10.478179,
+        51.445705,
+        -5.99352,
+        55.386379
+      ]
+    },
+    {
+      "id": "natural-earth:country:GBR",
+      "naturalEarthCode": "GBR",
+      "isoAlpha2": "GB",
+      "isoAlpha3": "GBR",
+      "name": "영국",
+      "nameKo": "영국",
+      "nameEn": "United Kingdom",
+      "nameLocal": "United Kingdom",
+      "aliases": [
+        "영국",
+        "United Kingdom",
+        "U.K.",
+        "United Kingdom of Great Britain and Northern Ireland",
+        "GB",
+        "GBR"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        -2.116346,
+        54.402739
+      ],
+      "bbox": [
+        -13.691314,
+        49.909613,
+        1.771169,
+        60.847886
+      ]
+    },
+    {
+      "id": "natural-earth:country:GRC",
+      "naturalEarthCode": "GRC",
+      "isoAlpha2": "GR",
+      "isoAlpha3": "GRC",
+      "name": "그리스",
+      "nameKo": "그리스",
+      "nameEn": "Greece",
+      "nameLocal": "Greece",
+      "aliases": [
+        "그리스",
+        "Greece",
+        "Hellenic Republic",
+        "GR",
+        "GRC"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        21.72568,
+        39.492763
+      ],
+      "bbox": [
+        19.626475,
+        34.815009,
+        28.239757,
+        41.750476
+      ]
+    },
+    {
+      "id": "natural-earth:country:ZMB",
+      "naturalEarthCode": "ZMB",
+      "isoAlpha2": "ZM",
+      "isoAlpha3": "ZMB",
+      "name": "잠비아",
+      "nameKo": "잠비아",
+      "nameEn": "Zambia",
+      "nameLocal": "Zambia",
+      "aliases": [
+        "잠비아",
+        "Zambia",
+        "Republic of Zambia",
+        "ZM",
+        "ZMB"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        26.395298,
+        -14.660804
+      ],
+      "bbox": [
+        21.979878,
+        -18.069232,
+        33.674203,
+        -8.194124
+      ]
+    },
+    {
+      "id": "natural-earth:country:SLE",
+      "naturalEarthCode": "SLE",
+      "isoAlpha2": "SL",
+      "isoAlpha3": "SLE",
+      "name": "시에라리온",
+      "nameKo": "시에라리온",
+      "nameEn": "Sierra Leone",
+      "nameLocal": "Sierra Leone",
+      "aliases": [
+        "시에라리온",
+        "Sierra Leone",
+        "S.L.",
+        "Republic of Sierra Leone",
+        "SL",
+        "SLE"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -11.763677,
+        8.617449
+      ],
+      "bbox": [
+        -13.301096,
+        6.91942,
+        -10.282236,
+        9.996006
+      ]
+    },
+    {
+      "id": "natural-earth:country:GIN",
+      "naturalEarthCode": "GIN",
+      "isoAlpha2": "GN",
+      "isoAlpha3": "GIN",
+      "name": "기니",
+      "nameKo": "기니",
+      "nameEn": "Guinea",
+      "nameLocal": "Guinea",
+      "aliases": [
+        "기니",
+        "Guinea",
+        "Gin.",
+        "Republic of Guinea",
+        "GN",
+        "GIN"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -10.016402,
+        10.618516
+      ],
+      "bbox": [
+        -15.081125,
+        7.190208,
+        -7.662447,
+        12.673388
+      ]
+    },
+    {
+      "id": "natural-earth:country:LBR",
+      "naturalEarthCode": "LBR",
+      "isoAlpha2": "LR",
+      "isoAlpha3": "LBR",
+      "name": "라이베리아",
+      "nameKo": "라이베리아",
+      "nameEn": "Liberia",
+      "nameLocal": "Liberia",
+      "aliases": [
+        "라이베리아",
+        "Liberia",
+        "Republic of Liberia",
+        "LR",
+        "LBR"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -9.460379,
+        6.447177
+      ],
+      "bbox": [
+        -11.476186,
+        4.347235,
+        -7.384118,
+        8.565396
+      ]
+    },
+    {
+      "id": "natural-earth:country:CAF",
+      "naturalEarthCode": "CAF",
+      "isoAlpha2": "CF",
+      "isoAlpha3": "CAF",
+      "name": "중앙아프리카 공화국",
+      "nameKo": "중앙아프리카 공화국",
+      "nameEn": "Central African Republic",
+      "nameLocal": "Central African Republic",
+      "aliases": [
+        "중앙아프리카 공화국",
+        "Central African Republic",
+        "Central African Rep.",
+        "C.A.R.",
+        "CF",
+        "CAF"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        20.906897,
+        6.989681
+      ],
+      "bbox": [
+        14.387266,
+        2.236454,
+        27.441301,
+        11.000828
+      ]
+    },
+    {
+      "id": "natural-earth:country:SDN",
+      "naturalEarthCode": "SDN",
+      "isoAlpha2": "SD",
+      "isoAlpha3": "SDN",
+      "name": "수단",
+      "nameKo": "수단",
+      "nameEn": "Sudan",
+      "nameLocal": "Sudan",
+      "aliases": [
+        "수단",
+        "Sudan",
+        "Republic of the Sudan",
+        "SD",
+        "SDN"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        29.260657,
+        16.330746
+      ],
+      "bbox": [
+        21.809449,
+        8.681642,
+        38.603852,
+        22.226965
+      ]
+    },
+    {
+      "id": "natural-earth:country:DJI",
+      "naturalEarthCode": "DJI",
+      "isoAlpha2": "DJ",
+      "isoAlpha3": "DJI",
+      "name": "지부티",
+      "nameKo": "지부티",
+      "nameEn": "Djibouti",
+      "nameLocal": "Djibouti",
+      "aliases": [
+        "지부티",
+        "Djibouti",
+        "Dji.",
+        "Republic of Djibouti",
+        "DJ",
+        "DJI"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        42.498825,
+        11.976343
+      ],
+      "bbox": [
+        41.74911,
+        10.929825,
+        43.418712,
+        12.707913
+      ]
+    },
+    {
+      "id": "natural-earth:country:ERI",
+      "naturalEarthCode": "ERI",
+      "isoAlpha2": "ER",
+      "isoAlpha3": "ERI",
+      "name": "에리트레아",
+      "nameKo": "에리트레아",
+      "nameEn": "Eritrea",
+      "nameLocal": "Eritrea",
+      "aliases": [
+        "에리트레아",
+        "Eritrea",
+        "Erit.",
+        "State of Eritrea",
+        "ER",
+        "ERI"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        38.285566,
+        15.787401
+      ],
+      "bbox": [
+        36.423647,
+        12.360022,
+        43.123871,
+        18.004828
+      ]
+    },
+    {
+      "id": "natural-earth:country:AUT",
+      "naturalEarthCode": "AUT",
+      "isoAlpha2": "AT",
+      "isoAlpha3": "AUT",
+      "name": "오스트리아",
+      "nameKo": "오스트리아",
+      "nameEn": "Austria",
+      "nameLocal": "Austria",
+      "aliases": [
+        "오스트리아",
+        "Austria",
+        "Aust.",
+        "Republic of Austria",
+        "AT",
+        "AUT"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        14.130515,
+        47.518859
+      ],
+      "bbox": [
+        9.521155,
+        46.378643,
+        17.148338,
+        49.009774
+      ]
+    },
+    {
+      "id": "natural-earth:country:IRQ",
+      "naturalEarthCode": "IRQ",
+      "isoAlpha2": "IQ",
+      "isoAlpha3": "IRQ",
+      "name": "이라크",
+      "nameKo": "이라크",
+      "nameEn": "Iraq",
+      "nameLocal": "Iraq",
+      "aliases": [
+        "이라크",
+        "Iraq",
+        "Republic of Iraq",
+        "IQ",
+        "IRQ"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        43.26181,
+        33.09403
+      ],
+      "bbox": [
+        38.774511,
+        29.063137,
+        48.559255,
+        37.375498
+      ]
+    },
+    {
+      "id": "natural-earth:country:ITA",
+      "naturalEarthCode": "ITA",
+      "isoAlpha2": "IT",
+      "isoAlpha3": "ITA",
+      "name": "이탈리아",
+      "nameKo": "이탈리아",
+      "nameEn": "Italy",
+      "nameLocal": "Italy",
+      "aliases": [
+        "이탈리아",
+        "Italy",
+        "Italian Republic",
+        "IT",
+        "ITA"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        11.076907,
+        44.732482
+      ],
+      "bbox": [
+        6.602728,
+        35.489244,
+        18.517426,
+        47.085215
+      ]
+    },
+    {
+      "id": "natural-earth:country:CHE",
+      "naturalEarthCode": "CHE",
+      "isoAlpha2": "CH",
+      "isoAlpha3": "CHE",
+      "name": "스위스",
+      "nameKo": "스위스",
+      "nameEn": "Switzerland",
+      "nameLocal": "Switzerland",
+      "aliases": [
+        "스위스",
+        "Switzerland",
+        "Switz.",
+        "Swiss Confederation",
+        "CH",
+        "CHE"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        7.463965,
+        46.719114
+      ],
+      "bbox": [
+        5.954809,
+        45.820718,
+        10.466627,
+        47.801166
+      ]
+    },
+    {
+      "id": "natural-earth:country:IRN",
+      "naturalEarthCode": "IRN",
+      "isoAlpha2": "IR",
+      "isoAlpha3": "IRN",
+      "name": "이란",
+      "nameKo": "이란",
+      "nameEn": "Iran",
+      "nameLocal": "Iran",
+      "aliases": [
+        "이란",
+        "Iran",
+        "Iran, Islamic Rep.",
+        "Islamic Republic of Iran",
+        "IR",
+        "IRN"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        54.931495,
+        32.166225
+      ],
+      "bbox": [
+        44.014863,
+        25.059408,
+        63.319628,
+        39.771527
+      ]
+    },
+    {
+      "id": "natural-earth:country:NLD",
+      "naturalEarthCode": "NLD",
+      "isoAlpha2": "NL",
+      "isoAlpha3": "NLD",
+      "name": "네덜란드",
+      "nameKo": "네덜란드",
+      "nameEn": "Netherlands",
+      "nameLocal": "Netherlands",
+      "aliases": [
+        "네덜란드",
+        "Netherlands",
+        "Neth.",
+        "Kingdom of the Netherlands",
+        "NL",
+        "NLD"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        5.61144,
+        52.422211
+      ],
+      "bbox": [
+        -68.417388,
+        12.02204,
+        7.198506,
+        53.558092
+      ]
+    },
+    {
+      "id": "natural-earth:country:LIE",
+      "naturalEarthCode": "LIE",
+      "isoAlpha2": "LI",
+      "isoAlpha3": "LIE",
+      "name": "리히텐슈타인",
+      "nameKo": "리히텐슈타인",
+      "nameEn": "Liechtenstein",
+      "nameLocal": "Liechtenstein",
+      "aliases": [
+        "리히텐슈타인",
+        "Liechtenstein",
+        "Liech.",
+        "Principality of Liechtenstein",
+        "LI",
+        "LIE"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        9.559439,
+        47.111405
+      ],
+      "bbox": [
+        9.475886,
+        47.0524,
+        9.615723,
+        47.262801
+      ]
+    },
+    {
+      "id": "natural-earth:country:CIV",
+      "naturalEarthCode": "CIV",
+      "isoAlpha2": "CI",
+      "isoAlpha3": "CIV",
+      "name": "코트디부아르",
+      "nameKo": "코트디부아르",
+      "nameEn": "Ivory Coast",
+      "nameLocal": "Ivory Coast",
+      "aliases": [
+        "코트디부아르",
+        "Ivory Coast",
+        "Côte d'Ivoire",
+        "I.C.",
+        "Republic of Ivory Coast",
+        "CI",
+        "CIV"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -5.568618,
+        7.49139
+      ],
+      "bbox": [
+        -8.61872,
+        4.344062,
+        -2.506328,
+        10.726478
+      ]
+    },
+    {
+      "id": "natural-earth:country:SRB",
+      "naturalEarthCode": "SRB",
+      "isoAlpha2": "RS",
+      "isoAlpha3": "SRB",
+      "name": "세르비아",
+      "nameKo": "세르비아",
+      "nameEn": "Serbia",
+      "nameLocal": "Serbia",
+      "aliases": [
+        "세르비아",
+        "Serbia",
+        "Serb.",
+        "Republic of Serbia",
+        "RS",
+        "SRB"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        20.787989,
+        44.189919
+      ],
+      "bbox": [
+        18.844978,
+        42.234945,
+        22.984571,
+        46.173875
+      ]
+    },
+    {
+      "id": "natural-earth:country:MLI",
+      "naturalEarthCode": "MLI",
+      "isoAlpha2": "ML",
+      "isoAlpha3": "MLI",
+      "name": "말리",
+      "nameKo": "말리",
+      "nameEn": "Mali",
+      "nameLocal": "Mali",
+      "aliases": [
+        "말리",
+        "Mali",
+        "Republic of Mali",
+        "ML",
+        "MLI"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -2.038455,
+        18.692713
+      ],
+      "bbox": [
+        -12.26413,
+        10.140054,
+        4.235638,
+        24.995065
+      ]
+    },
+    {
+      "id": "natural-earth:country:SEN",
+      "naturalEarthCode": "SEN",
+      "isoAlpha2": "SN",
+      "isoAlpha3": "SEN",
+      "name": "세네갈",
+      "nameKo": "세네갈",
+      "nameEn": "Senegal",
+      "nameLocal": "Senegal",
+      "aliases": [
+        "세네갈",
+        "Senegal",
+        "Sen.",
+        "Republic of Senegal",
+        "SN",
+        "SEN"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -14.778586,
+        15.138125
+      ],
+      "bbox": [
+        -17.536041,
+        12.305607,
+        -11.377776,
+        16.691385
+      ]
+    },
+    {
+      "id": "natural-earth:country:NGA",
+      "naturalEarthCode": "NGA",
+      "isoAlpha2": "NG",
+      "isoAlpha3": "NGA",
+      "name": "나이지리아",
+      "nameKo": "나이지리아",
+      "nameEn": "Nigeria",
+      "nameLocal": "Nigeria",
+      "aliases": [
+        "나이지리아",
+        "Nigeria",
+        "Federal Republic of Nigeria",
+        "NG",
+        "NGA"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        7.50322,
+        9.439799
+      ],
+      "bbox": [
+        2.671082,
+        4.272162,
+        14.669936,
+        13.880291
+      ]
+    },
+    {
+      "id": "natural-earth:country:BEN",
+      "naturalEarthCode": "BEN",
+      "isoAlpha2": "BJ",
+      "isoAlpha3": "BEN",
+      "name": "베냉",
+      "nameKo": "베냉",
+      "nameEn": "Benin",
+      "nameLocal": "Benin",
+      "aliases": [
+        "베냉",
+        "Benin",
+        "Republic of Benin",
+        "BJ",
+        "BEN"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        2.352018,
+        10.324775
+      ],
+      "bbox": [
+        0.759881,
+        6.213894,
+        3.837419,
+        12.399244
+      ]
+    },
+    {
+      "id": "natural-earth:country:AGO",
+      "naturalEarthCode": "AGO",
+      "isoAlpha2": "AO",
+      "isoAlpha3": "AGO",
+      "name": "앙골라",
+      "nameKo": "앙골라",
+      "nameEn": "Angola",
+      "nameLocal": "Angola",
+      "aliases": [
+        "앙골라",
+        "Angola",
+        "Ang.",
+        "People's Republic of Angola",
+        "AO",
+        "AGO"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        17.984249,
+        -12.182762
+      ],
+      "bbox": [
+        11.669394,
+        -18.031405,
+        24.061714,
+        -4.391204
+      ]
+    },
+    {
+      "id": "natural-earth:country:HRV",
+      "naturalEarthCode": "HRV",
+      "isoAlpha2": "HR",
+      "isoAlpha3": "HRV",
+      "name": "크로아티아",
+      "nameKo": "크로아티아",
+      "nameEn": "Croatia",
+      "nameLocal": "Croatia",
+      "aliases": [
+        "크로아티아",
+        "Croatia",
+        "Cro.",
+        "Republic of Croatia",
+        "HR",
+        "HRV"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        16.37241,
+        45.805799
+      ],
+      "bbox": [
+        13.501475,
+        42.416327,
+        19.407838,
+        46.546979
+      ]
+    },
+    {
+      "id": "natural-earth:country:SVN",
+      "naturalEarthCode": "SVN",
+      "isoAlpha2": "SI",
+      "isoAlpha3": "SVN",
+      "name": "슬로베니아",
+      "nameKo": "슬로베니아",
+      "nameEn": "Slovenia",
+      "nameLocal": "Slovenia",
+      "aliases": [
+        "슬로베니아",
+        "Slovenia",
+        "Slo.",
+        "Republic of Slovenia",
+        "SI",
+        "SVN"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        14.915312,
+        46.06076
+      ],
+      "bbox": [
+        13.365261,
+        45.423637,
+        16.515302,
+        46.863962
+      ]
+    },
+    {
+      "id": "natural-earth:country:QAT",
+      "naturalEarthCode": "QAT",
+      "isoAlpha2": "QA",
+      "isoAlpha3": "QAT",
+      "name": "카타르",
+      "nameKo": "카타르",
+      "nameEn": "Qatar",
+      "nameLocal": "Qatar",
+      "aliases": [
+        "카타르",
+        "Qatar",
+        "State of Qatar",
+        "QA",
+        "QAT"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        51.143509,
+        25.237383
+      ],
+      "bbox": [
+        50.750987,
+        24.559872,
+        51.616547,
+        26.160102
+      ]
+    },
+    {
+      "id": "natural-earth:country:SAU",
+      "naturalEarthCode": "SAU",
+      "isoAlpha2": "SA",
+      "isoAlpha3": "SAU",
+      "name": "사우디아라비아",
+      "nameKo": "사우디아라비아",
+      "nameEn": "Saudi Arabia",
+      "nameLocal": "Saudi Arabia",
+      "aliases": [
+        "사우디아라비아",
+        "Saudi Arabia",
+        "Saud.",
+        "Kingdom of Saudi Arabia",
+        "SA",
+        "SAU"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        44.6996,
+        23.806908
+      ],
+      "bbox": [
+        34.572765,
+        16.370958,
+        55.637565,
+        32.121348
+      ]
+    },
+    {
+      "id": "natural-earth:country:BWA",
+      "naturalEarthCode": "BWA",
+      "isoAlpha2": "BW",
+      "isoAlpha3": "BWA",
+      "name": "보츠와나",
+      "nameKo": "보츠와나",
+      "nameEn": "Botswana",
+      "nameLocal": "Botswana",
+      "aliases": [
+        "보츠와나",
+        "Botswana",
+        "Bwa.",
+        "Republic of Botswana",
+        "BW",
+        "BWA"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        24.179216,
+        -22.102634
+      ],
+      "bbox": [
+        19.978346,
+        -26.891794,
+        29.350074,
+        -17.781808
+      ]
+    },
+    {
+      "id": "natural-earth:country:ZWE",
+      "naturalEarthCode": "ZWE",
+      "isoAlpha2": "ZW",
+      "isoAlpha3": "ZWE",
+      "name": "짐바브웨",
+      "nameKo": "짐바브웨",
+      "nameEn": "Zimbabwe",
+      "nameLocal": "Zimbabwe",
+      "aliases": [
+        "짐바브웨",
+        "Zimbabwe",
+        "Zimb.",
+        "Republic of Zimbabwe",
+        "ZW",
+        "ZWE"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        29.925444,
+        -18.91164
+      ],
+      "bbox": [
+        25.21937,
+        -22.39734,
+        33.042768,
+        -15.614808
+      ]
+    },
+    {
+      "id": "natural-earth:country:PAK",
+      "naturalEarthCode": "PAK",
+      "isoAlpha2": "PK",
+      "isoAlpha3": "PAK",
+      "name": "파키스탄",
+      "nameKo": "파키스탄",
+      "nameEn": "Pakistan",
+      "nameLocal": "Pakistan",
+      "aliases": [
+        "파키스탄",
+        "Pakistan",
+        "Pak.",
+        "Islamic Republic of Pakistan",
+        "PK",
+        "PAK"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        68.545632,
+        29.328389
+      ],
+      "bbox": [
+        60.844379,
+        23.694525,
+        77.048971,
+        37.054484
+      ]
+    },
+    {
+      "id": "natural-earth:country:BGR",
+      "naturalEarthCode": "BGR",
+      "isoAlpha2": "BG",
+      "isoAlpha3": "BGR",
+      "name": "불가리아",
+      "nameKo": "불가리아",
+      "nameEn": "Bulgaria",
+      "nameLocal": "Bulgaria",
+      "aliases": [
+        "불가리아",
+        "Bulgaria",
+        "Bulg.",
+        "Republic of Bulgaria",
+        "BG",
+        "BGR"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        25.15709,
+        42.508785
+      ],
+      "bbox": [
+        22.345023,
+        41.238104,
+        28.603526,
+        44.228435
+      ]
+    },
+    {
+      "id": "natural-earth:country:THA",
+      "naturalEarthCode": "THA",
+      "isoAlpha2": "TH",
+      "isoAlpha3": "THA",
+      "name": "태국",
+      "nameKo": "태국",
+      "nameEn": "Thailand",
+      "nameLocal": "Thailand",
+      "aliases": [
+        "태국",
+        "Thailand",
+        "Thai.",
+        "Kingdom of Thailand",
+        "TH",
+        "THA"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        101.073198,
+        15.45974
+      ],
+      "bbox": [
+        97.351401,
+        5.62989,
+        105.650998,
+        20.445006
+      ]
+    },
+    {
+      "id": "natural-earth:country:SMR",
+      "naturalEarthCode": "SMR",
+      "isoAlpha2": "SM",
+      "isoAlpha3": "SMR",
+      "name": "산마리노",
+      "nameKo": "산마리노",
+      "nameEn": "San Marino",
+      "nameLocal": "San Marino",
+      "aliases": [
+        "산마리노",
+        "San Marino",
+        "S.M.",
+        "Republic of San Marino",
+        "SM",
+        "SMR"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        12.441206,
+        43.933916
+      ],
+      "bbox": [
+        12.385629,
+        43.892056,
+        12.492392,
+        43.982567
+      ]
+    },
+    {
+      "id": "natural-earth:country:HTI",
+      "naturalEarthCode": "HTI",
+      "isoAlpha2": "HT",
+      "isoAlpha3": "HTI",
+      "name": "아이티",
+      "nameKo": "아이티",
+      "nameEn": "Haiti",
+      "nameLocal": "Haiti",
+      "aliases": [
+        "아이티",
+        "Haiti",
+        "Republic of Haiti",
+        "HT",
+        "HTI"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -72.224051,
+        19.263784
+      ],
+      "bbox": [
+        -74.489166,
+        18.025946,
+        -71.639111,
+        20.089789
+      ]
+    },
+    {
+      "id": "natural-earth:country:DOM",
+      "naturalEarthCode": "DOM",
+      "isoAlpha2": "DO",
+      "isoAlpha3": "DOM",
+      "name": "도미니카 공화국",
+      "nameKo": "도미니카 공화국",
+      "nameEn": "Dominican Republic",
+      "nameLocal": "Dominican Republic",
+      "aliases": [
+        "도미니카 공화국",
+        "Dominican Republic",
+        "Dominican Rep.",
+        "Dom. Rep.",
+        "DO",
+        "DOM"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -70.653998,
+        19.104137
+      ],
+      "bbox": [
+        -72.009838,
+        17.545559,
+        -68.328603,
+        19.93769
+      ]
+    },
+    {
+      "id": "natural-earth:country:TCD",
+      "naturalEarthCode": "TCD",
+      "isoAlpha2": "TD",
+      "isoAlpha3": "TCD",
+      "name": "차드",
+      "nameKo": "차드",
+      "nameEn": "Chad",
+      "nameLocal": "Chad",
+      "aliases": [
+        "차드",
+        "Chad",
+        "Republic of Chad",
+        "TD",
+        "TCD"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        18.645041,
+        15.142959
+      ],
+      "bbox": [
+        13.449184,
+        7.455567,
+        23.984406,
+        23.44472
+      ]
+    },
+    {
+      "id": "natural-earth:country:KWT",
+      "naturalEarthCode": "KWT",
+      "isoAlpha2": "KW",
+      "isoAlpha3": "KWT",
+      "name": "쿠웨이트",
+      "nameKo": "쿠웨이트",
+      "nameEn": "Kuwait",
+      "nameLocal": "Kuwait",
+      "aliases": [
+        "쿠웨이트",
+        "Kuwait",
+        "Kwt.",
+        "State of Kuwait",
+        "KW",
+        "KWT"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        47.313999,
+        29.413628
+      ],
+      "bbox": [
+        46.532436,
+        28.533505,
+        48.432781,
+        30.098216
+      ]
+    },
+    {
+      "id": "natural-earth:country:SLV",
+      "naturalEarthCode": "SLV",
+      "isoAlpha2": "SV",
+      "isoAlpha3": "SLV",
+      "name": "엘살바도르",
+      "nameKo": "엘살바도르",
+      "nameEn": "El Salvador",
+      "nameLocal": "El Salvador",
+      "aliases": [
+        "엘살바도르",
+        "El Salvador",
+        "El. S.",
+        "Republic of El Salvador",
+        "SV",
+        "SLV"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -88.890124,
+        13.685371
+      ],
+      "bbox": [
+        -90.114779,
+        13.158637,
+        -87.693194,
+        14.445373
+      ]
+    },
+    {
+      "id": "natural-earth:country:GTM",
+      "naturalEarthCode": "GTM",
+      "isoAlpha2": "GT",
+      "isoAlpha3": "GTM",
+      "name": "과테말라",
+      "nameKo": "과테말라",
+      "nameEn": "Guatemala",
+      "nameLocal": "Guatemala",
+      "aliases": [
+        "과테말라",
+        "Guatemala",
+        "Guat.",
+        "Republic of Guatemala",
+        "GT",
+        "GTM"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -90.497134,
+        14.982133
+      ],
+      "bbox": [
+        -92.246257,
+        13.731404,
+        -88.220937,
+        17.81602
+      ]
+    },
+    {
+      "id": "natural-earth:country:TLS",
+      "naturalEarthCode": "TLS",
+      "isoAlpha2": "TL",
+      "isoAlpha3": "TLS",
+      "name": "동티모르",
+      "nameKo": "동티모르",
+      "nameEn": "East Timor",
+      "nameLocal": "East Timor",
+      "aliases": [
+        "동티모르",
+        "East Timor",
+        "Timor-Leste",
+        "T.L.",
+        "Democratic Republic of Timor-Leste",
+        "TL",
+        "TLS"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        125.854679,
+        -8.803705
+      ],
+      "bbox": [
+        124.03004,
+        -9.501228,
+        127.313243,
+        -8.135024
+      ]
+    },
+    {
+      "id": "natural-earth:country:BRN",
+      "naturalEarthCode": "BRN",
+      "isoAlpha2": "BN",
+      "isoAlpha3": "BRN",
+      "name": "브루나이",
+      "nameKo": "브루나이",
+      "nameEn": "Brunei",
+      "nameLocal": "Brunei",
+      "aliases": [
+        "브루나이",
+        "Brunei",
+        "Brunei Darussalam",
+        "Negara Brunei Darussalam",
+        "BN",
+        "BRN"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        114.551943,
+        4.448298
+      ],
+      "bbox": [
+        113.99879,
+        4.016681,
+        115.360741,
+        5.057196
+      ]
+    },
+    {
+      "id": "natural-earth:country:MCO",
+      "naturalEarthCode": "MCO",
+      "isoAlpha2": "MC",
+      "isoAlpha3": "MCO",
+      "name": "모나코",
+      "nameKo": "모나코",
+      "nameEn": "Monaco",
+      "nameLocal": "Monaco",
+      "aliases": [
+        "모나코",
+        "Monaco",
+        "Mco.",
+        "Principality of Monaco",
+        "MC",
+        "MCO"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        7.398291,
+        43.739652
+      ],
+      "bbox": [
+        7.36575,
+        43.717969,
+        7.437454,
+        43.763506
+      ]
+    },
+    {
+      "id": "natural-earth:country:DZA",
+      "naturalEarthCode": "DZA",
+      "isoAlpha2": "DZ",
+      "isoAlpha3": "DZA",
+      "name": "알제리",
+      "nameKo": "알제리",
+      "nameEn": "Algeria",
+      "nameLocal": "Algeria",
+      "aliases": [
+        "알제리",
+        "Algeria",
+        "Alg.",
+        "People's Democratic Republic of Algeria",
+        "DZ",
+        "DZA"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        2.808241,
+        27.397406
+      ],
+      "bbox": [
+        -8.682385,
+        18.975561,
+        11.968861,
+        37.09394
+      ]
+    },
+    {
+      "id": "natural-earth:country:MOZ",
+      "naturalEarthCode": "MOZ",
+      "isoAlpha2": "MZ",
+      "isoAlpha3": "MOZ",
+      "name": "모잠비크",
+      "nameKo": "모잠비크",
+      "nameEn": "Mozambique",
+      "nameLocal": "Mozambique",
+      "aliases": [
+        "모잠비크",
+        "Mozambique",
+        "Moz.",
+        "Republic of Mozambique",
+        "MZ",
+        "MOZ"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        37.83789,
+        -13.94323
+      ],
+      "bbox": [
+        30.213845,
+        -26.860272,
+        40.847992,
+        -10.469008
+      ]
+    },
+    {
+      "id": "natural-earth:country:SWZ",
+      "naturalEarthCode": "SWZ",
+      "isoAlpha2": "SZ",
+      "isoAlpha3": "SWZ",
+      "name": "에스와티니",
+      "nameKo": "에스와티니",
+      "nameEn": "Eswatini",
+      "nameLocal": "Eswatini",
+      "aliases": [
+        "에스와티니",
+        "Eswatini",
+        "Kingdom of eSwatini",
+        "Swaziland",
+        "eSw.",
+        "SZ",
+        "SWZ"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        31.467264,
+        -26.533676
+      ],
+      "bbox": [
+        30.782906,
+        -27.316264,
+        32.117398,
+        -25.735999
+      ]
+    },
+    {
+      "id": "natural-earth:country:BDI",
+      "naturalEarthCode": "BDI",
+      "isoAlpha2": "BI",
+      "isoAlpha3": "BDI",
+      "name": "부룬디",
+      "nameKo": "부룬디",
+      "nameEn": "Burundi",
+      "nameLocal": "Burundi",
+      "aliases": [
+        "부룬디",
+        "Burundi",
+        "Bur.",
+        "Republic of Burundi",
+        "BI",
+        "BDI"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        29.917086,
+        -3.332836
+      ],
+      "bbox": [
+        28.986892,
+        -4.463344,
+        30.833962,
+        -2.303062
+      ]
+    },
+    {
+      "id": "natural-earth:country:RWA",
+      "naturalEarthCode": "RWA",
+      "isoAlpha2": "RW",
+      "isoAlpha3": "RWA",
+      "name": "르완다",
+      "nameKo": "르완다",
+      "nameEn": "Rwanda",
+      "nameLocal": "Rwanda",
+      "aliases": [
+        "르완다",
+        "Rwanda",
+        "Rwa.",
+        "Republic of Rwanda",
+        "RW",
+        "RWA"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        30.103894,
+        -1.897196
+      ],
+      "bbox": [
+        28.857236,
+        -2.826855,
+        30.887809,
+        -1.058694
+      ]
+    },
+    {
+      "id": "natural-earth:country:MMR",
+      "naturalEarthCode": "MMR",
+      "isoAlpha2": "MM",
+      "isoAlpha3": "MMR",
+      "name": "미얀마",
+      "nameKo": "미얀마",
+      "nameEn": "Myanmar",
+      "nameLocal": "Myanmar",
+      "aliases": [
+        "미얀마",
+        "Myanmar",
+        "Myan.",
+        "Republic of the Union of Myanmar",
+        "MM",
+        "MMR"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        95.804497,
+        21.573855
+      ],
+      "bbox": [
+        92.174973,
+        9.790717,
+        101.173855,
+        28.538466
+      ]
+    },
+    {
+      "id": "natural-earth:country:BGD",
+      "naturalEarthCode": "BGD",
+      "isoAlpha2": "BD",
+      "isoAlpha3": "BGD",
+      "name": "방글라데시",
+      "nameKo": "방글라데시",
+      "nameEn": "Bangladesh",
+      "nameLocal": "Bangladesh",
+      "aliases": [
+        "방글라데시",
+        "Bangladesh",
+        "Bang.",
+        "People's Republic of Bangladesh",
+        "BD",
+        "BGD"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        89.684963,
+        24.214956
+      ],
+      "bbox": [
+        88.02179,
+        20.738715,
+        92.642851,
+        26.623544
+      ]
+    },
+    {
+      "id": "natural-earth:country:AND",
+      "naturalEarthCode": "AND",
+      "isoAlpha2": "AD",
+      "isoAlpha3": "AND",
+      "name": "안도라",
+      "nameKo": "안도라",
+      "nameEn": "Andorra",
+      "nameLocal": "Andorra",
+      "aliases": [
+        "안도라",
+        "Andorra",
+        "And.",
+        "Principality of Andorra",
+        "AD",
+        "AND"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        1.539409,
+        42.547643
+      ],
+      "bbox": [
+        1.406456,
+        42.428677,
+        1.765091,
+        42.649362
+      ]
+    },
+    {
+      "id": "natural-earth:country:AFG",
+      "naturalEarthCode": "AFG",
+      "isoAlpha2": "AF",
+      "isoAlpha3": "AFG",
+      "name": "아프가니스탄",
+      "nameKo": "아프가니스탄",
+      "nameEn": "Afghanistan",
+      "nameLocal": "Afghanistan",
+      "aliases": [
+        "아프가니스탄",
+        "Afghanistan",
+        "Afg.",
+        "Islamic State of Afghanistan",
+        "AF",
+        "AFG"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        66.496586,
+        34.164262
+      ],
+      "bbox": [
+        60.486778,
+        29.386605,
+        74.892307,
+        38.473673
+      ]
+    },
+    {
+      "id": "natural-earth:country:MNE",
+      "naturalEarthCode": "MNE",
+      "isoAlpha2": "ME",
+      "isoAlpha3": "MNE",
+      "name": "몬테네그로",
+      "nameKo": "몬테네그로",
+      "nameEn": "Montenegro",
+      "nameLocal": "Montenegro",
+      "aliases": [
+        "몬테네그로",
+        "Montenegro",
+        "Mont.",
+        "ME",
+        "MNE"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        19.143727,
+        42.803101
+      ],
+      "bbox": [
+        18.433531,
+        41.852362,
+        20.355171,
+        43.547886
+      ]
+    },
+    {
+      "id": "natural-earth:country:BIH",
+      "naturalEarthCode": "BIH",
+      "isoAlpha2": "BA",
+      "isoAlpha3": "BIH",
+      "name": "보스니아 헤르체고비나",
+      "nameKo": "보스니아 헤르체고비나",
+      "nameEn": "Bosnia and Herzegovina",
+      "nameLocal": "Bosnia and Herzegovina",
+      "aliases": [
+        "보스니아 헤르체고비나",
+        "Bosnia and Herzegovina",
+        "Bosnia and Herz.",
+        "B.H.",
+        "BA",
+        "BIH"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        18.06841,
+        44.091051
+      ],
+      "bbox": [
+        15.716074,
+        42.559212,
+        19.618885,
+        45.284524
+      ]
+    },
+    {
+      "id": "natural-earth:country:UGA",
+      "naturalEarthCode": "UGA",
+      "isoAlpha2": "UG",
+      "isoAlpha3": "UGA",
+      "name": "우간다",
+      "nameKo": "우간다",
+      "nameEn": "Uganda",
+      "nameLocal": "Uganda",
+      "aliases": [
+        "우간다",
+        "Uganda",
+        "Uga.",
+        "Republic of Uganda",
+        "UG",
+        "UGA"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        32.948555,
+        1.972589
+      ],
+      "bbox": [
+        29.54846,
+        -1.475206,
+        35.006473,
+        4.219692
+      ]
+    },
+    {
+      "id": "natural-earth:country:USG",
+      "naturalEarthCode": "USG",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "관타나모만 해군 기지",
+      "nameKo": "관타나모만 해군 기지",
+      "nameEn": "Guantanamo Bay Naval Base",
+      "nameLocal": "Guantanamo Bay Naval Base",
+      "aliases": [
+        "관타나모만 해군 기지",
+        "Guantanamo Bay Naval Base",
+        "USNB Guantanamo Bay",
+        "US Naval Base Guantanamo Bay",
+        "Guantanamo Bay USNB",
+        "Gitmo, GTMO",
+        "Guantan.",
+        "USG"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -75.117277,
+        19.918398
+      ],
+      "bbox": [
+        -75.232859,
+        19.891142,
+        -75.09495,
+        19.971584
+      ]
+    },
+    {
+      "id": "natural-earth:country:CUB",
+      "naturalEarthCode": "CUB",
+      "isoAlpha2": "CU",
+      "isoAlpha3": "CUB",
+      "name": "쿠바",
+      "nameKo": "쿠바",
+      "nameEn": "Cuba",
+      "nameLocal": "Cuba",
+      "aliases": [
+        "쿠바",
+        "Cuba",
+        "Republic of Cuba",
+        "CU",
+        "CUB"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -77.975855,
+        21.334024
+      ],
+      "bbox": [
+        -84.949615,
+        19.827826,
+        -74.132883,
+        23.26557
+      ]
+    },
+    {
+      "id": "natural-earth:country:HND",
+      "naturalEarthCode": "HND",
+      "isoAlpha2": "HN",
+      "isoAlpha3": "HND",
+      "name": "온두라스",
+      "nameKo": "온두라스",
+      "nameEn": "Honduras",
+      "nameLocal": "Honduras",
+      "aliases": [
+        "온두라스",
+        "Honduras",
+        "Hond.",
+        "Republic of Honduras",
+        "HN",
+        "HND"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -86.887604,
+        14.794801
+      ],
+      "bbox": [
+        -89.363791,
+        12.979777,
+        -83.130444,
+        17.418647
+      ]
+    },
+    {
+      "id": "natural-earth:country:ECU",
+      "naturalEarthCode": "ECU",
+      "isoAlpha2": "EC",
+      "isoAlpha3": "ECU",
+      "name": "에콰도르",
+      "nameKo": "에콰도르",
+      "nameEn": "Ecuador",
+      "nameLocal": "Ecuador",
+      "aliases": [
+        "에콰도르",
+        "Ecuador",
+        "Ecu.",
+        "Republic of Ecuador",
+        "EC",
+        "ECU"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -78.188375,
+        -1.259076
+      ],
+      "bbox": [
+        -92.011586,
+        -5.011373,
+        -75.227264,
+        1.664374
+      ]
+    },
+    {
+      "id": "natural-earth:country:COL",
+      "naturalEarthCode": "COL",
+      "isoAlpha2": "CO",
+      "isoAlpha3": "COL",
+      "name": "콜롬비아",
+      "nameKo": "콜롬비아",
+      "nameEn": "Colombia",
+      "nameLocal": "Colombia",
+      "aliases": [
+        "콜롬비아",
+        "Colombia",
+        "Col.",
+        "Republic of Colombia",
+        "CO",
+        "COL"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -73.174347,
+        3.373111
+      ],
+      "bbox": [
+        -81.723704,
+        -4.236484,
+        -66.875061,
+        13.578355
+      ]
+    },
+    {
+      "id": "natural-earth:country:PRY",
+      "naturalEarthCode": "PRY",
+      "isoAlpha2": "PY",
+      "isoAlpha3": "PRY",
+      "name": "파라과이",
+      "nameKo": "파라과이",
+      "nameEn": "Paraguay",
+      "nameLocal": "Paraguay",
+      "aliases": [
+        "파라과이",
+        "Paraguay",
+        "Para.",
+        "Republic of Paraguay",
+        "PY",
+        "PRY"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -60.146394,
+        -21.674509
+      ],
+      "bbox": [
+        -62.650357,
+        -27.586842,
+        -54.245289,
+        -19.286729
+      ]
+    },
+    {
+      "id": "natural-earth:country:BRI",
+      "naturalEarthCode": "BRI",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "브라질리안 아일랜드",
+      "nameKo": "브라질리안 아일랜드",
+      "nameEn": "Brazilian Island",
+      "nameLocal": "Brazilian Island",
+      "aliases": [
+        "브라질리안 아일랜드",
+        "Brazilian Island",
+        "Brazilian I.",
+        "Brazil (Brazilian I.)",
+        "BRI"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -57.623042,
+        -30.187555
+      ],
+      "bbox": [
+        -57.642466,
+        -30.193092,
+        -57.602793,
+        -30.182963
+      ]
+    },
+    {
+      "id": "natural-earth:country:PRT",
+      "naturalEarthCode": "PRT",
+      "isoAlpha2": "PT",
+      "isoAlpha3": "PRT",
+      "name": "포르투갈",
+      "nameKo": "포르투갈",
+      "nameEn": "Portugal",
+      "nameLocal": "Portugal",
+      "aliases": [
+        "포르투갈",
+        "Portugal",
+        "Port.",
+        "Portuguese Republic",
+        "PT",
+        "PRT"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        -8.271754,
+        39.606675
+      ],
+      "bbox": [
+        -31.284901,
+        30.029242,
+        -6.205947,
+        42.15363
+      ]
+    },
+    {
+      "id": "natural-earth:country:MDA",
+      "naturalEarthCode": "MDA",
+      "isoAlpha2": "MD",
+      "isoAlpha3": "MDA",
+      "name": "몰도바",
+      "nameKo": "몰도바",
+      "nameEn": "Moldova",
+      "nameLocal": "Moldova",
+      "aliases": [
+        "몰도바",
+        "Moldova",
+        "Mda.",
+        "Republic of Moldova",
+        "MD",
+        "MDA"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        28.487904,
+        47.434999
+      ],
+      "bbox": [
+        26.617889,
+        45.461774,
+        30.131576,
+        48.486034
+      ]
+    },
+    {
+      "id": "natural-earth:country:TKM",
+      "naturalEarthCode": "TKM",
+      "isoAlpha2": "TM",
+      "isoAlpha3": "TKM",
+      "name": "투르크메니스탄",
+      "nameKo": "투르크메니스탄",
+      "nameEn": "Turkmenistan",
+      "nameLocal": "Turkmenistan",
+      "aliases": [
+        "투르크메니스탄",
+        "Turkmenistan",
+        "Turkm.",
+        "TM",
+        "TKM"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        58.676647,
+        39.855246
+      ],
+      "bbox": [
+        52.437671,
+        35.140647,
+        66.645782,
+        42.791188
+      ]
+    },
+    {
+      "id": "natural-earth:country:JOR",
+      "naturalEarthCode": "JOR",
+      "isoAlpha2": "JO",
+      "isoAlpha3": "JOR",
+      "name": "요르단",
+      "nameKo": "요르단",
+      "nameEn": "Jordan",
+      "nameLocal": "Jordan",
+      "aliases": [
+        "요르단",
+        "Jordan",
+        "Jord.",
+        "Hashemite Kingdom of Jordan",
+        "JO",
+        "JOR"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        36.375991,
+        30.805025
+      ],
+      "bbox": [
+        34.949385,
+        29.189951,
+        39.291999,
+        33.371685
+      ]
+    },
+    {
+      "id": "natural-earth:country:NPL",
+      "naturalEarthCode": "NPL",
+      "isoAlpha2": "NP",
+      "isoAlpha3": "NPL",
+      "name": "네팔",
+      "nameKo": "네팔",
+      "nameEn": "Nepal",
+      "nameLocal": "Nepal",
+      "aliases": [
+        "네팔",
+        "Nepal",
+        "NP",
+        "NPL"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        83.639914,
+        28.297925
+      ],
+      "bbox": [
+        80.030288,
+        26.343768,
+        88.169067,
+        30.416904
+      ]
+    },
+    {
+      "id": "natural-earth:country:LSO",
+      "naturalEarthCode": "LSO",
+      "isoAlpha2": "LS",
+      "isoAlpha3": "LSO",
+      "name": "레소토",
+      "nameKo": "레소토",
+      "nameEn": "Lesotho",
+      "nameLocal": "Lesotho",
+      "aliases": [
+        "레소토",
+        "Lesotho",
+        "Les.",
+        "Kingdom of Lesotho",
+        "LS",
+        "LSO"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        28.246639,
+        -29.480158
+      ],
+      "bbox": [
+        27.002155,
+        -30.658799,
+        29.435908,
+        -28.570761
+      ]
+    },
+    {
+      "id": "natural-earth:country:CMR",
+      "naturalEarthCode": "CMR",
+      "isoAlpha2": "CM",
+      "isoAlpha3": "CMR",
+      "name": "카메룬",
+      "nameKo": "카메룬",
+      "nameEn": "Cameroon",
+      "nameLocal": "Cameroon",
+      "aliases": [
+        "카메룬",
+        "Cameroon",
+        "Cam.",
+        "Republic of Cameroon",
+        "CM",
+        "CMR"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        12.473488,
+        4.585041
+      ],
+      "bbox": [
+        8.505056,
+        1.654551,
+        16.207723,
+        13.081141
+      ]
+    },
+    {
+      "id": "natural-earth:country:GAB",
+      "naturalEarthCode": "GAB",
+      "isoAlpha2": "GA",
+      "isoAlpha3": "GAB",
+      "name": "가봉",
+      "nameKo": "가봉",
+      "nameEn": "Gabon",
+      "nameLocal": "Gabon",
+      "aliases": [
+        "가봉",
+        "Gabon",
+        "Gabonese Republic",
+        "GA",
+        "GAB"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        11.835939,
+        -0.437739
+      ],
+      "bbox": [
+        8.695567,
+        -3.936856,
+        14.498991,
+        2.322495
+      ]
+    },
+    {
+      "id": "natural-earth:country:NER",
+      "naturalEarthCode": "NER",
+      "isoAlpha2": "NE",
+      "isoAlpha3": "NER",
+      "name": "니제르",
+      "nameKo": "니제르",
+      "nameEn": "Niger",
+      "nameLocal": "Niger",
+      "aliases": [
+        "니제르",
+        "Niger",
+        "Republic of Niger",
+        "NE",
+        "NER"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        9.504356,
+        17.446195
+      ],
+      "bbox": [
+        0.152941,
+        11.695773,
+        15.970322,
+        23.517351
+      ]
+    },
+    {
+      "id": "natural-earth:country:BFA",
+      "naturalEarthCode": "BFA",
+      "isoAlpha2": "BF",
+      "isoAlpha3": "BFA",
+      "name": "부르키나파소",
+      "nameKo": "부르키나파소",
+      "nameEn": "Burkina Faso",
+      "nameLocal": "Burkina Faso",
+      "aliases": [
+        "부르키나파소",
+        "Burkina Faso",
+        "B.F.",
+        "BF",
+        "BFA"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -1.36388,
+        12.673048
+      ],
+      "bbox": [
+        -5.522578,
+        9.391883,
+        2.390169,
+        15.079908
+      ]
+    },
+    {
+      "id": "natural-earth:country:TGO",
+      "naturalEarthCode": "TGO",
+      "isoAlpha2": "TG",
+      "isoAlpha3": "TGO",
+      "name": "토고",
+      "nameKo": "토고",
+      "nameEn": "Togo",
+      "nameLocal": "Togo",
+      "aliases": [
+        "토고",
+        "Togo",
+        "Togolese Republic",
+        "TG",
+        "TGO"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        1.058113,
+        8.80722
+      ],
+      "bbox": [
+        -0.166109,
+        6.100491,
+        1.782351,
+        11.13498
+      ]
+    },
+    {
+      "id": "natural-earth:country:GHA",
+      "naturalEarthCode": "GHA",
+      "isoAlpha2": "GH",
+      "isoAlpha3": "GHA",
+      "name": "가나",
+      "nameKo": "가나",
+      "nameEn": "Ghana",
+      "nameLocal": "Ghana",
+      "aliases": [
+        "가나",
+        "Ghana",
+        "Republic of Ghana",
+        "GH",
+        "GHA"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -1.036941,
+        7.717639
+      ],
+      "bbox": [
+        -3.262509,
+        4.737128,
+        1.187968,
+        11.162937
+      ]
+    },
+    {
+      "id": "natural-earth:country:GNB",
+      "naturalEarthCode": "GNB",
+      "isoAlpha2": "GW",
+      "isoAlpha3": "GNB",
+      "name": "기니비사우",
+      "nameKo": "기니비사우",
+      "nameEn": "Guinea-Bissau",
+      "nameLocal": "Guinea-Bissau",
+      "aliases": [
+        "기니비사우",
+        "Guinea-Bissau",
+        "GnB.",
+        "Republic of Guinea-Bissau",
+        "GW",
+        "GNB"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -14.52413,
+        12.163712
+      ],
+      "bbox": [
+        -16.728437,
+        10.927639,
+        -13.660712,
+        12.679434
+      ]
+    },
+    {
+      "id": "natural-earth:country:GIB",
+      "naturalEarthCode": "GIB",
+      "isoAlpha2": "GI",
+      "isoAlpha3": "GIB",
+      "name": "지브롤터",
+      "nameKo": "지브롤터",
+      "nameEn": "Gibraltar",
+      "nameLocal": "Gibraltar",
+      "aliases": [
+        "지브롤터",
+        "Gibraltar",
+        "Gib.",
+        "GI",
+        "GIB"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        -5.3467,
+        36.129426
+      ],
+      "bbox": [
+        -5.358387,
+        36.1105,
+        -5.338773,
+        36.14112
+      ]
+    },
+    {
+      "id": "natural-earth:country:USA",
+      "naturalEarthCode": "USA",
+      "isoAlpha2": "US",
+      "isoAlpha3": "USA",
+      "name": "미국",
+      "nameKo": "미국",
+      "nameEn": "United States of America",
+      "nameLocal": "United States of America",
+      "aliases": [
+        "미국",
+        "United States of America",
+        "United States",
+        "U.S.A.",
+        "US",
+        "USA"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -97.482602,
+        39.538479
+      ],
+      "bbox": [
+        -179.143503,
+        18.906117,
+        179.780935,
+        71.412502
+      ]
+    },
+    {
+      "id": "natural-earth:country:CAN",
+      "naturalEarthCode": "CAN",
+      "isoAlpha2": "CA",
+      "isoAlpha3": "CAN",
+      "name": "캐나다",
+      "nameKo": "캐나다",
+      "nameEn": "Canada",
+      "nameLocal": "Canada",
+      "aliases": [
+        "캐나다",
+        "Canada",
+        "Can.",
+        "CA",
+        "CAN"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -101.9107,
+        60.324287
+      ],
+      "bbox": [
+        -141.005564,
+        41.669086,
+        -52.616607,
+        83.116523
+      ]
+    },
+    {
+      "id": "natural-earth:country:MEX",
+      "naturalEarthCode": "MEX",
+      "isoAlpha2": "MX",
+      "isoAlpha3": "MEX",
+      "name": "멕시코",
+      "nameKo": "멕시코",
+      "nameEn": "Mexico",
+      "nameLocal": "Mexico",
+      "aliases": [
+        "멕시코",
+        "Mexico",
+        "Mex.",
+        "United Mexican States",
+        "MX",
+        "MEX"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -102.289448,
+        23.919988
+      ],
+      "bbox": [
+        -118.368804,
+        14.546279,
+        -86.700592,
+        32.712836
+      ]
+    },
+    {
+      "id": "natural-earth:country:BLZ",
+      "naturalEarthCode": "BLZ",
+      "isoAlpha2": "BZ",
+      "isoAlpha3": "BLZ",
+      "name": "벨리즈",
+      "nameKo": "벨리즈",
+      "nameEn": "Belize",
+      "nameLocal": "Belize",
+      "aliases": [
+        "벨리즈",
+        "Belize",
+        "BZ",
+        "BLZ"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -88.712962,
+        17.202068
+      ],
+      "bbox": [
+        -89.236512,
+        15.879652,
+        -87.78307,
+        18.490759
+      ]
+    },
+    {
+      "id": "natural-earth:country:PAN",
+      "naturalEarthCode": "PAN",
+      "isoAlpha2": "PA",
+      "isoAlpha3": "PAN",
+      "name": "파나마",
+      "nameKo": "파나마",
+      "nameEn": "Panama",
+      "nameLocal": "Panama",
+      "aliases": [
+        "파나마",
+        "Panama",
+        "Pan.",
+        "Republic of Panama",
+        "PA",
+        "PAN"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -80.352106,
+        8.72198
+      ],
+      "bbox": [
+        -83.053246,
+        7.205715,
+        -77.16327,
+        9.629292
+      ]
+    },
+    {
+      "id": "natural-earth:country:VEN",
+      "naturalEarthCode": "VEN",
+      "isoAlpha2": "VE",
+      "isoAlpha3": "VEN",
+      "name": "베네수엘라",
+      "nameKo": "베네수엘라",
+      "nameEn": "Venezuela",
+      "nameLocal": "Venezuela",
+      "aliases": [
+        "베네수엘라",
+        "Venezuela",
+        "Venezuela, RB",
+        "Ven.",
+        "Bolivarian Republic of Venezuela",
+        "VE",
+        "VEN"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -64.599381,
+        7.182476
+      ],
+      "bbox": [
+        -73.391149,
+        0.649315,
+        -59.815595,
+        15.702948
+      ]
+    },
+    {
+      "id": "natural-earth:country:PNG",
+      "naturalEarthCode": "PNG",
+      "isoAlpha2": "PG",
+      "isoAlpha3": "PNG",
+      "name": "파푸아뉴기니",
+      "nameKo": "파푸아뉴기니",
+      "nameEn": "Papua New Guinea",
+      "nameLocal": "Papua New Guinea",
+      "aliases": [
+        "파푸아뉴기니",
+        "Papua New Guinea",
+        "P.N.G.",
+        "Independent State of Papua New Guinea",
+        "PG",
+        "PNG"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        143.910216,
+        -5.695285
+      ],
+      "bbox": [
+        140.849211,
+        -11.636326,
+        155.96754,
+        -1.346368
+      ]
+    },
+    {
+      "id": "natural-earth:country:EGY",
+      "naturalEarthCode": "EGY",
+      "isoAlpha2": "EG",
+      "isoAlpha3": "EGY",
+      "name": "이집트",
+      "nameKo": "이집트",
+      "nameEn": "Egypt",
+      "nameLocal": "Egypt",
+      "aliases": [
+        "이집트",
+        "Egypt",
+        "Egypt, Arab Rep.",
+        "Arab Republic of Egypt",
+        "EG",
+        "EGY"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        29.445837,
+        26.186173
+      ],
+      "bbox": [
+        24.688343,
+        21.994369,
+        36.899181,
+        31.65648
+      ]
+    },
+    {
+      "id": "natural-earth:country:YEM",
+      "naturalEarthCode": "YEM",
+      "isoAlpha2": "YE",
+      "isoAlpha3": "YEM",
+      "name": "예멘",
+      "nameKo": "예멘",
+      "nameEn": "Yemen",
+      "nameLocal": "Yemen",
+      "aliases": [
+        "예멘",
+        "Yemen",
+        "Yemen, Rep.",
+        "Yem.",
+        "Republic of Yemen",
+        "YE",
+        "YEM"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        45.874383,
+        15.328226
+      ],
+      "bbox": [
+        42.545746,
+        12.111444,
+        54.540294,
+        18.995638
+      ]
+    },
+    {
+      "id": "natural-earth:country:MRT",
+      "naturalEarthCode": "MRT",
+      "isoAlpha2": "MR",
+      "isoAlpha3": "MRT",
+      "name": "모리타니",
+      "nameKo": "모리타니",
+      "nameEn": "Mauritania",
+      "nameLocal": "Mauritania",
+      "aliases": [
+        "모리타니",
+        "Mauritania",
+        "Mrt.",
+        "Islamic Republic of Mauritania",
+        "MR",
+        "MRT"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -9.740299,
+        19.587062
+      ],
+      "bbox": [
+        -17.081175,
+        14.734399,
+        -4.821613,
+        27.285416
+      ]
+    },
+    {
+      "id": "natural-earth:country:GNQ",
+      "naturalEarthCode": "GNQ",
+      "isoAlpha2": "GQ",
+      "isoAlpha3": "GNQ",
+      "name": "적도 기니",
+      "nameKo": "적도 기니",
+      "nameEn": "Equatorial Guinea",
+      "nameLocal": "Equatorial Guinea",
+      "aliases": [
+        "적도 기니",
+        "Equatorial Guinea",
+        "Eq. Guinea",
+        "Eq. G.",
+        "Republic of Equatorial Guinea",
+        "GQ",
+        "GNQ"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        8.9902,
+        2.333
+      ],
+      "bbox": [
+        5.61199,
+        -1.475681,
+        11.336341,
+        3.772406
+      ]
+    },
+    {
+      "id": "natural-earth:country:GMB",
+      "naturalEarthCode": "GMB",
+      "isoAlpha2": "GM",
+      "isoAlpha3": "GMB",
+      "name": "감비아",
+      "nameKo": "감비아",
+      "nameEn": "The Gambia",
+      "nameLocal": "The Gambia",
+      "aliases": [
+        "감비아",
+        "The Gambia",
+        "Gambia",
+        "Gambia, The",
+        "Republic of the Gambia",
+        "GM",
+        "GMB"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -14.998318,
+        13.641721
+      ],
+      "bbox": [
+        -16.829701,
+        13.065009,
+        -13.818713,
+        13.819984
+      ]
+    },
+    {
+      "id": "natural-earth:country:HKG",
+      "naturalEarthCode": "HKG",
+      "isoAlpha2": "HK",
+      "isoAlpha3": "HKG",
+      "name": "홍콩",
+      "nameKo": "홍콩",
+      "nameEn": "Hong Kong",
+      "nameLocal": "Hong Kong",
+      "aliases": [
+        "홍콩",
+        "Hong Kong",
+        "Hong Kong SAR, China",
+        "H.K.",
+        "Hong Kong Special Administrative Region, PRC",
+        "HK",
+        "HKG"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        114.097769,
+        22.448829
+      ],
+      "bbox": [
+        113.837332,
+        22.177069,
+        114.401296,
+        22.563946
+      ]
+    },
+    {
+      "id": "natural-earth:country:VAT",
+      "naturalEarthCode": "VAT",
+      "isoAlpha2": "VA",
+      "isoAlpha3": "VAT",
+      "name": "바티칸 시국",
+      "nameKo": "바티칸 시국",
+      "nameEn": "Vatican City",
+      "nameLocal": "Vatican City",
+      "aliases": [
+        "바티칸 시국",
+        "Vatican City",
+        "Vatican",
+        "Vatican (Holy See)",
+        "Holy See",
+        "Vat.",
+        "State of the Vatican City",
+        "VA",
+        "VAT"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        12.453418,
+        41.903323
+      ],
+      "bbox": [
+        12.452714,
+        41.902752,
+        12.454035,
+        41.903915
+      ]
+    },
+    {
+      "id": "natural-earth:country:CYN",
+      "naturalEarthCode": "CYN",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "북키프로스",
+      "nameKo": "북키프로스",
+      "nameEn": "Turkish Republic of Northern Cyprus",
+      "nameLocal": "Turkish Republic of Northern Cyprus",
+      "aliases": [
+        "북키프로스",
+        "Turkish Republic of Northern Cyprus",
+        "N. Cyprus",
+        "Northern Cyprus",
+        "Cyprus, Northern",
+        "N. Cy.",
+        "CYN"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        33.692434,
+        35.216071
+      ],
+      "bbox": [
+        32.601899,
+        35.002722,
+        34.59254,
+        35.691962
+      ]
+    },
+    {
+      "id": "natural-earth:country:CNM",
+      "naturalEarthCode": "CNM",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "유엔 키프로스 완충 지대",
+      "nameKo": "유엔 키프로스 완충 지대",
+      "nameEn": "United Nations Buffer Zone in Cyprus",
+      "nameLocal": "United Nations Buffer Zone in Cyprus",
+      "aliases": [
+        "유엔 키프로스 완충 지대",
+        "United Nations Buffer Zone in Cyprus",
+        "Cyprus U.N. Buffer Zone",
+        "Cyprus No Mans Area",
+        "Cyprus No Mans Land",
+        "CNM"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        33.288134,
+        35.140713
+      ],
+      "bbox": [
+        32.584809,
+        34.977763,
+        34.021961,
+        35.199403
+      ]
+    },
+    {
+      "id": "natural-earth:country:KAS",
+      "naturalEarthCode": "KAS",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "시아첸 빙하",
+      "nameKo": "시아첸 빙하",
+      "nameEn": "Siachen Glacier",
+      "nameLocal": "Siachen Glacier",
+      "aliases": [
+        "시아첸 빙하",
+        "Siachen Glacier",
+        "Kashmir",
+        "Siachen",
+        "KAS"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        77.129553,
+        35.340606
+      ],
+      "bbox": [
+        76.777351,
+        35.110442,
+        77.800346,
+        35.647799
+      ]
+    },
+    {
+      "id": "natural-earth:country:KAB",
+      "naturalEarthCode": "KAB",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "바이코누르",
+      "nameKo": "바이코누르",
+      "nameEn": "Baikonur",
+      "nameLocal": "Baikonur",
+      "aliases": [
+        "바이코누르",
+        "Baikonur",
+        "Baikonur Cosmodrome",
+        "Baykonur Cosmodrome",
+        "Bayk.",
+        "KAB"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        63.383897,
+        45.978332
+      ],
+      "bbox": [
+        62.800642,
+        45.565824,
+        63.967134,
+        46.390839
+      ]
+    },
+    {
+      "id": "natural-earth:country:WSB",
+      "naturalEarthCode": "WSB",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "아크로티리",
+      "nameKo": "아크로티리",
+      "nameEn": "Akrotiri Sovereign Base Area",
+      "nameLocal": "Akrotiri Sovereign Base Area",
+      "aliases": [
+        "아크로티리",
+        "Akrotiri Sovereign Base Area",
+        "Akrotiri",
+        "Akr.",
+        "WSB"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        32.979025,
+        34.60083
+      ],
+      "bbox": [
+        32.760102,
+        34.568549,
+        33.030284,
+        34.700948
+      ]
+    },
+    {
+      "id": "natural-earth:country:SPI",
+      "naturalEarthCode": "SPI",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "사우던 파타고니안 아이스 필드",
+      "nameKo": "사우던 파타고니안 아이스 필드",
+      "nameEn": "Southern Patagonian Ice Field",
+      "nameLocal": "Southern Patagonian Ice Field",
+      "aliases": [
+        "사우던 파타고니안 아이스 필드",
+        "Southern Patagonian Ice Field",
+        "S.Pat. Ice Field",
+        "SPI"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -73.31378,
+        -49.511034
+      ],
+      "bbox": [
+        -73.588036,
+        -49.759959,
+        -73.057424,
+        -49.272754
+      ]
+    },
+    {
+      "id": "natural-earth:country:BRT",
+      "naturalEarthCode": "BRT",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "비르 타윌",
+      "nameKo": "비르 타윌",
+      "nameEn": "Bir Tawil",
+      "nameLocal": "Bir Tawil",
+      "aliases": [
+        "비르 타윌",
+        "Bir Tawil",
+        "B. Tawil",
+        "BRT"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        33.673428,
+        21.860442
+      ],
+      "bbox": [
+        33.181136,
+        21.710957,
+        34.084179,
+        21.995454
+      ]
+    },
+    {
+      "id": "natural-earth:country:ATA",
+      "naturalEarthCode": "ATA",
+      "isoAlpha2": "AQ",
+      "isoAlpha3": "ATA",
+      "name": "남극",
+      "nameKo": "남극",
+      "nameEn": "Antarctica",
+      "nameLocal": "Antarctica",
+      "aliases": [
+        "남극",
+        "Antarctica",
+        "Ant.",
+        "AQ",
+        "ATA"
+      ],
+      "continentId": "natural-earth:continent:antarctica",
+      "continentCode": "antarctica",
+      "centroid": [
+        35.885455,
+        -79.843222
+      ],
+      "bbox": [
+        -180,
+        -90,
+        180,
+        -60.516209
+      ]
+    },
+    {
+      "id": "natural-earth:country:AUS",
+      "naturalEarthCode": "AUS",
+      "isoAlpha2": "AU",
+      "isoAlpha3": "AUS",
+      "name": "오스트레일리아",
+      "nameKo": "오스트레일리아",
+      "nameEn": "Australia",
+      "nameLocal": "Australia",
+      "aliases": [
+        "오스트레일리아",
+        "Australia",
+        "Auz.",
+        "Commonwealth of Australia",
+        "AU",
+        "AUS"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        134.04972,
+        -24.129522
+      ],
+      "bbox": [
+        112.919444,
+        -54.750421,
+        159.106456,
+        -9.240167
+      ]
+    },
+    {
+      "id": "natural-earth:country:GRL",
+      "naturalEarthCode": "GRL",
+      "isoAlpha2": "GL",
+      "isoAlpha3": "GRL",
+      "name": "그린란드",
+      "nameKo": "그린란드",
+      "nameEn": "Greenland",
+      "nameLocal": "Greenland",
+      "aliases": [
+        "그린란드",
+        "Greenland",
+        "Grlnd.",
+        "GL",
+        "GRL"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -39.335251,
+        74.319387
+      ],
+      "bbox": [
+        -73.05724,
+        59.792629,
+        -11.37682,
+        83.634101
+      ]
+    },
+    {
+      "id": "natural-earth:country:FJI",
+      "naturalEarthCode": "FJI",
+      "isoAlpha2": "FJ",
+      "isoAlpha3": "FJI",
+      "name": "피지",
+      "nameKo": "피지",
+      "nameEn": "Fiji",
+      "nameLocal": "Fiji",
+      "aliases": [
+        "피지",
+        "Fiji",
+        "Republic of Fiji",
+        "FJ",
+        "FJI"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        177.975427,
+        -17.826099
+      ],
+      "bbox": [
+        -180,
+        -21.711114,
+        180,
+        -12.475274
+      ]
+    },
+    {
+      "id": "natural-earth:country:NZL",
+      "naturalEarthCode": "NZL",
+      "isoAlpha2": "NZ",
+      "isoAlpha3": "NZL",
+      "name": "뉴질랜드",
+      "nameKo": "뉴질랜드",
+      "nameEn": "New Zealand",
+      "nameLocal": "New Zealand",
+      "aliases": [
+        "뉴질랜드",
+        "New Zealand",
+        "N.Z.",
+        "NZ",
+        "NZL"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        172.787,
+        -39.759
+      ],
+      "bbox": [
+        -177.957997,
+        -52.600313,
+        178.843923,
+        -8.543227
+      ]
+    },
+    {
+      "id": "natural-earth:country:NCL",
+      "naturalEarthCode": "NCL",
+      "isoAlpha2": "NC",
+      "isoAlpha3": "NCL",
+      "name": "누벨칼레도니",
+      "nameKo": "누벨칼레도니",
+      "nameEn": "New Caledonia",
+      "nameLocal": "New Caledonia",
+      "aliases": [
+        "누벨칼레도니",
+        "New Caledonia",
+        "New C.",
+        "NC",
+        "NCL"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        165.084004,
+        -21.064697
+      ],
+      "bbox": [
+        163.615733,
+        -22.670668,
+        171.343765,
+        -19.623712
+      ]
+    },
+    {
+      "id": "natural-earth:country:MDG",
+      "naturalEarthCode": "MDG",
+      "isoAlpha2": "MG",
+      "isoAlpha3": "MDG",
+      "name": "마다가스카르",
+      "nameKo": "마다가스카르",
+      "nameEn": "Madagascar",
+      "nameLocal": "Madagascar",
+      "aliases": [
+        "마다가스카르",
+        "Madagascar",
+        "Mad.",
+        "Republic of Madagascar",
+        "MG",
+        "MDG"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        46.704241,
+        -18.628288
+      ],
+      "bbox": [
+        43.222911,
+        -25.598565,
+        50.503917,
+        -11.943617
+      ]
+    },
+    {
+      "id": "natural-earth:country:PHL",
+      "naturalEarthCode": "PHL",
+      "isoAlpha2": "PH",
+      "isoAlpha3": "PHL",
+      "name": "필리핀",
+      "nameKo": "필리핀",
+      "nameEn": "Philippines",
+      "nameLocal": "Philippines",
+      "aliases": [
+        "필리핀",
+        "Philippines",
+        "Phil.",
+        "Republic of the Philippines",
+        "PH",
+        "PHL"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        122.465,
+        11.198
+      ],
+      "bbox": [
+        116.954926,
+        4.655707,
+        126.617686,
+        21.122382
+      ]
+    },
+    {
+      "id": "natural-earth:country:LKA",
+      "naturalEarthCode": "LKA",
+      "isoAlpha2": "LK",
+      "isoAlpha3": "LKA",
+      "name": "스리랑카",
+      "nameKo": "스리랑카",
+      "nameEn": "Sri Lanka",
+      "nameLocal": "Sri Lanka",
+      "aliases": [
+        "스리랑카",
+        "Sri Lanka",
+        "Sri L.",
+        "Democratic Socialist Republic of Sri Lanka",
+        "LK",
+        "LKA"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        80.704823,
+        7.581097
+      ],
+      "bbox": [
+        79.655772,
+        5.923733,
+        81.89031,
+        9.829576
+      ]
+    },
+    {
+      "id": "natural-earth:country:CUW",
+      "naturalEarthCode": "CUW",
+      "isoAlpha2": "CW",
+      "isoAlpha3": "CUW",
+      "name": "퀴라소",
+      "nameKo": "퀴라소",
+      "nameEn": "Curaçao",
+      "nameLocal": "Curaçao",
+      "aliases": [
+        "퀴라소",
+        "Curaçao",
+        "Cur.",
+        "CW",
+        "CUW"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -68.920578,
+        12.145039
+      ],
+      "bbox": [
+        -69.171742,
+        12.041327,
+        -68.739735,
+        12.391506
+      ]
+    },
+    {
+      "id": "natural-earth:country:ABW",
+      "naturalEarthCode": "ABW",
+      "isoAlpha2": "AW",
+      "isoAlpha3": "ABW",
+      "name": "아루바",
+      "nameKo": "아루바",
+      "nameEn": "Aruba",
+      "nameLocal": "Aruba",
+      "aliases": [
+        "아루바",
+        "Aruba",
+        "AW",
+        "ABW"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -69.972795,
+        12.5174
+      ],
+      "bbox": [
+        -70.062408,
+        12.41767,
+        -69.87682,
+        12.632148
+      ]
+    },
+    {
+      "id": "natural-earth:country:BHS",
+      "naturalEarthCode": "BHS",
+      "isoAlpha2": "BS",
+      "isoAlpha3": "BHS",
+      "name": "바하마",
+      "nameKo": "바하마",
+      "nameEn": "The Bahamas",
+      "nameLocal": "The Bahamas",
+      "aliases": [
+        "바하마",
+        "The Bahamas",
+        "Bahamas",
+        "Bahamas, The",
+        "Bhs.",
+        "Commonwealth of the Bahamas",
+        "BS",
+        "BHS"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -77.146688,
+        26.401789
+      ],
+      "bbox": [
+        -79.59435,
+        20.912399,
+        -72.746165,
+        26.928412
+      ]
+    },
+    {
+      "id": "natural-earth:country:TCA",
+      "naturalEarthCode": "TCA",
+      "isoAlpha2": "TC",
+      "isoAlpha3": "TCA",
+      "name": "터크스 케이커스 제도",
+      "nameKo": "터크스 케이커스 제도",
+      "nameEn": "Turks and Caicos Islands",
+      "nameLocal": "Turks and Caicos Islands",
+      "aliases": [
+        "터크스 케이커스 제도",
+        "Turks and Caicos Islands",
+        "Turks and Caicos Is.",
+        "T.C. Is.",
+        "TC",
+        "TCA"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -71.752704,
+        21.81663
+      ],
+      "bbox": [
+        -72.481313,
+        21.290107,
+        -71.128896,
+        21.959215
+      ]
+    },
+    {
+      "id": "natural-earth:country:TWN",
+      "naturalEarthCode": "TWN",
+      "isoAlpha2": "TW",
+      "isoAlpha3": "TWN",
+      "name": "중화민국",
+      "nameKo": "중화민국",
+      "nameEn": "Taiwan",
+      "nameLocal": "Taiwan",
+      "aliases": [
+        "중화민국",
+        "Taiwan",
+        "TW",
+        "TWN"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        120.868204,
+        23.652408
+      ],
+      "bbox": [
+        118.279552,
+        21.904608,
+        122.005382,
+        25.287421
+      ]
+    },
+    {
+      "id": "natural-earth:country:JPN",
+      "naturalEarthCode": "JPN",
+      "isoAlpha2": "JP",
+      "isoAlpha3": "JPN",
+      "name": "일본",
+      "nameKo": "일본",
+      "nameEn": "Japan",
+      "nameLocal": "Japan",
+      "aliases": [
+        "일본",
+        "Japan",
+        "JP",
+        "JPN"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        138.44217,
+        36.142538
+      ],
+      "bbox": [
+        122.938162,
+        24.212104,
+        153.985606,
+        45.520413
+      ]
+    },
+    {
+      "id": "natural-earth:country:SPM",
+      "naturalEarthCode": "SPM",
+      "isoAlpha2": "PM",
+      "isoAlpha3": "SPM",
+      "name": "생피에르 미클롱",
+      "nameKo": "생피에르 미클롱",
+      "nameEn": "Saint Pierre and Miquelon",
+      "nameLocal": "Saint Pierre and Miquelon",
+      "aliases": [
+        "생피에르 미클롱",
+        "Saint Pierre and Miquelon",
+        "St. Pierre and Miquelon",
+        "St. P.M.",
+        "PM",
+        "SPM"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -56.332352,
+        47.040344
+      ],
+      "bbox": [
+        -56.396596,
+        46.752753,
+        -56.144765,
+        47.141262
+      ]
+    },
+    {
+      "id": "natural-earth:country:ISL",
+      "naturalEarthCode": "ISL",
+      "isoAlpha2": "IS",
+      "isoAlpha3": "ISL",
+      "name": "아이슬란드",
+      "nameKo": "아이슬란드",
+      "nameEn": "Iceland",
+      "nameLocal": "Iceland",
+      "aliases": [
+        "아이슬란드",
+        "Iceland",
+        "Republic of Iceland",
+        "IS",
+        "ISL"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        -18.673711,
+        64.779286
+      ],
+      "bbox": [
+        -24.539906,
+        63.396715,
+        -13.502919,
+        66.564154
+      ]
+    },
+    {
+      "id": "natural-earth:country:PCN",
+      "naturalEarthCode": "PCN",
+      "isoAlpha2": "PN",
+      "isoAlpha3": "PCN",
+      "name": "핏케언 제도",
+      "nameKo": "핏케언 제도",
+      "nameEn": "Pitcairn Islands",
+      "nameLocal": "Pitcairn Islands",
+      "aliases": [
+        "핏케언 제도",
+        "Pitcairn Islands",
+        "Pitcairn Is.",
+        "Pit. Is.",
+        "Pitcairn, Henderson, Ducie and Oeno Islands",
+        "PN",
+        "PCN"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        -128.317536,
+        -24.364576
+      ],
+      "bbox": [
+        -130.753082,
+        -25.077081,
+        -124.778066,
+        -23.924412
+      ]
+    },
+    {
+      "id": "natural-earth:country:PYF",
+      "naturalEarthCode": "PYF",
+      "isoAlpha2": "PF",
+      "isoAlpha3": "PYF",
+      "name": "프랑스령 폴리네시아",
+      "nameKo": "프랑스령 폴리네시아",
+      "nameEn": "French Polynesia",
+      "nameLocal": "French Polynesia",
+      "aliases": [
+        "프랑스령 폴리네시아",
+        "French Polynesia",
+        "Fr. Polynesia",
+        "Fr. Poly.",
+        "PF",
+        "PYF"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        -149.46157,
+        -17.628081
+      ],
+      "bbox": [
+        -154.536977,
+        -27.641209,
+        -134.942983,
+        -7.950128
+      ]
+    },
+    {
+      "id": "natural-earth:country:ATF",
+      "naturalEarthCode": "ATF",
+      "isoAlpha2": "TF",
+      "isoAlpha3": "ATF",
+      "name": "프랑스령 남방 및 남극",
+      "nameKo": "프랑스령 남방 및 남극",
+      "nameEn": "French Southern and Antarctic Lands",
+      "nameLocal": "French Southern and Antarctic Lands",
+      "aliases": [
+        "프랑스령 남방 및 남극",
+        "French Southern and Antarctic Lands",
+        "Fr. S. Antarctic Lands",
+        "Fr. S.A.L.",
+        "Territory of the French Southern and Antarctic Lands",
+        "TF",
+        "ATF"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        69.122136,
+        -49.303721
+      ],
+      "bbox": [
+        39.728282,
+        -49.721612,
+        77.585216,
+        -11.550632
+      ]
+    },
+    {
+      "id": "natural-earth:country:SYC",
+      "naturalEarthCode": "SYC",
+      "isoAlpha2": "SC",
+      "isoAlpha3": "SYC",
+      "name": "세이셸",
+      "nameKo": "세이셸",
+      "nameEn": "Seychelles",
+      "nameLocal": "Seychelles",
+      "aliases": [
+        "세이셸",
+        "Seychelles",
+        "Syc.",
+        "Republic of Seychelles",
+        "SC",
+        "SYC"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        55.480175,
+        -4.676659
+      ],
+      "bbox": [
+        46.207367,
+        -9.755548,
+        56.287446,
+        -3.791111
+      ]
+    },
+    {
+      "id": "natural-earth:country:KIR",
+      "naturalEarthCode": "KIR",
+      "isoAlpha2": "KI",
+      "isoAlpha3": "KIR",
+      "name": "키리바시",
+      "nameKo": "키리바시",
+      "nameEn": "Kiribati",
+      "nameLocal": "Kiribati",
+      "aliases": [
+        "키리바시",
+        "Kiribati",
+        "Kir.",
+        "Republic of Kiribati",
+        "KI",
+        "KIR"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        -157.384577,
+        1.820437
+      ],
+      "bbox": [
+        -174.543406,
+        -11.461114,
+        176.850922,
+        4.72309
+      ]
+    },
+    {
+      "id": "natural-earth:country:MHL",
+      "naturalEarthCode": "MHL",
+      "isoAlpha2": "MH",
+      "isoAlpha3": "MHL",
+      "name": "마셜 제도",
+      "nameKo": "마셜 제도",
+      "nameEn": "Marshall Islands",
+      "nameLocal": "Marshall Islands",
+      "aliases": [
+        "마셜 제도",
+        "Marshall Islands",
+        "Marshall Is.",
+        "M. Is.",
+        "Republic of the Marshall Islands",
+        "MH",
+        "MHL"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        171.193609,
+        7.082568
+      ],
+      "bbox": [
+        165.282237,
+        4.573798,
+        172.029796,
+        14.6105
+      ]
+    },
+    {
+      "id": "natural-earth:country:TTO",
+      "naturalEarthCode": "TTO",
+      "isoAlpha2": "TT",
+      "isoAlpha3": "TTO",
+      "name": "트리니다드 토바고",
+      "nameKo": "트리니다드 토바고",
+      "nameEn": "Trinidad and Tobago",
+      "nameLocal": "Trinidad and Tobago",
+      "aliases": [
+        "트리니다드 토바고",
+        "Trinidad and Tobago",
+        "Tr.T.",
+        "Republic of Trinidad and Tobago",
+        "TT",
+        "TTO"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -60.9184,
+        10.9989
+      ],
+      "bbox": [
+        -61.9287,
+        10.04206,
+        -60.522084,
+        11.35106
+      ]
+    },
+    {
+      "id": "natural-earth:country:GRD",
+      "naturalEarthCode": "GRD",
+      "isoAlpha2": "GD",
+      "isoAlpha3": "GRD",
+      "name": "그레나다",
+      "nameKo": "그레나다",
+      "nameEn": "Grenada",
+      "nameLocal": "Grenada",
+      "aliases": [
+        "그레나다",
+        "Grenada",
+        "Gren.",
+        "GD",
+        "GRD"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -61.680461,
+        12.113156
+      ],
+      "bbox": [
+        -61.790517,
+        12.002834,
+        -61.42162,
+        12.529731
+      ]
+    },
+    {
+      "id": "natural-earth:country:VCT",
+      "naturalEarthCode": "VCT",
+      "isoAlpha2": "VC",
+      "isoAlpha3": "VCT",
+      "name": "세인트빈센트 그레나딘",
+      "nameKo": "세인트빈센트 그레나딘",
+      "nameEn": "Saint Vincent and the Grenadines",
+      "nameLocal": "Saint Vincent and the Grenadines",
+      "aliases": [
+        "세인트빈센트 그레나딘",
+        "Saint Vincent and the Grenadines",
+        "St. Vin. and Gren.",
+        "St. Vincent and the Grenadines",
+        "St.V.G.",
+        "VC",
+        "VCT"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -61.3359,
+        13.0879
+      ],
+      "bbox": [
+        -61.459828,
+        12.58515,
+        -61.123931,
+        13.380764
+      ]
+    },
+    {
+      "id": "natural-earth:country:BRB",
+      "naturalEarthCode": "BRB",
+      "isoAlpha2": "BB",
+      "isoAlpha3": "BRB",
+      "name": "바베이도스",
+      "nameKo": "바베이도스",
+      "nameEn": "Barbados",
+      "nameLocal": "Barbados",
+      "aliases": [
+        "바베이도스",
+        "Barbados",
+        "Barb.",
+        "BB",
+        "BRB"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -59.568966,
+        13.163709
+      ],
+      "bbox": [
+        -59.654205,
+        13.051174,
+        -59.42691,
+        13.34455
+      ]
+    },
+    {
+      "id": "natural-earth:country:LCA",
+      "naturalEarthCode": "LCA",
+      "isoAlpha2": "LC",
+      "isoAlpha3": "LCA",
+      "name": "세인트루시아",
+      "nameKo": "세인트루시아",
+      "nameEn": "Saint Lucia",
+      "nameLocal": "Saint Lucia",
+      "aliases": [
+        "세인트루시아",
+        "Saint Lucia",
+        "St. Lucia",
+        "S.L.",
+        "LC",
+        "LCA"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -60.980094,
+        13.892371
+      ],
+      "bbox": [
+        -61.078521,
+        13.714667,
+        -60.882965,
+        14.111884
+      ]
+    },
+    {
+      "id": "natural-earth:country:DMA",
+      "naturalEarthCode": "DMA",
+      "isoAlpha2": "DM",
+      "isoAlpha3": "DMA",
+      "name": "도미니카 연방",
+      "nameKo": "도미니카 연방",
+      "nameEn": "Dominica",
+      "nameLocal": "Dominica",
+      "aliases": [
+        "도미니카 연방",
+        "Dominica",
+        "D'inca",
+        "Commonwealth of Dominica",
+        "DM",
+        "DMA"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -61.344958,
+        15.458829
+      ],
+      "bbox": [
+        -61.488922,
+        15.201809,
+        -61.249257,
+        15.633857
+      ]
+    },
+    {
+      "id": "natural-earth:country:UMI",
+      "naturalEarthCode": "UMI",
+      "isoAlpha2": "UM",
+      "isoAlpha3": "UMI",
+      "name": "미국령 군소 제도",
+      "nameKo": "미국령 군소 제도",
+      "nameEn": "United States Minor Outlying Islands",
+      "nameLocal": "United States Minor Outlying Islands",
+      "aliases": [
+        "미국령 군소 제도",
+        "United States Minor Outlying Islands",
+        "U.S. Minor Outlying Is.",
+        "U.S. MOI",
+        "UM",
+        "UMI"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        166.644535,
+        19.285663
+      ],
+      "bbox": [
+        -177.389597,
+        -0.388767,
+        166.652354,
+        28.215318
+      ]
+    },
+    {
+      "id": "natural-earth:country:MSR",
+      "naturalEarthCode": "MSR",
+      "isoAlpha2": "MS",
+      "isoAlpha3": "MSR",
+      "name": "몬트세랫",
+      "nameKo": "몬트세랫",
+      "nameEn": "Montserrat",
+      "nameLocal": "Montserrat",
+      "aliases": [
+        "몬트세랫",
+        "Montserrat",
+        "Monts.",
+        "MS",
+        "MSR"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -62.188252,
+        16.73717
+      ],
+      "bbox": [
+        -62.230133,
+        16.67536,
+        -62.140533,
+        16.819322
+      ]
+    },
+    {
+      "id": "natural-earth:country:ATG",
+      "naturalEarthCode": "ATG",
+      "isoAlpha2": "AG",
+      "isoAlpha3": "ATG",
+      "name": "앤티가 바부다",
+      "nameKo": "앤티가 바부다",
+      "nameEn": "Antigua and Barbuda",
+      "nameLocal": "Antigua and Barbuda",
+      "aliases": [
+        "앤티가 바부다",
+        "Antigua and Barbuda",
+        "Antigua and Barb.",
+        "Ant.B.",
+        "AG",
+        "ATG"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -61.790612,
+        17.352249
+      ],
+      "bbox": [
+        -62.34826,
+        16.93197,
+        -61.667592,
+        17.727688
+      ]
+    },
+    {
+      "id": "natural-earth:country:KNA",
+      "naturalEarthCode": "KNA",
+      "isoAlpha2": "KN",
+      "isoAlpha3": "KNA",
+      "name": "세인트키츠 네비스",
+      "nameKo": "세인트키츠 네비스",
+      "nameEn": "Saint Kitts and Nevis",
+      "nameLocal": "Saint Kitts and Nevis",
+      "aliases": [
+        "세인트키츠 네비스",
+        "Saint Kitts and Nevis",
+        "St. Kitts and Nevis",
+        "St.K.N.",
+        "Federation of Saint Kitts and Nevis",
+        "KN",
+        "KNA"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -62.757975,
+        17.336558
+      ],
+      "bbox": [
+        -62.861073,
+        17.100531,
+        -62.536773,
+        17.415839
+      ]
+    },
+    {
+      "id": "natural-earth:country:VIR",
+      "naturalEarthCode": "VIR",
+      "isoAlpha2": "VI",
+      "isoAlpha3": "VIR",
+      "name": "미국령 버진아일랜드",
+      "nameKo": "미국령 버진아일랜드",
+      "nameEn": "United States Virgin Islands",
+      "nameLocal": "United States Virgin Islands",
+      "aliases": [
+        "미국령 버진아일랜드",
+        "United States Virgin Islands",
+        "U.S. Virgin Is.",
+        "Virgin Islands (U.S.)",
+        "V.I. (U.S.)",
+        "Virgin Islands of the United States",
+        "VI",
+        "VIR"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -64.779172,
+        17.746706
+      ],
+      "bbox": [
+        -65.041493,
+        17.682766,
+        -64.559397,
+        18.386599
+      ]
+    },
+    {
+      "id": "natural-earth:country:BLM",
+      "naturalEarthCode": "BLM",
+      "isoAlpha2": "BL",
+      "isoAlpha3": "BLM",
+      "name": "생바르텔레미",
+      "nameKo": "생바르텔레미",
+      "nameEn": "Saint Barthélemy",
+      "nameLocal": "Saint Barthélemy",
+      "aliases": [
+        "생바르텔레미",
+        "Saint Barthélemy",
+        "St-Barthélemy",
+        "Saint-Barthélemy",
+        "St. B.",
+        "BL",
+        "BLM"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -62.833193,
+        17.901987
+      ],
+      "bbox": [
+        -62.86734,
+        17.881985,
+        -62.791656,
+        17.929145
+      ]
+    },
+    {
+      "id": "natural-earth:country:PRI",
+      "naturalEarthCode": "PRI",
+      "isoAlpha2": "PR",
+      "isoAlpha3": "PRI",
+      "name": "푸에르토리코",
+      "nameKo": "푸에르토리코",
+      "nameEn": "Puerto Rico",
+      "nameLocal": "Puerto Rico",
+      "aliases": [
+        "푸에르토리코",
+        "Puerto Rico",
+        "P.R.",
+        "Commonwealth of Puerto Rico",
+        "PR",
+        "PRI"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -66.481065,
+        18.234668
+      ],
+      "bbox": [
+        -67.937815,
+        17.922919,
+        -65.244618,
+        18.522773
+      ]
+    },
+    {
+      "id": "natural-earth:country:AIA",
+      "naturalEarthCode": "AIA",
+      "isoAlpha2": "AI",
+      "isoAlpha3": "AIA",
+      "name": "앵귈라",
+      "nameKo": "앵귈라",
+      "nameEn": "Anguilla",
+      "nameLocal": "Anguilla",
+      "aliases": [
+        "앵귈라",
+        "Anguilla",
+        "Ang.",
+        "AI",
+        "AIA"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -63.026361,
+        18.242979
+      ],
+      "bbox": [
+        -63.428822,
+        18.169094,
+        -62.925682,
+        18.601264
+      ]
+    },
+    {
+      "id": "natural-earth:country:VGB",
+      "naturalEarthCode": "VGB",
+      "isoAlpha2": "VG",
+      "isoAlpha3": "VGB",
+      "name": "영국령 버진아일랜드",
+      "nameKo": "영국령 버진아일랜드",
+      "nameEn": "British Virgin Islands",
+      "nameLocal": "British Virgin Islands",
+      "aliases": [
+        "영국령 버진아일랜드",
+        "British Virgin Islands",
+        "British Virgin Is.",
+        "V.I. (Br.)",
+        "VG",
+        "VGB"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -64.63661,
+        18.426606
+      ],
+      "bbox": [
+        -64.773997,
+        18.334662,
+        -64.270741,
+        18.746243
+      ]
+    },
+    {
+      "id": "natural-earth:country:JAM",
+      "naturalEarthCode": "JAM",
+      "isoAlpha2": "JM",
+      "isoAlpha3": "JAM",
+      "name": "자메이카",
+      "nameKo": "자메이카",
+      "nameEn": "Jamaica",
+      "nameLocal": "Jamaica",
+      "aliases": [
+        "자메이카",
+        "Jamaica",
+        "Jam.",
+        "JM",
+        "JAM"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -77.318767,
+        18.137124
+      ],
+      "bbox": [
+        -78.374664,
+        17.703192,
+        -76.187978,
+        18.525092
+      ]
+    },
+    {
+      "id": "natural-earth:country:CYM",
+      "naturalEarthCode": "CYM",
+      "isoAlpha2": "KY",
+      "isoAlpha3": "CYM",
+      "name": "케이맨 제도",
+      "nameKo": "케이맨 제도",
+      "nameEn": "Cayman Islands",
+      "nameLocal": "Cayman Islands",
+      "aliases": [
+        "케이맨 제도",
+        "Cayman Islands",
+        "Cayman Is.",
+        "Cym. Is.",
+        "KY",
+        "CYM"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -81.24055,
+        19.319862
+      ],
+      "bbox": [
+        -81.416542,
+        19.263864,
+        -79.726643,
+        19.757631
+      ]
+    },
+    {
+      "id": "natural-earth:country:BMU",
+      "naturalEarthCode": "BMU",
+      "isoAlpha2": "BM",
+      "isoAlpha3": "BMU",
+      "name": "버뮤다",
+      "nameKo": "버뮤다",
+      "nameEn": "Bermuda",
+      "nameLocal": "Bermuda",
+      "aliases": [
+        "버뮤다",
+        "Bermuda",
+        "Berm.",
+        "The Bermudas or Somers Isles",
+        "BM",
+        "BMU"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -64.763573,
+        32.296592
+      ],
+      "bbox": [
+        -64.885994,
+        32.248077,
+        -64.647631,
+        32.388658
+      ]
+    },
+    {
+      "id": "natural-earth:country:HMD",
+      "naturalEarthCode": "HMD",
+      "isoAlpha2": "HM",
+      "isoAlpha3": "HMD",
+      "name": "허드 맥도널드 제도",
+      "nameKo": "허드 맥도널드 제도",
+      "nameEn": "Heard Island and McDonald Islands",
+      "nameLocal": "Heard Island and McDonald Islands",
+      "aliases": [
+        "허드 맥도널드 제도",
+        "Heard Island and McDonald Islands",
+        "Heard I. and McDonald Is.",
+        "Heard I. and McDonald Islands",
+        "H.M.Is.",
+        "Territory of Heard Island and McDonald Islands",
+        "HM",
+        "HMD"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        73.50521,
+        -53.103462
+      ],
+      "bbox": [
+        73.236013,
+        -53.19256,
+        73.812185,
+        -52.961602
+      ]
+    },
+    {
+      "id": "natural-earth:country:SHN",
+      "naturalEarthCode": "SHN",
+      "isoAlpha2": "SH",
+      "isoAlpha3": "SHN",
+      "name": "세인트헬레나",
+      "nameKo": "세인트헬레나",
+      "nameEn": "Saint Helena",
+      "nameLocal": "Saint Helena",
+      "aliases": [
+        "세인트헬레나",
+        "Saint Helena",
+        "St. Helena",
+        "St.H.",
+        "SH",
+        "SHN"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -5.71262,
+        -15.950487
+      ],
+      "bbox": [
+        -14.417714,
+        -40.397882,
+        -5.65038,
+        -7.877862
+      ]
+    },
+    {
+      "id": "natural-earth:country:MUS",
+      "naturalEarthCode": "MUS",
+      "isoAlpha2": "MU",
+      "isoAlpha3": "MUS",
+      "name": "모리셔스",
+      "nameKo": "모리셔스",
+      "nameEn": "Mauritius",
+      "nameLocal": "Mauritius",
+      "aliases": [
+        "모리셔스",
+        "Mauritius",
+        "Mus.",
+        "Republic of Mauritius",
+        "MU",
+        "MUS"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        57.565848,
+        -20.299506
+      ],
+      "bbox": [
+        56.524181,
+        -20.517348,
+        63.493907,
+        -10.323907
+      ]
+    },
+    {
+      "id": "natural-earth:country:COM",
+      "naturalEarthCode": "COM",
+      "isoAlpha2": "KM",
+      "isoAlpha3": "COM",
+      "name": "코모로",
+      "nameKo": "코모로",
+      "nameEn": "Comoros",
+      "nameLocal": "Comoros",
+      "aliases": [
+        "코모로",
+        "Comoros",
+        "Com.",
+        "Union of the Comoros",
+        "KM",
+        "COM"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        43.318094,
+        -11.727683
+      ],
+      "bbox": [
+        43.213227,
+        -12.380304,
+        44.529063,
+        -11.361261
+      ]
+    },
+    {
+      "id": "natural-earth:country:STP",
+      "naturalEarthCode": "STP",
+      "isoAlpha2": "ST",
+      "isoAlpha3": "STP",
+      "name": "상투메 프린시페",
+      "nameKo": "상투메 프린시페",
+      "nameEn": "São Tomé and Príncipe",
+      "nameLocal": "São Tomé and Príncipe",
+      "aliases": [
+        "상투메 프린시페",
+        "São Tomé and Príncipe",
+        "São Tomé and Principe",
+        "Sao Tome and Principe",
+        "S.T.P.",
+        "Democratic Republic of São Tomé and Principe",
+        "ST",
+        "STP"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        7.021,
+        0.9709
+      ],
+      "bbox": [
+        6.461681,
+        0.024115,
+        7.462738,
+        1.699774
+      ]
+    },
+    {
+      "id": "natural-earth:country:CPV",
+      "naturalEarthCode": "CPV",
+      "isoAlpha2": "CV",
+      "isoAlpha3": "CPV",
+      "name": "카보베르데",
+      "nameKo": "카보베르데",
+      "nameEn": "Cape Verde",
+      "nameLocal": "Cape Verde",
+      "aliases": [
+        "카보베르데",
+        "Cape Verde",
+        "Cabo Verde",
+        "Republic of Cabo Verde",
+        "C.Vd.",
+        "CV",
+        "CPV"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        -23.639434,
+        15.074761
+      ],
+      "bbox": [
+        -25.360422,
+        14.803941,
+        -22.666575,
+        17.196601
+      ]
+    },
+    {
+      "id": "natural-earth:country:MLT",
+      "naturalEarthCode": "MLT",
+      "isoAlpha2": "MT",
+      "isoAlpha3": "MLT",
+      "name": "몰타",
+      "nameKo": "몰타",
+      "nameEn": "Malta",
+      "nameLocal": "Malta",
+      "aliases": [
+        "몰타",
+        "Malta",
+        "Republic of Malta",
+        "MT",
+        "MLT"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        14.433005,
+        35.892886
+      ],
+      "bbox": [
+        14.183604,
+        35.801215,
+        14.567149,
+        36.075588
+      ]
+    },
+    {
+      "id": "natural-earth:country:JEY",
+      "naturalEarthCode": "JEY",
+      "isoAlpha2": "JE",
+      "isoAlpha3": "JEY",
+      "name": "저지섬",
+      "nameKo": "저지섬",
+      "nameEn": "Jersey",
+      "nameLocal": "Jersey",
+      "aliases": [
+        "저지섬",
+        "Jersey",
+        "Jey.",
+        "Bailiwick of Jersey",
+        "JE",
+        "JEY"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        -2.090146,
+        49.220808
+      ],
+      "bbox": [
+        -2.242014,
+        49.171332,
+        -2.00829,
+        49.267035
+      ]
+    },
+    {
+      "id": "natural-earth:country:GGY",
+      "naturalEarthCode": "GGY",
+      "isoAlpha2": "GG",
+      "isoAlpha3": "GGY",
+      "name": "건지섬",
+      "nameKo": "건지섬",
+      "nameEn": "Guernsey",
+      "nameLocal": "Guernsey",
+      "aliases": [
+        "건지섬",
+        "Guernsey",
+        "Guern.",
+        "Bailiwick of Guernsey",
+        "GG",
+        "GGY"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        -2.561736,
+        49.463533
+      ],
+      "bbox": [
+        -2.673451,
+        49.411566,
+        -2.170318,
+        49.731391
+      ]
+    },
+    {
+      "id": "natural-earth:country:IMN",
+      "naturalEarthCode": "IMN",
+      "isoAlpha2": "IM",
+      "isoAlpha3": "IMN",
+      "name": "맨섬",
+      "nameKo": "맨섬",
+      "nameEn": "Isle of Man",
+      "nameLocal": "Isle of Man",
+      "aliases": [
+        "맨섬",
+        "Isle of Man",
+        "IoMan",
+        "IM",
+        "IMN"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        -4.530069,
+        54.220833
+      ],
+      "bbox": [
+        -4.790151,
+        54.056952,
+        -4.31192,
+        54.419013
+      ]
+    },
+    {
+      "id": "natural-earth:country:ALD",
+      "naturalEarthCode": "ALD",
+      "isoAlpha2": "AX",
+      "isoAlpha3": "ALA",
+      "name": "올란드 제도",
+      "nameKo": "올란드 제도",
+      "nameEn": "Åland",
+      "nameLocal": "Åland",
+      "aliases": [
+        "올란드 제도",
+        "Åland",
+        "Åland Islands",
+        "Aland",
+        "AX",
+        "ALA",
+        "ALD"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        19.869671,
+        60.156467
+      ],
+      "bbox": [
+        19.513194,
+        59.904486,
+        21.09669,
+        60.48078
+      ]
+    },
+    {
+      "id": "natural-earth:country:FRO",
+      "naturalEarthCode": "FRO",
+      "isoAlpha2": "FO",
+      "isoAlpha3": "FRO",
+      "name": "페로 제도",
+      "nameKo": "페로 제도",
+      "nameEn": "Faroe Islands",
+      "nameLocal": "Faroe Islands",
+      "aliases": [
+        "페로 제도",
+        "Faroe Islands",
+        "Faeroe Is.",
+        "Faeroe Islands",
+        "Føroyar Is. (Faeroe Is.)",
+        "FO",
+        "FRO"
+      ],
+      "continentId": "natural-earth:continent:europe",
+      "continentCode": "europe",
+      "centroid": [
+        -7.058429,
+        62.185604
+      ],
+      "bbox": [
+        -7.644154,
+        61.39411,
+        -6.275787,
+        62.398912
+      ]
+    },
+    {
+      "id": "natural-earth:country:IOA",
+      "naturalEarthCode": "IOA",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "호주령 인도양 지역",
+      "nameKo": "호주령 인도양 지역",
+      "nameEn": "Australian Indian Ocean Territories",
+      "nameLocal": "Australian Indian Ocean Territories",
+      "aliases": [
+        "호주령 인도양 지역",
+        "Australian Indian Ocean Territories",
+        "Indian Ocean Ter.",
+        "Indian Ocean Territories",
+        "Ind. Oc. Ter.",
+        "IOA"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        105.67259,
+        -10.490789
+      ],
+      "bbox": [
+        96.821544,
+        -12.199965,
+        105.714692,
+        -10.430841
+      ]
+    },
+    {
+      "id": "natural-earth:country:IOT",
+      "naturalEarthCode": "IOT",
+      "isoAlpha2": "IO",
+      "isoAlpha3": "IOT",
+      "name": "영국령 인도양 지역",
+      "nameKo": "영국령 인도양 지역",
+      "nameEn": "British Indian Ocean Territory",
+      "nameLocal": "British Indian Ocean Territory",
+      "aliases": [
+        "영국령 인도양 지역",
+        "British Indian Ocean Territory",
+        "Br. Indian Ocean Ter.",
+        "I.O.T.",
+        "IO",
+        "IOT"
+      ],
+      "continentId": "natural-earth:continent:africa",
+      "continentCode": "africa",
+      "centroid": [
+        71.348349,
+        -6.190826
+      ],
+      "bbox": [
+        71.260997,
+        -7.432224,
+        72.49464,
+        -5.226983
+      ]
+    },
+    {
+      "id": "natural-earth:country:SGP",
+      "naturalEarthCode": "SGP",
+      "isoAlpha2": "SG",
+      "isoAlpha3": "SGP",
+      "name": "싱가포르",
+      "nameKo": "싱가포르",
+      "nameEn": "Singapore",
+      "nameLocal": "Singapore",
+      "aliases": [
+        "싱가포르",
+        "Singapore",
+        "Sing.",
+        "Republic of Singapore",
+        "SG",
+        "SGP"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        103.816925,
+        1.366587
+      ],
+      "bbox": [
+        103.640391,
+        1.264309,
+        104.003429,
+        1.448635
+      ]
+    },
+    {
+      "id": "natural-earth:country:NFK",
+      "naturalEarthCode": "NFK",
+      "isoAlpha2": "NF",
+      "isoAlpha3": "NFK",
+      "name": "노퍽섬",
+      "nameKo": "노퍽섬",
+      "nameEn": "Norfolk Island",
+      "nameLocal": "Norfolk Island",
+      "aliases": [
+        "노퍽섬",
+        "Norfolk Island",
+        "Nfk. I.",
+        "Territory of Norfolk Island",
+        "NF",
+        "NFK"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        167.954531,
+        -29.033042
+      ],
+      "bbox": [
+        167.91212,
+        -29.080011,
+        167.996349,
+        -28.997491
+      ]
+    },
+    {
+      "id": "natural-earth:country:COK",
+      "naturalEarthCode": "COK",
+      "isoAlpha2": "CK",
+      "isoAlpha3": "COK",
+      "name": "쿡 제도",
+      "nameKo": "쿡 제도",
+      "nameEn": "Cook Islands",
+      "nameLocal": "Cook Islands",
+      "aliases": [
+        "쿡 제도",
+        "Cook Islands",
+        "Cook Is.",
+        "CK",
+        "COK"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        -159.785675,
+        -21.215993
+      ],
+      "bbox": [
+        -165.824534,
+        -21.938897,
+        -157.312815,
+        -8.94671
+      ]
+    },
+    {
+      "id": "natural-earth:country:TON",
+      "naturalEarthCode": "TON",
+      "isoAlpha2": "TO",
+      "isoAlpha3": "TON",
+      "name": "통가",
+      "nameKo": "통가",
+      "nameEn": "Tonga",
+      "nameLocal": "Tonga",
+      "aliases": [
+        "통가",
+        "Tonga",
+        "Tongo",
+        "Kingdom of Tonga",
+        "TO",
+        "TON"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        -175.163014,
+        -21.210026
+      ],
+      "bbox": [
+        -176.219309,
+        -22.3388,
+        -173.914255,
+        -15.559503
+      ]
+    },
+    {
+      "id": "natural-earth:country:WLF",
+      "naturalEarthCode": "WLF",
+      "isoAlpha2": "WF",
+      "isoAlpha3": "WLF",
+      "name": "왈리스 푸투나",
+      "nameKo": "왈리스 푸투나",
+      "nameEn": "Wallis and Futuna",
+      "nameLocal": "Wallis and Futuna",
+      "aliases": [
+        "왈리스 푸투나",
+        "Wallis and Futuna",
+        "Wallis and Futuna Is.",
+        "Wallis and Futuna Islands",
+        "Wlf.",
+        "WF",
+        "WLF"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        -178.137436,
+        -14.286415
+      ],
+      "bbox": [
+        -178.18574,
+        -14.319431,
+        -176.1256,
+        -13.208917
+      ]
+    },
+    {
+      "id": "natural-earth:country:WSM",
+      "naturalEarthCode": "WSM",
+      "isoAlpha2": "WS",
+      "isoAlpha3": "WSM",
+      "name": "사모아",
+      "nameKo": "사모아",
+      "nameEn": "Samoa",
+      "nameLocal": "Samoa",
+      "aliases": [
+        "사모아",
+        "Samoa",
+        "Independent State of Samoa",
+        "WS",
+        "WSM"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        -172.438241,
+        -13.639139
+      ],
+      "bbox": [
+        -172.782582,
+        -14.05283,
+        -171.437693,
+        -13.462823
+      ]
+    },
+    {
+      "id": "natural-earth:country:SLB",
+      "naturalEarthCode": "SLB",
+      "isoAlpha2": "SB",
+      "isoAlpha3": "SLB",
+      "name": "솔로몬 제도",
+      "nameKo": "솔로몬 제도",
+      "nameEn": "Solomon Islands",
+      "nameLocal": "Solomon Islands",
+      "aliases": [
+        "솔로몬 제도",
+        "Solomon Islands",
+        "Solomon Is.",
+        "S. Is.",
+        "SB",
+        "SLB"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        159.170468,
+        -8.029548
+      ],
+      "bbox": [
+        155.507986,
+        -12.290623,
+        168.825857,
+        -6.599867
+      ]
+    },
+    {
+      "id": "natural-earth:country:TUV",
+      "naturalEarthCode": "TUV",
+      "isoAlpha2": "TV",
+      "isoAlpha3": "TUV",
+      "name": "투발루",
+      "nameKo": "투발루",
+      "nameEn": "Tuvalu",
+      "nameLocal": "Tuvalu",
+      "aliases": [
+        "투발루",
+        "Tuvalu",
+        "Tuv.",
+        "TV",
+        "TUV"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        179.209587,
+        -8.513717
+      ],
+      "bbox": [
+        176.125255,
+        -9.420668,
+        179.906749,
+        -5.677504
+      ]
+    },
+    {
+      "id": "natural-earth:country:MDV",
+      "naturalEarthCode": "MDV",
+      "isoAlpha2": "MV",
+      "isoAlpha3": "MDV",
+      "name": "몰디브",
+      "nameKo": "몰디브",
+      "nameEn": "Maldives",
+      "nameLocal": "Maldives",
+      "aliases": [
+        "몰디브",
+        "Maldives",
+        "Mald.",
+        "Republic of Maldives",
+        "MV",
+        "MDV"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        73.507554,
+        4.174441
+      ],
+      "bbox": [
+        72.684825,
+        -0.688572,
+        73.753184,
+        7.107245
+      ]
+    },
+    {
+      "id": "natural-earth:country:NRU",
+      "naturalEarthCode": "NRU",
+      "isoAlpha2": "NR",
+      "isoAlpha3": "NRU",
+      "name": "나우루",
+      "nameKo": "나우루",
+      "nameEn": "Nauru",
+      "nameLocal": "Nauru",
+      "aliases": [
+        "나우루",
+        "Nauru",
+        "Republic of Nauru",
+        "NR",
+        "NRU"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        166.932644,
+        -0.520261
+      ],
+      "bbox": [
+        166.906993,
+        -0.551853,
+        166.958263,
+        -0.490411
+      ]
+    },
+    {
+      "id": "natural-earth:country:FSM",
+      "naturalEarthCode": "FSM",
+      "isoAlpha2": "FM",
+      "isoAlpha3": "FSM",
+      "name": "미크로네시아 연방",
+      "nameKo": "미크로네시아 연방",
+      "nameEn": "Federated States of Micronesia",
+      "nameLocal": "Federated States of Micronesia",
+      "aliases": [
+        "미크로네시아 연방",
+        "Federated States of Micronesia",
+        "Micronesia",
+        "Micronesia, Federated States of",
+        "F.S.M.",
+        "FM",
+        "FSM"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        158.234019,
+        6.887553
+      ],
+      "bbox": [
+        138.063813,
+        0.918158,
+        163.04656,
+        9.77558
+      ]
+    },
+    {
+      "id": "natural-earth:country:SGS",
+      "naturalEarthCode": "SGS",
+      "isoAlpha2": "GS",
+      "isoAlpha3": "SGS",
+      "name": "사우스조지아 사우스샌드위치 제도",
+      "nameKo": "사우스조지아 사우스샌드위치 제도",
+      "nameEn": "South Georgia and the South Sandwich Islands",
+      "nameLocal": "South Georgia and the South Sandwich Islands",
+      "aliases": [
+        "사우스조지아 사우스샌드위치 제도",
+        "South Georgia and the South Sandwich Islands",
+        "S. Geo. and the Is.",
+        "South Georgia and the Islands",
+        "S.G. & Is.",
+        "GS",
+        "SGS"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -31.063179,
+        -55.683402
+      ],
+      "bbox": [
+        -38.087026,
+        -59.472752,
+        -26.239329,
+        -53.972426
+      ]
+    },
+    {
+      "id": "natural-earth:country:FLK",
+      "naturalEarthCode": "FLK",
+      "isoAlpha2": "FK",
+      "isoAlpha3": "FLK",
+      "name": "포클랜드 제도",
+      "nameKo": "포클랜드 제도",
+      "nameEn": "Falkland Islands",
+      "nameLocal": "Falkland Islands",
+      "aliases": [
+        "포클랜드 제도",
+        "Falkland Islands",
+        "Falkland Is.",
+        "Falkland Islands / Malvinas",
+        "Islas Malvinas",
+        "Flk. Is.",
+        "FK",
+        "FLK"
+      ],
+      "continentId": "natural-earth:continent:south-america",
+      "continentCode": "south-america",
+      "centroid": [
+        -58.738602,
+        -51.608913
+      ],
+      "bbox": [
+        -61.318186,
+        -52.406523,
+        -57.734283,
+        -51.027765
+      ]
+    },
+    {
+      "id": "natural-earth:country:VUT",
+      "naturalEarthCode": "VUT",
+      "isoAlpha2": "VU",
+      "isoAlpha3": "VUT",
+      "name": "바누아투",
+      "nameKo": "바누아투",
+      "nameEn": "Vanuatu",
+      "nameLocal": "Vanuatu",
+      "aliases": [
+        "바누아투",
+        "Vanuatu",
+        "Van.",
+        "Republic of Vanuatu",
+        "VU",
+        "VUT"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        166.908762,
+        -15.37153
+      ],
+      "bbox": [
+        166.520518,
+        -20.253106,
+        169.898936,
+        -13.064874
+      ]
+    },
+    {
+      "id": "natural-earth:country:NIU",
+      "naturalEarthCode": "NIU",
+      "isoAlpha2": "NU",
+      "isoAlpha3": "NIU",
+      "name": "니우에",
+      "nameKo": "니우에",
+      "nameEn": "Niue",
+      "nameLocal": "Niue",
+      "aliases": [
+        "니우에",
+        "Niue",
+        "NU",
+        "NIU"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        -169.862565,
+        -19.045956
+      ],
+      "bbox": [
+        -169.950429,
+        -19.142755,
+        -169.782908,
+        -18.964044
+      ]
+    },
+    {
+      "id": "natural-earth:country:ASM",
+      "naturalEarthCode": "ASM",
+      "isoAlpha2": "AS",
+      "isoAlpha3": "ASM",
+      "name": "아메리칸사모아",
+      "nameKo": "아메리칸사모아",
+      "nameEn": "American Samoa",
+      "nameLocal": "American Samoa",
+      "aliases": [
+        "아메리칸사모아",
+        "American Samoa",
+        "Am. Samoa",
+        "AS",
+        "ASM"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        -170.747153,
+        -14.32671
+      ],
+      "bbox": [
+        -171.086537,
+        -14.532892,
+        -168.160471,
+        -11.051365
+      ]
+    },
+    {
+      "id": "natural-earth:country:PLW",
+      "naturalEarthCode": "PLW",
+      "isoAlpha2": "PW",
+      "isoAlpha3": "PLW",
+      "name": "팔라우",
+      "nameKo": "팔라우",
+      "nameEn": "Palau",
+      "nameLocal": "Palau",
+      "aliases": [
+        "팔라우",
+        "Palau",
+        "Republic of Palau",
+        "PW",
+        "PLW"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        134.580157,
+        7.518252
+      ],
+      "bbox": [
+        131.131114,
+        2.949042,
+        134.727343,
+        8.096618
+      ]
+    },
+    {
+      "id": "natural-earth:country:GUM",
+      "naturalEarthCode": "GUM",
+      "isoAlpha2": "GU",
+      "isoAlpha3": "GUM",
+      "name": "괌",
+      "nameKo": "괌",
+      "nameEn": "Guam",
+      "nameLocal": "Guam",
+      "aliases": [
+        "괌",
+        "Guam",
+        "Territory of Guam",
+        "GU",
+        "GUM"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        144.703614,
+        13.354173
+      ],
+      "bbox": [
+        144.624197,
+        13.241034,
+        144.952159,
+        13.65412
+      ]
+    },
+    {
+      "id": "natural-earth:country:MNP",
+      "naturalEarthCode": "MNP",
+      "isoAlpha2": "MP",
+      "isoAlpha3": "MNP",
+      "name": "북마리아나 제도",
+      "nameKo": "북마리아나 제도",
+      "nameEn": "Northern Mariana Islands",
+      "nameLocal": "Northern Mariana Islands",
+      "aliases": [
+        "북마리아나 제도",
+        "Northern Mariana Islands",
+        "N. Mariana Is.",
+        "N.M.I.",
+        "Commonwealth of the Northern Mariana Islands",
+        "MP",
+        "MNP"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        145.734397,
+        15.188188
+      ],
+      "bbox": [
+        144.90211,
+        14.110663,
+        145.868907,
+        20.555406
+      ]
+    },
+    {
+      "id": "natural-earth:country:BHR",
+      "naturalEarthCode": "BHR",
+      "isoAlpha2": "BH",
+      "isoAlpha3": "BHR",
+      "name": "바레인",
+      "nameKo": "바레인",
+      "nameEn": "Bahrain",
+      "nameLocal": "Bahrain",
+      "aliases": [
+        "바레인",
+        "Bahrain",
+        "Bahr.",
+        "Kingdom of Bahrain",
+        "BH",
+        "BHR"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        50.554816,
+        26.055972
+      ],
+      "bbox": [
+        50.38053,
+        25.579891,
+        50.819875,
+        26.287439
+      ]
+    },
+    {
+      "id": "natural-earth:country:CSI",
+      "naturalEarthCode": "CSI",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "산호해 제도",
+      "nameKo": "산호해 제도",
+      "nameEn": "Coral Sea Islands",
+      "nameLocal": "Coral Sea Islands",
+      "aliases": [
+        "산호해 제도",
+        "Coral Sea Islands",
+        "Coral Sea Is.",
+        "C.S.I.",
+        "Coral Sea Islands Territory",
+        "CSI"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        154.390595,
+        -21.029311
+      ],
+      "bbox": [
+        154.38852,
+        -21.030043,
+        154.391287,
+        -21.028741
+      ]
+    },
+    {
+      "id": "natural-earth:country:PGA",
+      "naturalEarthCode": "PGA",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "웨이크섬",
+      "nameKo": "웨이크섬",
+      "nameEn": "Wake Island",
+      "nameLocal": "Wake Island",
+      "aliases": [
+        "웨이크섬",
+        "Wake Island",
+        "Spratly Is.",
+        "Spratly Islands",
+        "PGA"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        115.81956,
+        10.72954
+      ],
+      "bbox": [
+        114.02768,
+        9.679511,
+        115.848806,
+        11.117987
+      ]
+    },
+    {
+      "id": "natural-earth:country:CLP",
+      "naturalEarthCode": "CLP",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "클리퍼턴섬",
+      "nameKo": "클리퍼턴섬",
+      "nameEn": "Clipperton Island",
+      "nameLocal": "Clipperton Island",
+      "aliases": [
+        "클리퍼턴섬",
+        "Clipperton Island",
+        "Clipperton I.",
+        "Clp. I.",
+        "CLP"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -109.22045,
+        10.297324
+      ],
+      "bbox": [
+        -109.234242,
+        10.281562,
+        -109.210357,
+        10.311021
+      ]
+    },
+    {
+      "id": "natural-earth:country:MAC",
+      "naturalEarthCode": "MAC",
+      "isoAlpha2": "MO",
+      "isoAlpha3": "MAC",
+      "name": "마카오",
+      "nameKo": "마카오",
+      "nameEn": "Macau",
+      "nameLocal": "Macau",
+      "aliases": [
+        "마카오",
+        "Macau",
+        "Macao",
+        "Macao SAR, China",
+        "Mac.",
+        "Macao Special Administrative Region, PRC",
+        "MO",
+        "MAC"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        113.556038,
+        22.129735
+      ],
+      "bbox": [
+        113.519867,
+        22.105373,
+        113.587494,
+        22.220771
+      ]
+    },
+    {
+      "id": "natural-earth:country:ATC",
+      "naturalEarthCode": "ATC",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "애시모어 카르티에 제도",
+      "nameKo": "애시모어 카르티에 제도",
+      "nameEn": "Ashmore and Cartier Islands",
+      "nameLocal": "Ashmore and Cartier Islands",
+      "aliases": [
+        "애시모어 카르티에 제도",
+        "Ashmore and Cartier Islands",
+        "Ashmore and Cartier Is.",
+        "A.C.Is.",
+        "Territory of Ashmore and Cartier Islands",
+        "ATC"
+      ],
+      "continentId": "natural-earth:continent:oceania",
+      "continentCode": "oceania",
+      "centroid": [
+        123.586368,
+        -12.432571
+      ],
+      "bbox": [
+        123.575043,
+        -12.438572,
+        123.597748,
+        -12.426609
+      ]
+    },
+    {
+      "id": "natural-earth:country:BJN",
+      "naturalEarthCode": "BJN",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "바호 누에보 뱅크",
+      "nameKo": "바호 누에보 뱅크",
+      "nameEn": "Bajo Nuevo Bank",
+      "nameLocal": "Bajo Nuevo Bank",
+      "aliases": [
+        "바호 누에보 뱅크",
+        "Bajo Nuevo Bank",
+        "Bajo Nuevo Bank (Petrel Islands)",
+        "Bajo Nuevo Bank (Petrel Is.)",
+        "BJN"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -79.9878435,
+        15.795193000000001
+      ],
+      "bbox": [
+        -79.989288,
+        15.794176,
+        -79.986399,
+        15.79621
+      ]
+    },
+    {
+      "id": "natural-earth:country:SER",
+      "naturalEarthCode": "SER",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "세라냐 뱅크",
+      "nameKo": "세라냐 뱅크",
+      "nameEn": "Serranilla Bank",
+      "nameLocal": "Serranilla Bank",
+      "aliases": [
+        "세라냐 뱅크",
+        "Serranilla Bank",
+        "S.B.",
+        "SER"
+      ],
+      "continentId": "natural-earth:continent:north-america",
+      "continentCode": "north-america",
+      "centroid": [
+        -78.638239,
+        15.864308
+      ],
+      "bbox": [
+        -78.640411,
+        15.862087,
+        -78.636871,
+        15.867296
+      ]
+    },
+    {
+      "id": "natural-earth:country:SCR",
+      "naturalEarthCode": "SCR",
+      "isoAlpha2": null,
+      "isoAlpha3": null,
+      "name": "스카버러 암초",
+      "nameKo": "스카버러 암초",
+      "nameEn": "Scarborough Shoal",
+      "nameLocal": "Scarborough Shoal",
+      "aliases": [
+        "스카버러 암초",
+        "Scarborough Shoal",
+        "Scarborough Reef",
+        "S.R.",
+        "SCR"
+      ],
+      "continentId": "natural-earth:continent:asia",
+      "continentCode": "asia",
+      "centroid": [
+        117.753812,
+        15.152039
+      ],
+      "bbox": [
+        117.751856,
+        15.150082,
+        117.755692,
+        15.154369
+      ]
+    }
+  ]
+}

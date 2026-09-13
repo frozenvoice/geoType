@@ -1,0 +1,159 @@
+/* Result review and save states. Kept separate from the shared app shell. */
+.result-screen .result-hero > p:not(.eyebrow) {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.result-screen .result-score span {
+  letter-spacing: .08em;
+}
+
+.result-screen .save-score input:disabled,
+.result-screen .save-score button:disabled {
+  cursor: wait;
+}
+
+.question-review {
+  width: min(72rem, 100%);
+  margin: 1rem auto 0;
+  padding: clamp(1rem, 2.2vw, 1.7rem);
+}
+
+.question-review .section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.question-review .section-heading > span {
+  white-space: nowrap;
+}
+
+.review-description {
+  margin: .85rem 0 0;
+  color: var(--muted);
+  font-size: .7rem;
+}
+
+.review-list {
+  display: grid;
+  gap: .45rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.review-row {
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr) minmax(13rem, auto);
+  align-items: center;
+  gap: .7rem;
+  min-width: 0;
+  border: 1px solid rgba(127, 183, 198, .12);
+  border-radius: .68rem;
+  padding: .7rem .8rem;
+  background: rgba(5, 17, 29, .52);
+}
+
+.review-row.review-correct {
+  border-color: rgba(99, 245, 204, .18);
+}
+
+.review-row.review-miss {
+  border-color: rgba(255, 113, 139, .22);
+  background: rgba(70, 25, 42, .18);
+}
+
+.review-index {
+  color: var(--muted-2);
+  font: 700 .58rem/1 ui-monospace, monospace;
+  letter-spacing: .08em;
+}
+
+.review-place {
+  display: grid;
+  gap: .18rem;
+  min-width: 0;
+}
+
+.review-place strong {
+  overflow: hidden;
+  color: #f4fbfc;
+  font-size: .82rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.review-place span {
+  overflow-wrap: anywhere;
+  color: var(--muted);
+  font-size: .63rem;
+}
+
+.review-place em {
+  color: var(--muted-2);
+  font-style: normal;
+}
+
+.review-metrics {
+  display: grid;
+  justify-items: end;
+  gap: .2rem;
+  min-width: 0;
+  text-align: right;
+}
+
+.review-outcome {
+  color: var(--cyan);
+  font-size: .67rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.review-miss .review-outcome {
+  color: var(--coral);
+}
+
+.review-metrics small {
+  color: var(--muted-2);
+  font-size: .56rem;
+  white-space: nowrap;
+}
+
+.review-empty {
+  margin: 1rem 0 0;
+  color: var(--muted-2);
+  font-size: .7rem;
+}
+
+.result-screen .save-score [role='alert'] {
+  line-height: 1.45;
+}
+
+@media (max-width: 700px) {
+  .review-row {
+    grid-template-columns: 1.8rem minmax(0, 1fr);
+    gap: .55rem;
+  }
+
+  .review-metrics {
+    grid-column: 2;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .review-metrics small {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 430px) {
+  .question-review {
+    padding: .9rem;
+  }
+
+  .review-row {
+    padding: .62rem;
+  }
+}

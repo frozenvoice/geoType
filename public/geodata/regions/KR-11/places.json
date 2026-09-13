@@ -1,0 +1,153 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "custom:station:seoul",
+      "source": "custom",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureType": "station",
+      "name": "Seoul Station",
+      "localizedNames": {
+        "ko": "서울역",
+        "en": "Seoul Station"
+      },
+      "aliases": [
+        "서울 철도역"
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9707,
+          37.5547
+        ]
+      },
+      "centroid": [
+        126.9707,
+        37.5547
+      ],
+      "bbox": [
+        126.9707,
+        37.5547,
+        126.9707,
+        37.5547
+      ],
+      "parentIds": [
+        "custom:admin2:KR-11-yongsan",
+        "custom:admin1:KR-11"
+      ],
+      "countryCode": "KR",
+      "importance": 0.92,
+      "recommendedMinZoom": 14,
+      "recommendedMaxZoom": 19
+    },
+    {
+      "id": "custom:road:sejong-daero",
+      "source": "custom",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureType": "road",
+      "name": "Sejong-daero",
+      "localizedNames": {
+        "ko": "세종대로",
+        "en": "Sejong-daero"
+      },
+      "aliases": [
+        "세종로"
+      ],
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.9721,
+            37.5545
+          ],
+          [
+            126.9755,
+            37.5662
+          ],
+          [
+            126.9768,
+            37.5758
+          ]
+        ]
+      },
+      "centroid": [
+        126.97484088778586,
+        37.5650672148593
+      ],
+      "bbox": [
+        126.9721,
+        37.5545,
+        126.9768,
+        37.5758
+      ],
+      "parentIds": [
+        "custom:admin2:KR-11-jung",
+        "custom:admin2:KR-11-jongno",
+        "custom:admin1:KR-11"
+      ],
+      "countryCode": "KR",
+      "importance": 0.75,
+      "recommendedMinZoom": 14,
+      "recommendedMaxZoom": 19
+    },
+    {
+      "id": "custom:landmark:gyeongbokgung",
+      "source": "custom",
+      "sourceVersion": "development-fixture-2026-07-19",
+      "featureType": "landmark",
+      "name": "Gyeongbokgung Palace",
+      "localizedNames": {
+        "ko": "경복궁",
+        "en": "Gyeongbokgung Palace"
+      },
+      "aliases": [
+        "Gyeongbok Palace"
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.973,
+              37.576
+            ],
+            [
+              126.979,
+              37.576
+            ],
+            [
+              126.979,
+              37.582
+            ],
+            [
+              126.973,
+              37.582
+            ],
+            [
+              126.973,
+              37.576
+            ]
+          ]
+        ]
+      },
+      "centroid": [
+        126.97599850290756,
+        37.578999556955566
+      ],
+      "bbox": [
+        126.973,
+        37.576,
+        126.979,
+        37.582
+      ],
+      "parentIds": [
+        "custom:admin2:KR-11-jongno",
+        "custom:admin1:KR-11"
+      ],
+      "countryCode": "KR",
+      "importance": 0.95,
+      "recommendedMinZoom": 14,
+      "recommendedMaxZoom": 20
+    }
+  ]
+}
