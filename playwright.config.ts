@@ -2,6 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 const port = 4173;
 const baseURL = `http://127.0.0.1:${port}`;
+const serverCommand = process.env.GEOTYPE_E2E_PREVIEW === '1' ? 'preview' : 'dev';
 
 export default defineConfig({
   testDir: './e2e',
@@ -42,7 +43,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: `npm run dev -- --host 127.0.0.1 --port ${port} --strictPort`,
+    command: `npm run ${serverCommand} -- --host 127.0.0.1 --port ${port} --strictPort`,
     url: baseURL,
     // Never run GeoType assertions against an unrelated app occupying this
     // port. Fail clearly on a collision instead of reusing that server.

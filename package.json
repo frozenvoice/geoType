@@ -22,7 +22,7 @@
     "check": "npm run lint && npm run typecheck && npm run test && npm run geodata:validate && npm run build"
   },
   "dependencies": {
-    "maplibre-gl": "^5.24.0",
+    "maplibre-gl": "6.4.1",
     "pmtiles": "^4.4.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

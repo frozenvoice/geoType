@@ -192,7 +192,9 @@ test('일본어 한자 모드는 한자 힌트를 사용하고 IME 조합 중 En
   await expect(answer).toHaveAttribute('lang', 'ja');
   await expect(page.getByTestId('hint-mask').locator('span')).toHaveCount(2);
 
-  await expect(page.getByTestId('hint-mask')).toContainText('日', { timeout: 6_000 });
+  // Normal mode reveals its first hint at 7s in preview builds; only dev E2E
+  // sessions halve the timer. Keep this assertion valid for both servers.
+  await expect(page.getByTestId('hint-mask')).toContainText('日', { timeout: 10_000 });
   await expect(page.getByTestId('hint-mask')).not.toContainText('일');
   await capture(page, testInfo, 'japan-kanji-question.png', page.locator('.typing-console'));
 

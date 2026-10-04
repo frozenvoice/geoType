@@ -1,0 +1,141 @@
+import { expect, test } from '@playwright/test';
+
+test.use({ video: 'off', trace: 'off' });
+
+// Exercise the real renderer and bundled worker without remote tiles, fonts or
+// sprites. This fixture is for upgrade regression, not hosted-map quality QA.
+const styleUrl = 'https://tiles.openfreemap.org/styles/liberty';
+const koreaId = 'natural-earth:country:KOR';
+
+async function waitForMapFrame(page) {
+  await expect.poll(() => page.evaluate(() => {
+    const diagnostics = window.__GEOTYPE_E2E_MAP__?.getDiagnostics();
+    return diagnostics?.tilesLoaded && !diagnostics.moving && diagnostics.renderedCountryCount > 0;
+  }), { timeout: 20_000 }).toBe(true);
+}
+
+async function openLocalMap(page, attribution = 'Local map fixture') {
+  const externalRequests = [];
+  await page.route('**/*', async (route) => {
+    const url = route.request().url();
+    if (url === styleUrl) {
+      await route.fulfill({
+        contentType: 'application/json',
+        json: {
+          version: 8,
+          sources: {
+            local: {
+              type: 'geojson',
+              attribution,
+              data: {
+                type: 'FeatureCollection',
+                features: [{
+                  type: 'Feature', properties: {},
+                  geometry: { type: 'Point', coordinates: [127.8, 36.1] },
+                }],
+              },
+            },
+          },
+          layers: [
+            { id: 'background', type: 'background', paint: { 'background-color': '#07101d' } },
+            { id: 'local-point', type: 'circle', source: 'local', paint: { 'circle-radius': 1 } },
+            // Exercise the missing-image resolver without loading a sprite.
+            { id: 'local-icon', type: 'symbol', source: 'local', layout: { 'icon-image': 'local-missing-icon' } },
+          ],
+        },
+      });
+    } else if (new URL(url).hostname === '127.0.0.1') {
+      await route.continue();
+    } else {
+      externalRequests.push(url);
+      await route.abort();
+    }
+  });
+  await page.goto('/?mapDiagnostics=1&e2e=1');
+  await expect(page.locator('.maplibre-stage')).toHaveAttribute('data-map-style-state', 'loaded');
+  await expect(page.getByTestId('selected-country-name')).toHaveText('출발 지역을 선택하세요', { timeout: 20_000 });
+  await waitForMapFrame(page);
+  return externalRequests;
+}
+
+test('local MapLibre renderer preserves globe, camera, hover, selection and Korean IME gameplay', async ({ page }, testInfo) => {
+  const errors = [];
+  page.on('pageerror', (error) => errors.push(error.message));
+  page.on('console', (message) => { if (message.type() === 'error') errors.push(message.text()); });
+  const requests = await openLocalMap(page);
+  const stage = page.locator('.maplibre-stage');
+  await expect(stage).toHaveAttribute('data-map-projection', 'globe');
+  await expect(page.locator('.maplibregl-canvas')).toBeVisible();
+  await page.screenshot({ path: testInfo.outputPath('world.png') });
+  const initialZoom = await page.evaluate(() => window.__GEOTYPE_E2E_MAP__.getDiagnostics().zoom);
+  await page.getByRole('button', { name: 'Zoom in', exact: true }).click();
+  await expect.poll(() => page.evaluate(() => window.__GEOTYPE_E2E_MAP__.getDiagnostics().zoom)).toBeGreaterThan(initialZoom + 0.5);
+
+  const mobile = testInfo.project.name === 'mobile-chromium';
+  await page.evaluate(async (isMobile) => {
+    await window.__GEOTYPE_E2E_MAP__.centerOn([127.8, isMobile ? 30.5 : 36.1], 4.8, 30);
+  }, mobile);
+  await expect.poll(() => page.evaluate(() => window.__GEOTYPE_E2E_MAP__.getDiagnostics().pitch)).toBeCloseTo(30, 1);
+  await expect.poll(() => page.evaluate(() => window.__GEOTYPE_E2E_MAP__.getDiagnostics().zoom)).toBeCloseTo(4.8, 1);
+  await waitForMapFrame(page);
+  const point = await page.evaluate(() => window.__GEOTYPE_E2E_MAP__.project([127.8, 36.1]));
+  const bounds = await page.locator('.maplibregl-canvas').boundingBox();
+  await page.mouse.move(bounds.x + point.x, bounds.y + point.y);
+  await expect.poll(() => page.evaluate(() => window.__GEOTYPE_E2E_MAP__.getDiagnostics().lastHoverSelectionId)).toBe(koreaId);
+  await expect(page.locator('.maplibre-stage__tooltip')).toHaveText('대한민국');
+  await page.mouse.click(bounds.x + point.x, bounds.y + point.y);
+  await expect(page.getByTestId('selected-country-name')).toHaveText('대한민국');
+  await expect.poll(() => page.evaluate(() => window.__GEOTYPE_E2E_MAP__.getDiagnostics().lastSelectionId)).toBe(koreaId);
+  await waitForMapFrame(page);
+  await page.screenshot({ path: testInfo.outputPath('selected.png') });
+
+  const types = page.locator('.geo-type-fieldset');
+  const checkboxes = types.getByRole('checkbox');
+  for (let index = 0; index < await checkboxes.count(); index += 1) {
+    const checkbox = checkboxes.nth(index);
+    const label = (await checkbox.locator('..').innerText()).trim();
+    if (label !== '국가' && await checkbox.isChecked()) await checkbox.locator('..').click();
+  }
+  const country = types.getByRole('checkbox', { name: /^국가$/ });
+  if (!(await country.isChecked())) await country.locator('..').click();
+  await expect(page.getByTestId('start-game')).toContainText('1문제 시작');
+  await page.getByTestId('start-game').click();
+  const answer = page.getByRole('textbox', { name: '목표 지명 입력' });
+  await expect(answer).toBeEnabled({ timeout: 20_000 });
+  await expect(answer).toHaveAttribute('lang', 'ko');
+  await page.screenshot({ path: testInfo.outputPath('question.png') });
+  await answer.dispatchEvent('compositionstart', { data: '대' });
+  await answer.fill('대한민국');
+  await answer.press('Enter');
+  await expect(page.locator('.verdict')).toHaveCount(0);
+  await answer.dispatchEvent('compositionend', { data: '대한민국' });
+  await expect(page.locator('.verdict-correct')).toBeVisible();
+  await expect(page.locator('.result-screen')).toBeVisible({ timeout: 10_000 });
+  await waitForMapFrame(page);
+  await page.screenshot({ path: testInfo.outputPath('result.png') });
+  expect(errors).toEqual([]);
+  expect(requests).toEqual([]);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
+});
+
+test('source attribution removes adjacent event handlers and keeps credit links in the real control', async ({ page }) => {
+  await page.addInitScript(() => { window.attributionExecutions = 0; });
+  const requests = await openLocalMap(page,
+    'Local credit <a href="https://example.invalid/credits" target="_blank">Map contributors</a> ' +
+    '<details open onload="window.attributionExecutions++" ontoggle="window.attributionExecutions++">Local details</details> ' +
+    '<a onclick="window.attributionExecutions++" onmouseover="window.attributionExecutions++" href="javascript:window.attributionExecutions++">Unsafe link</a>',
+  );
+  const attribution = page.locator('.maplibregl-ctrl-attrib-inner');
+  await expect(attribution).toContainText('Local credit');
+  await expect(attribution).toContainText('Local details');
+  const credit = attribution.locator('a', { hasText: 'Map contributors' });
+  await expect(credit).toHaveAttribute('href', 'https://example.invalid/credits');
+  await expect(credit).toHaveAttribute('target', '_blank');
+  expect(await attribution.locator('[onload], [ontoggle], [onclick], [onmouseover], [href^="javascript:"]').count()).toBe(0);
+  await attribution.locator('details').dispatchEvent('toggle');
+  const unsafe = attribution.locator('a', { hasText: 'Unsafe link' });
+  await unsafe.dispatchEvent('mouseover');
+  await unsafe.dispatchEvent('click');
+  expect(await page.evaluate(() => window.attributionExecutions)).toBe(0);
+  expect(requests).toEqual([]);
+});

@@ -1,4 +1,4 @@
-import type maplibregl from 'maplibre-gl';
+import type * as maplibregl from 'maplibre-gl';
 import { PMTiles, Protocol } from 'pmtiles';
 
 type MapLibreProtocolHost = Pick<typeof maplibregl, 'addProtocol'>;

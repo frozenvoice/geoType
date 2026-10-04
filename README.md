@@ -466,6 +466,12 @@ Playwright는 간단 지도에서 국가 검색·선택, 도시 탐험 프리셋
 
 E2E는 4173 포트에 전용 Vite 서버를 시작합니다. 해당 포트에 다른 앱이 실행 중이면 그 앱을 재사용하거나 종료하지 않고 테스트 시작을 중단합니다.
 
+MapLibre는 출처 HTML 정제 우회 [GHSA-jrc7-96c5-q579](https://github.com/maplibre/maplibre-gl-js/security/advisories/GHSA-jrc7-96c5-q579)를 수정한 `6.4.1`로 고정합니다. 외부 스타일의 source attribution과 custom attribution 모두 실제 `AttributionControl`을 거치므로 이 경로를 단위 테스트에서 검사합니다. 인접 이벤트 속성 및 위험 URL 제거, 이벤트 미실행, 정상 출처 텍스트·HTTPS 링크 보존을 초기 표시와 source metadata 갱신에 대해 확인합니다.
+
+`npx playwright test e2e/maplibre-local.spec.js --workers=1`은 외부 스타일 요청을 로컬 fixture로 응답하고 다른 외부 요청을 차단합니다. 실제 MapLibre와 워커로 desktop/mobile의 globe·줌·피치·hover·선택·한글 IME·게임 완료 및 출처 정제를 확인합니다. `npm run build` 뒤 `GEOTYPE_E2E_PREVIEW=1` 환경 변수로 같은 테스트를 실행하면 배포 번들과 워커를 검사합니다. 이 로컬 지도 비교는 OpenFreeMap의 실제 도로·라벨·건물·지형 품질 검수를 대체하지 않습니다.
+
+6.x의 ESM 및 이미지 resolver API를 사용하며 Vite의 `?worker&url`로 워커와 공유 모듈을 함께 번들링합니다. v5의 타일 확대·피처 조회 동작을 유지하도록 overscaling 옵션을 명시하고 기존 CSS·카메라·레이어를 유지합니다. MapLibre 6은 WebGL2가 필요합니다. GitHub Actions는 Ubuntu·Node 22에서 설치, lint, typecheck, 단위 테스트, build만 실행하며 브라우저·대용량 지도 다운로드는 수행하지 않습니다.
+
 ## 현재 한계
 
 - production 범위는 Natural Earth Admin-0 국가 258개와 Natural Earth Populated Places city/town point 7,293개입니다. 행정1·행정2 경계, 도로·역·랜드마크 geometry, 서울의 모든 지명은 아직 없습니다. 배경 스타일에 보이는 label을 정답으로 쓰지 않습니다.

@@ -4,11 +4,12 @@ import {
   useState,
   type CSSProperties,
 } from 'react';
-import maplibregl, {
+import * as maplibregl from 'maplibre-gl';
+import {
   type Map as MapInstance,
   type MapMouseEvent,
-  type MapStyleImageMissingEvent,
 } from 'maplibre-gl';
+import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 import type { GeoFeature, GeoGeometry } from '../geodata/types';
@@ -59,6 +60,13 @@ import { resolveCapabilityState } from './types';
 import { createJourneyCollection, createJourneyLayers, JOURNEY_SOURCE_ID, type JourneyStop } from './journey';
 import './map.css';
 
+// Bundle the v6 module worker and its shared imports for both Vite dev and build.
+maplibregl.setWorkerUrl(maplibreWorkerUrl);
+
+// v6 documents explicit undefined to retain v5 tile overscaling/feature queries.
+// @ts-expect-error MapOptions omits this sentinel with exactOptionalPropertyTypes.
+const legacyOverscaling: Pick<maplibregl.MapOptions, 'zoomLevelsToOverscale'> = { zoomLevelsToOverscale: undefined };
+
 export type MapLibreRendererProps = {
   provider: MapProvider;
   mode: MapMode;
@@ -92,7 +100,7 @@ export type MapLibreRendererProps = {
 
 type LabelLayerOriginalState = {
   filter: unknown[] | null;
-  visibility: unknown;
+  visibility: maplibregl.VisibilitySpecification;
 };
 
 type TooltipState = {
@@ -117,6 +125,8 @@ type TestMapController = {
     zoom: number;
     pitch: number;
     tilesLoaded: boolean;
+    moving: boolean;
+    renderedCountryCount: number;
   };
 };
 
@@ -560,6 +570,7 @@ export function MapLibreRenderer({
         bearing: 0,
         attributionControl: false,
         renderWorldCopies: false,
+        ...legacyOverscaling,
         transformRequest: (url: string, resourceType?: maplibregl.ResourceType) => {
           const type = resourceType ?? 'Unknown';
           const transformed = provider.transformRequest?.(url, type) ?? { url };
@@ -627,6 +638,10 @@ export function MapLibreRenderer({
                 zoom: map.getZoom(),
                 pitch: map.getPitch(),
                 tilesLoaded: map.areTilesLoaded(),
+                moving: map.isMoving(),
+                renderedCountryCount: map.getLayer(MAP_LAYER_IDS.countryHit)
+                  ? map.queryRenderedFeatures({ layers: [MAP_LAYER_IDS.countryHit] }).length
+                  : 0,
               };
             },
           }
@@ -644,18 +659,18 @@ export function MapLibreRenderer({
       );
 
       const reportError = (error: MapResourceLoadError) => callbackRef.current.onError?.(error);
-      const handleStyleImageMissing = (event: MapStyleImageMissingEvent) => {
+      map.setMissingStyleImageResolver((id) => {
         // Vector tiles can reference optional POI icons that are not present in
-        // a style's sprite sheet. MapLibre exposes this event specifically so
+        // a style's sprite sheet. MapLibre exposes this resolver so
         // applications can provide a deterministic fallback instead of
         // emitting a missing-image warning for every affected tile.
-        if (map.hasImage(event.id)) return;
-        map.addImage(event.id, {
+        if (map.hasImage(id)) return;
+        map.addImage(id, {
           width: 1,
           height: 1,
           data: new Uint8Array([0, 0, 0, 0]),
         });
-      };
+      });
       const handleError = (event: unknown) => {
         reportError(createMapResourceLoadError(event, requestedResourceTypes, styleUrl));
       };
@@ -765,9 +780,8 @@ export function MapLibreRenderer({
       };
 
       map.on('error', handleError);
-      map.on('styleimagemissing', handleStyleImageMissing);
       map.on('mousemove', handleMouseMove);
-      map.on('mouseleave', handleMouseLeave);
+      map.on('mouseout', handleMouseLeave);
       map.on('click', handleClick);
       map.on('zoomend', handleZoomEnd);
       void map.once('load', () => {
@@ -784,9 +798,8 @@ export function MapLibreRenderer({
       return () => {
         resizeObserver.disconnect();
         map.off('error', handleError);
-        map.off('styleimagemissing', handleStyleImageMissing);
         map.off('mousemove', handleMouseMove);
-        map.off('mouseleave', handleMouseLeave);
+        map.off('mouseout', handleMouseLeave);
         map.off('click', handleClick);
         map.off('zoomend', handleZoomEnd);
         if (callbackRef.current.syncSelectionStore) {
