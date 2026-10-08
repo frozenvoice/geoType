@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=22.13.0 <23"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -19,6 +22,9 @@
     "geodata:import:countries": "tsx scripts/geodata/importNaturalEarthCountries.ts",
     "geodata:import:places": "tsx scripts/geodata/importNaturalEarthPopulatedPlaces.ts",
     "map:quality": "tsx scripts/map-quality.ts",
+    "verify:quick": "node scripts/verify-local.mjs quick",
+    "verify:full": "node scripts/verify-local.mjs full",
+    "verify:release": "node scripts/verify-local.mjs release",
     "check": "npm run lint && npm run typecheck && npm run test && npm run geodata:validate && npm run build"
   },
   "dependencies": {

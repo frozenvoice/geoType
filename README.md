@@ -21,10 +21,10 @@ Natural Earth의 de facto 경계 정책을 따르며 법적 승인이나 영유�
 
 ## 실행
 
-Node.js와 npm이 필요합니다.
+Node.js 22(22.13.0 이상)와 npm이 필요합니다. `.nvmrc`는 Node 22를 지정하며, 재현 가능한 설치에는 커밋된 잠금 파일을 사용합니다.
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -390,6 +390,8 @@ POST body는 `LeaderboardEntry` 전체입니다. 기존 점수 필드에 `typing
 
 ## 품질 게이트
 
+로컬 기능 검증은 [Quick / Full / Release](./docs/local-verification.md)로 실행합니다. `npm run verify:release -- --real-map`은 별도 실제 OpenFreeMap 스크린샷과 진단을 수집하지만, 자동 assertion 성공 후에도 시각 품질은 **REVIEW REQUIRED**입니다. 아래 기존 항목별 수동 품질 게이트를 자동 승인하지 않습니다.
+
 ```bash
 npm run map:quality
 ```
@@ -437,6 +439,12 @@ npm run map:quality
 | `npm run geodata:language-stats` | 언어 모드별 실제 출제 가능/제외 수 출력 |
 | `npm run map:quality` | 실제 provider 지도 품질 검수 |
 | `npm run check` | lint, typecheck, test, geodata validation, build 순차 실행 |
+| `npm run verify:quick -- --scope=<범위>` | lint/typecheck + 관련 Vitest, UI 관련 범위의 desktop/mobile E2E (개발 서버) |
+| `npm run verify:full -- --scope=<범위>` | 기존 check 1회 + 관련 desktop/mobile E2E (production preview) |
+| `npm run verify:release` | 기존 check 1회 + 전체 결정적 desktop/mobile E2E (production preview) |
+| `npm run verify:release -- --real-map` | Release + 별도 실제 OpenFreeMap 스크린샷·진단; 시각 검토 필요 |
+
+범위는 `all`, `ui`, `map`, `game`, `language`, `data`, `tooling`이며 기본값은 `all`, 여러 범위는 쉼표로 지정합니다. 브라우저 미설치는 환경 부족으로 종료하며 PASS 처리하지 않습니다. 환경 준비, 단계별 차이와 증거/미검증 항목 보고는 [로컬 검증](./docs/local-verification.md), 에이전트 완료 규칙은 [AGENTS.md](./AGENTS.md)를 따릅니다.
 
 ## 프로젝트 구성
 
@@ -470,7 +478,7 @@ MapLibre는 출처 HTML 정제 우회 [GHSA-jrc7-96c5-q579](https://github.com/m
 
 `npx playwright test e2e/maplibre-local.spec.js --workers=1`은 외부 스타일 요청을 로컬 fixture로 응답하고 다른 외부 요청을 차단합니다. 실제 MapLibre와 워커로 desktop/mobile의 globe·줌·피치·hover·선택·한글 IME·게임 완료 및 출처 정제를 확인합니다. `npm run build` 뒤 `GEOTYPE_E2E_PREVIEW=1` 환경 변수로 같은 테스트를 실행하면 배포 번들과 워커를 검사합니다. 이 로컬 지도 비교는 OpenFreeMap의 실제 도로·라벨·건물·지형 품질 검수를 대체하지 않습니다.
 
-6.x의 ESM 및 이미지 resolver API를 사용하며 Vite의 `?worker&url`로 워커와 공유 모듈을 함께 번들링합니다. v5의 타일 확대·피처 조회 동작을 유지하도록 overscaling 옵션을 명시하고 기존 CSS·카메라·레이어를 유지합니다. MapLibre 6은 WebGL2가 필요합니다. GitHub Actions는 Ubuntu·Node 22에서 설치, lint, typecheck, 단위 테스트, build만 실행하며 브라우저·대용량 지도 다운로드는 수행하지 않습니다.
+6.x의 ESM 및 이미지 resolver API를 사용하며 Vite의 `?worker&url`로 워커와 공유 모듈을 함께 번들링합니다. v5의 타일 확대·피처 조회 동작을 유지하도록 overscaling 옵션을 명시하고 기존 CSS·카메라·레이어를 유지합니다. MapLibre 6은 WebGL2가 필요합니다. GitHub Actions는 `workflow_dispatch` 수동 실행 전용이며 Ubuntu·Node 22에서 설치, lint, typecheck, 단위 테스트, build만 실행합니다. 브라우저·대용량 지도 다운로드는 수행하지 않습니다. 기능 작업의 완료는 Actions 실행을 기다리는 대신 로컬 Full 검증과 관련 브라우저 증거를 기준으로 보고합니다.
 
 ## 현재 한계
 

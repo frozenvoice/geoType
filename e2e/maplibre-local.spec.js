@@ -1,6 +1,4 @@
-import { expect, test } from '@playwright/test';
-
-test.use({ video: 'off', trace: 'off' });
+import { expect, test } from './deterministic-test.js';
 
 // Exercise the real renderer and bundled worker without remote tiles, fonts or
 // sprites. This fixture is for upgrade regression, not hosted-map quality QA.
@@ -14,7 +12,7 @@ async function waitForMapFrame(page) {
   }), { timeout: 20_000 }).toBe(true);
 }
 
-async function openLocalMap(page, attribution = 'Local map fixture') {
+async function openLocalMap(page, attribution = 'Local map fixture', capabilities = false) {
   const externalRequests = [];
   await page.route('**/*', async (route) => {
     const url = route.request().url();
@@ -24,6 +22,21 @@ async function openLocalMap(page, attribution = 'Local map fixture') {
         json: {
           version: 8,
           sources: {
+            ...(capabilities ? {
+              // These sources exercise discovery/activation only. Empty vector
+              // tiles and an unused DEM do not prove terrain or building quality.
+              'synthetic-buildings': {
+                type: 'vector',
+                tiles: ['http://127.0.0.1:4173/__synthetic-buildings/{z}/{x}/{y}.pbf'],
+                minzoom: 14,
+                maxzoom: 14,
+              },
+              'synthetic-dem': {
+                type: 'raster-dem',
+                tiles: ['http://127.0.0.1:4173/__unused-dem/{z}/{x}/{y}.png'],
+                tileSize: 256,
+              },
+            } : {}),
             local: {
               type: 'geojson',
               attribution,
@@ -41,9 +54,23 @@ async function openLocalMap(page, attribution = 'Local map fixture') {
             { id: 'local-point', type: 'circle', source: 'local', paint: { 'circle-radius': 1 } },
             // Exercise the missing-image resolver without loading a sprite.
             { id: 'local-icon', type: 'symbol', source: 'local', layout: { 'icon-image': 'local-missing-icon' } },
+            ...(capabilities ? [{
+              id: 'synthetic-building-3d',
+              type: 'fill-extrusion',
+              source: 'synthetic-buildings',
+              'source-layer': 'building',
+              minzoom: 13,
+              layout: { visibility: 'none' },
+              paint: {
+                'fill-extrusion-height': ['get', 'render_height'],
+                'fill-extrusion-base': ['get', 'render_min_height'],
+              },
+            }] : []),
           ],
         },
       });
+    } else if (new URL(url).pathname.startsWith('/__synthetic-buildings/')) {
+      await route.fulfill({ contentType: 'application/x-protobuf', body: '' });
     } else if (new URL(url).hostname === '127.0.0.1') {
       await route.continue();
     } else {
@@ -65,6 +92,10 @@ test('local MapLibre renderer preserves globe, camera, hover, selection and Kore
   const requests = await openLocalMap(page);
   const stage = page.locator('.maplibre-stage');
   await expect(stage).toHaveAttribute('data-map-projection', 'globe');
+  await expect(stage).toHaveAttribute('data-map-terrain-supported', 'false');
+  await expect(stage).toHaveAttribute('data-map-terrain-state', 'not-requested');
+  await expect(stage).toHaveAttribute('data-map-building-layer', '');
+  await expect(stage).toHaveAttribute('data-map-buildings-state', 'not-requested');
   await expect(page.locator('.maplibregl-canvas')).toBeVisible();
   await page.screenshot({ path: testInfo.outputPath('world.png') });
   const initialZoom = await page.evaluate(() => window.__GEOTYPE_E2E_MAP__.getDiagnostics().zoom);
@@ -116,6 +147,29 @@ test('local MapLibre renderer preserves globe, camera, hover, selection and Kore
   expect(errors).toEqual([]);
   expect(requests).toEqual([]);
   expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
+});
+
+test('synthetic style discovers DEM support and activates building metadata without claiming visual quality', async ({ page }) => {
+  const errors = [];
+  page.on('pageerror', (error) => errors.push(error.message));
+  const requests = await openLocalMap(page, 'Synthetic capability fixture', true);
+  const stage = page.locator('.maplibre-stage');
+  await expect(stage).toHaveAttribute('data-map-terrain-supported', 'true');
+  // Merely providing a DEM source must not activate optional terrain.
+  await expect(stage).toHaveAttribute('data-map-terrain-state', 'not-requested');
+  await expect(stage).toHaveAttribute('data-map-building-layer', 'synthetic-building-3d');
+  await expect(stage).toHaveAttribute('data-map-building-source', 'synthetic-buildings');
+  await expect(stage).toHaveAttribute('data-map-building-source-layer', 'building');
+  await expect(stage).toHaveAttribute('data-map-buildings-state', 'active');
+  expect(await page.evaluate(() => window.__GEOTYPE_E2E_MAP__.getDiagnostics().renderedBuildingCount)).toBe(0);
+  const diagnostics = await page.evaluate(() => window.__GEOTYPE_E2E_MAP__.getDiagnostics().style);
+  expect(diagnostics.terrainSourceIds).toEqual(['synthetic-dem']);
+  expect(diagnostics.building).toMatchObject({
+    layerId: 'synthetic-building-3d', minZoom: 14,
+    heightProperty: 'render_height', baseProperty: 'render_min_height',
+  });
+  expect(errors).toEqual([]);
+  expect(requests).toEqual([]);
 });
 
 test('source attribution removes adjacent event handlers and keeps credit links in the real control', async ({ page }) => {

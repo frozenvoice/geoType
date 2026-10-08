@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './deterministic-test.js';
 
 // Keep the gameplay suite deterministic and independent from MapLibre's network
 // resources. The DOM renderer still exercises the same catalog, session, input,
@@ -100,22 +100,49 @@ async function expectHudLanguage(page, testInfo, label) {
   }
 }
 
-function screenshotPath(testInfo, filename) {
-  return testInfo.project.name === 'mobile-chromium'
-    ? `docs/screenshots/mobile/${filename}`
-    : `docs/screenshots/${filename}`;
-}
-
 async function capture(page, testInfo, filename, focus) {
   if (focus) await focus.scrollIntoViewIfNeeded();
-  await page.screenshot({ path: screenshotPath(testInfo, filename) });
+  const path = testInfo.outputPath(filename);
+  await page.screenshot({ path });
+  await testInfo.attach(filename, { path, contentType: 'image/png' });
 }
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => {
-    window.localStorage.clear();
-    window.indexedDB.deleteDatabase('geotype-geodata');
+    // A context is fresh per test; preserve settings across reloads within it.
+    if (window.name !== 'geotype-gameplay-seeded') {
+      window.localStorage.clear();
+      window.indexedDB.deleteDatabase('geotype-geodata');
+      window.name = 'geotype-gameplay-seeded';
+    }
   });
+});
+
+test('국가와 세계 범위 전환은 지원되지 않는 일본어 설정을 한국어로 복구하고 저장한다', async ({ page }) => {
+  await openMenu(page);
+  await selectCountry(page, '일본', COUNTRY_IDS.japan, '일본');
+  await chooseRadio(page.getByRole('radiogroup', { name: '타이핑 언어' }), '일본어 한자');
+  await expect(page.locator('.start-settings-summary')).toContainText('언어 일본어 한자');
+
+  await selectCountry(page, '대한민국', COUNTRY_IDS.korea, '대한민국');
+  await expect(page.getByRole('radiogroup', { name: '타이핑 언어' }).getByLabel('한국어')).toBeChecked();
+  await expect(page.locator('.start-settings-summary')).toContainText('언어 한국어');
+  await expect(page.getByLabel('일본어 한자')).toHaveCount(0);
+
+  await selectCountry(page, '일본', COUNTRY_IDS.japan, '일본');
+  await chooseRadio(page.getByRole('radiogroup', { name: '타이핑 언어' }), '일본어 읽기');
+  await page.locator('[data-scope-kind="world"]').click();
+  const worldLanguages = page.getByRole('radiogroup', { name: '타이핑 언어' });
+  await expect(worldLanguages.getByLabel('한국어')).toBeChecked();
+  await expect(page.locator('.start-settings-summary')).toContainText('언어 한국어');
+  await expect(worldLanguages.getByLabel('현지어')).toBeDisabled();
+
+  await page.reload();
+  await expect(page.getByTestId('selected-country-name')).toHaveText('출발 지역을 선택하세요', { timeout: 20_000 });
+  await selectCountry(page, '일본', COUNTRY_IDS.japan, '일본');
+  await expect(page.getByRole('radiogroup', { name: '타이핑 언어' }).getByLabel('한국어')).toBeChecked();
+  await expect(page.getByLabel('지정된 언어만')).toBeChecked();
+  await expect(page.locator('.start-settings-summary')).toContainText('언어 한국어');
 });
 
 test('기본값은 한국어 strict이며 세계 범위에서는 현지어를 명시적으로 차단한다', async ({ page }, testInfo) => {

@@ -1,11 +1,17 @@
 import { defineConfig, devices } from '@playwright/test';
+import { LOCAL_BROWSER_ENVIRONMENT } from './scripts/verification-environment';
 
 const port = 4173;
 const baseURL = `http://127.0.0.1:${port}`;
 const serverCommand = process.env.GEOTYPE_E2E_PREVIEW === '1' ? 'preview' : 'dev';
+const realMapEvidence = process.env.GEOTYPE_REAL_MAP === '1';
 
 export default defineConfig({
   testDir: './e2e',
+  // Hosted-map evidence is explicit and never part of deterministic E2E.
+  ...(realMapEvidence
+    ? { testMatch: '**/real-map-quality.spec.js' }
+    : { testIgnore: '**/real-map-quality.spec.js' }),
   outputDir: 'test-results',
   fullyParallel: false,
   forbidOnly: Boolean(process.env.CI),
@@ -23,6 +29,7 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
     video: 'retain-on-failure',
+    serviceWorkers: 'block',
   },
   projects: [
     {
@@ -44,6 +51,12 @@ export default defineConfig({
   ],
   webServer: {
     command: `npm run ${serverCommand} -- --host 127.0.0.1 --port ${port} --strictPort`,
+    env: {
+      // Vite process values take precedence over local .env provider overrides.
+      // A prebuilt preview cannot be overridden here; the spec fails closed
+      // against any external provider other than free OpenFreeMap resources.
+      ...LOCAL_BROWSER_ENVIRONMENT,
+    },
     url: baseURL,
     // Never run GeoType assertions against an unrelated app occupying this
     // port. Fail clearly on a collision instead of reusing that server.

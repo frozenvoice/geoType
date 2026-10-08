@@ -127,6 +127,7 @@ type TestMapController = {
     tilesLoaded: boolean;
     moving: boolean;
     renderedCountryCount: number;
+    renderedBuildingCount: number;
   };
 };
 
@@ -631,6 +632,7 @@ export function MapLibreRenderer({
             },
             getDiagnostics: () => {
               const center = map.getCenter();
+              const buildingLayerId = loadedStyleDiagnostics?.building?.layerId;
               return {
                 ...testDiagnostics,
                 style: loadedStyleDiagnostics,
@@ -641,6 +643,9 @@ export function MapLibreRenderer({
                 moving: map.isMoving(),
                 renderedCountryCount: map.getLayer(MAP_LAYER_IDS.countryHit)
                   ? map.queryRenderedFeatures({ layers: [MAP_LAYER_IDS.countryHit] }).length
+                  : 0,
+                renderedBuildingCount: buildingLayerId && map.getLayer(buildingLayerId)
+                  ? map.queryRenderedFeatures({ layers: [buildingLayerId] }).length
                   : 0,
               };
             },
