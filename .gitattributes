@@ -1,0 +1,4 @@
+# Geodata manifests verify exact byte sizes and SHA-256, including newlines.
+# Keep the committed canonical bytes on Windows as well as Linux/macOS.
+public/geodata/**/*.json text eol=lf
+public/geodata/**/*.geojson text eol=lf

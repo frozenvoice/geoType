@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './deterministic-test.js';
 
 // The DOM map is an intentional test renderer: it keeps these flows
 // deterministic while still exercising the production catalog and game loop.
@@ -102,6 +102,28 @@ test('간단 지도 fallback에서도 국가 선택과 도시 탐험 출발이 �
   await expect(page.getByTestId('question-review').locator('.review-row')).toHaveCount(3);
 });
 
+test('선택 취소는 지도 대상과 시작 가능 상태를 지우고 재선택하면 복구한다', async ({ page }, testInfo) => {
+  await openMenu(page);
+  await selectKorea(page);
+  await expect(page.getByTestId('start-game')).toBeEnabled();
+
+  if (testInfo.project.name === 'mobile-chromium') {
+    // The compact UI clears selection through its world breadcrumb.
+    await page.getByRole('navigation', { name: '현재 지리 계층' })
+      .getByRole('button', { name: '세계', exact: true }).click();
+  } else {
+    await page.getByRole('button', { name: '선택 취소', exact: true }).click();
+  }
+  await expect(page.getByTestId('selected-country-name')).toHaveText('출발 지역을 선택하세요');
+  await expect(page.locator('.simple-country.is-target')).toHaveCount(0);
+  await expect(page.getByTestId('start-game')).toBeDisabled();
+  await expect(page.getByTestId('quick-start-cities')).toBeDisabled();
+
+  await selectKorea(page);
+  await expect(page.getByTestId('start-game')).toBeEnabled();
+  await expect(page.getByTestId('quick-start-cities')).toBeEnabled();
+});
+
 test('기본 OpenFreeMap 스타일 오류는 상태 코드를 보여주고 간단 지도로 복구할 수 있다', async ({ page }) => {
   await page.route('https://tiles.openfreemap.org/styles/liberty', (route) => route.fulfill({
     status: 503,
@@ -145,6 +167,27 @@ test('진행 중 일시정지는 타이머를 보존하고 복귀 후 게임을 
   await expect(answer).toBeEnabled();
   await expect(page.locator('.phase-chip.playing')).toHaveText('입력 중');
   await finishSingleQuestion(page);
+});
+
+test('입력 없이 제한 시간이 끝나면 한 번만 시간 종료로 판정하고 결과로 이동한다', async ({ page }) => {
+  await openMenu(page);
+  await selectKorea(page);
+  await chooseQuestionType(page, '국가');
+  // Expert has a real 12s limit in preview builds and no automatic hints.
+  // Let the production scheduler expire it without altering browser clocks.
+  await page.getByTestId('difficulty-select').selectOption('expert');
+  const answer = await start(page);
+  await expect(answer).toHaveValue('');
+  await expect(page.locator('.verdict-miss')).toContainText('시간이 끝났습니다', { timeout: 15_000 });
+  await expect(page.locator('.result-screen')).toBeVisible({ timeout: 10_000 });
+
+  const rows = page.getByTestId('question-review').locator('.review-row');
+  await expect(rows).toHaveCount(1);
+  await expect(rows).toContainText('대한민국');
+  await expect(rows).toContainText('시간 종료');
+  await expect(rows).toContainText('남은 시간 0.0초');
+  await expect(rows).toHaveClass(/review-miss/);
+  await expect(page.getByTestId('question-review').locator('header')).toContainText('0/1');
 });
 
 test('결과 화면은 각 문제를 복습하고 저장한 로컬 기록을 다음 실행에서도 보여준다', async ({ page }) => {

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { resolveMapCapabilityConfiguration } from '../map/capabilities';
+import { createBuildingLayerSpecification } from '../map/layers';
 
 describe('map capability configuration', () => {
   it('keeps optional capabilities disabled unless they are explicitly requested', () => {
@@ -100,5 +101,53 @@ describe('map capability configuration', () => {
     expect(configuration.terrain.requested).toBe(false);
     expect(configuration.buildings.requested).toBe(false);
     expect(configuration.issues).toHaveLength(2);
+  });
+
+  it.each([
+    { VITE_MAP_TERRAIN_TILE_SIZE: '384' },
+    { VITE_MAP_TERRAIN_EXAGGERATION: 'Infinity' },
+  ])('does not activate terrain with unsupported numeric options: %j', (invalidOptions) => {
+    const terrain = resolveMapCapabilityConfiguration({
+      VITE_MAP_TERRAIN_ENABLED: 'true',
+      VITE_MAP_TERRAIN_SOURCE_ID: 'dem',
+      ...invalidOptions,
+    }).terrain;
+    expect(terrain.requested).toBe(true);
+    expect(terrain.configured).toBe(false);
+    expect(terrain.options).toBeNull();
+    expect(terrain.issues).not.toHaveLength(0);
+  });
+
+  it.each([
+    { VITE_MAP_BUILDINGS_SOURCE_ID: 'basemap' },
+    { VITE_MAP_BUILDINGS_SOURCE_LAYER: 'building' },
+  ])('does not activate buildings with an incomplete source binding: %j', (incompleteSource) => {
+    const buildings = resolveMapCapabilityConfiguration({
+      VITE_MAP_BUILDINGS_ENABLED: 'true',
+      ...incompleteSource,
+    }).buildings;
+    expect(buildings.requested).toBe(true);
+    expect(buildings.configured).toBe(false);
+    expect(buildings.options).toBeNull();
+    expect(buildings.issues).not.toHaveLength(0);
+  });
+});
+
+describe('building rendering contract', () => {
+  it('keeps close-up extrusion data-backed and accepts both supported height schemas', () => {
+    const layer = createBuildingLayerSpecification({
+      sourceId: 'basemap', sourceLayer: 'building', minZoom: 8,
+    });
+    expect(layer).toMatchObject({
+      type: 'fill-extrusion', source: 'basemap', 'source-layer': 'building', minzoom: 14,
+      layout: { visibility: 'visible' },
+      filter: ['any', ['has', 'render_height'], ['has', 'height']],
+    });
+    expect(layer.paint?.['fill-extrusion-height']).toEqual([
+      'coalesce', ['get', 'render_height'], ['get', 'height'],
+    ]);
+    expect(layer.paint?.['fill-extrusion-base']).toEqual([
+      'coalesce', ['get', 'render_min_height'], ['get', 'min_height'], 0,
+    ]);
   });
 });
