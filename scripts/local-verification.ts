@@ -6,7 +6,7 @@ import { dirname, resolve } from 'node:path';
 import { stripVTControlCharacters } from 'node:util';
 
 import { chromium } from '@playwright/test';
-import { LOCAL_BROWSER_ENVIRONMENT } from './verification-environment';
+import { LOCAL_BROWSER_ENVIRONMENT, localChromiumLaunchOptions } from './verification-environment';
 
 const root = resolve(import.meta.dirname, '..');
 const scopes = ['all', 'ui', 'map', 'game', 'language', 'data', 'tooling'] as const;
@@ -244,7 +244,7 @@ export async function runVerification(args: string[]): Promise<void> {
     let browserProblem: string | undefined;
     if (plan.some((step) => step.script === 'e2e')) {
       try {
-        const browser = await chromium.launch({ headless: true });
+        const browser = await chromium.launch({ headless: true, ...localChromiumLaunchOptions() });
         await browser.close();
         report.browserEnvironment = 'AVAILABLE';
       } catch (error) {

@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import { LOCAL_BROWSER_ENVIRONMENT } from './scripts/verification-environment';
+import { LOCAL_BROWSER_ENVIRONMENT, localChromiumLaunchOptions } from './scripts/verification-environment';
 
 const port = 4173;
 const baseURL = `http://127.0.0.1:${port}`;
@@ -30,6 +30,7 @@ export default defineConfig({
     trace: 'retain-on-failure',
     video: 'retain-on-failure',
     serviceWorkers: 'block',
+    launchOptions: localChromiumLaunchOptions(),
   },
   projects: [
     {

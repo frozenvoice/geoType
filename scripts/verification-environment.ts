@@ -1,5 +1,10 @@
 // A local .env must not send automated checks to paid map/leaderboard services
 // or silently replace production geodata with the development catalog.
+export function localChromiumLaunchOptions(environment: NodeJS.ProcessEnv = process.env) {
+  const executablePath = environment.GEOTYPE_CHROMIUM_EXECUTABLE?.trim();
+  return executablePath ? { executablePath } : {};
+}
+
 export const LOCAL_BROWSER_ENVIRONMENT = {
   VITE_MAP_PROVIDER: 'hosted',
   VITE_MAP_STYLE_URL: 'https://tiles.openfreemap.org/styles/liberty',

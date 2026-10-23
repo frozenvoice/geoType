@@ -6,6 +6,7 @@ import {
 } from './schemas';
 
 export interface LeaderboardRepository {
+  readonly storageLocation?: 'browser' | 'server';
   getTopEntries(query: LeaderboardQuery): Promise<LeaderboardEntry[]>;
   saveEntry(entry: LeaderboardEntry): Promise<void>;
   clearLocalEntries?(): Promise<void>;

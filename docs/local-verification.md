@@ -146,3 +146,8 @@ Vitest도 `test.only`를 금지한다. 테스트가 0개이거나 생략된 테�
 - 증거: `.verification/<run-id>/` 보고서·로그 및 관련 Playwright 첨부 경로.
 
 변경 후 검사 실패가 남으면 해결하거나 원인과 미완료 범위를 명시한다. 병렬 작업이 합쳐진 뒤 Full 또는 Release 통합 게이트를 한 번 실행하고, 새 변경/실패/불확실성이 없다면 같은 전체 검사를 반복하지 않는다.
+# 2026-10-23 검증 환경 및 랭킹 저장 위치 보완
+
+설치된 Chrome을 명시적으로 사용할 때는 PowerShell에서 `$env:GEOTYPE_CHROMIUM_EXECUTABLE = 'C:\Program Files\Google\Chrome\Application\chrome.exe'`를 지정한다. 같은 executable을 Full 사전 확인과 Playwright 프로젝트가 사용하며 기본값은 기존 Playwright Chromium이다. 브라우저를 자동 설치하지 않는다. 동영상 근거 helper가 없는 경우 `npx playwright install ffmpeg`는 해당 helper만 준비한다.
+
+결과 화면은 repository의 실제 저장 위치에 따라 로컬/서버 랭킹 및 닉네임·플레이 기록 전송 안내를 구분한다. HTTP 모드가 브라우저 안에만 저장한다고 표시하지 않는다. Vitest 4.1.12는 보안 mocker 수정과 tinypool 제거를 위해 선택했고 Vite는 기존 7.x의 보안 버전 7.3.7을 유지한다. 공식 npm 감사에서 알려진 advisory 0개를 확인했으며 실지도 시각 품질·실제 HTTP 랭킹 서비스 운영을 입증하지 않는다.
