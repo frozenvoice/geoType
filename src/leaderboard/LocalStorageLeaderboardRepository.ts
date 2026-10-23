@@ -54,6 +54,7 @@ function getDefaultStorage(): LeaderboardStorageAdapter {
 }
 
 export class LocalStorageLeaderboardRepository implements LeaderboardRepository {
+  readonly storageLocation = 'browser' as const;
   readonly #storage: LeaderboardStorageAdapter;
 
   constructor(storage: LeaderboardStorageAdapter = getDefaultStorage()) {

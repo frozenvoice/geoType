@@ -39,6 +39,7 @@ export interface HttpLeaderboardRepositoryOptions {
 }
 
 export class HttpLeaderboardRepository implements LeaderboardRepository {
+  readonly storageLocation = 'server' as const;
   readonly #baseUrl: string;
   readonly #fetch: typeof fetch;
 
@@ -60,7 +61,9 @@ export class HttpLeaderboardRepository implements LeaderboardRepository {
     }
 
     this.#baseUrl = normalizedBaseUrl;
-    this.#fetch = fetchImplementation;
+    // Native browser fetch requires the Window receiver when stored on a
+    // repository instance; injected test implementations retain the same call.
+    this.#fetch = fetchImplementation.bind(globalThis);
   }
 
   async getTopEntries(query: LeaderboardQuery): Promise<LeaderboardEntry[]> {

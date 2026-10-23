@@ -110,6 +110,11 @@ export function ResultScreen({ repository }: ResultScreenProps) {
 
   const uiLocale = session?.languageSettings.uiLocale ?? 'ko';
   const copy = RESULT_COPY[uiLocale];
+  const remoteRanking = repository.storageLocation === 'server';
+  const rankingLabel = remoteRanking ? (uiLocale === 'ko' ? '서버 랭킹' : 'SERVER RANKING') : copy.rankingEyebrow;
+  const storageHelp = remoteRanking
+    ? (uiLocale === 'ko' ? '닉네임과 플레이 기록을 설정된 랭킹 서버로 전송해 저장합니다.' : 'Your nickname and run details are sent to the configured ranking server and stored there.')
+    : copy.saveHelp;
   const total = correctCount + missCount;
   const accuracy = total ? (correctCount / total) * 100 : 0;
   const elapsedMs = Math.max(0, finishedAt - startedAt - totalPausedMs);
@@ -212,7 +217,7 @@ export function ResultScreen({ repository }: ResultScreenProps) {
           </div>
 
           <div className="result-ranking hud-panel">
-            <header className="section-heading"><div><p className="eyebrow">{copy.rankingEyebrow}</p><h2>{copy.ranking}</h2></div><span>{copy.topTwenty}</span></header>
+            <header className="section-heading"><div><p className="eyebrow">{rankingLabel}</p><h2>{copy.ranking}</h2></div><span>{copy.topTwenty}</span></header>
             <div className="ranking-language-filter" data-testid="ranking-language-filter">
               <span>{getTypingLanguageLabel(session.languageSettings.typingLanguage, session.languageSettings.uiLocale)}</span>
               <span>{getAnswerPolicyLabel(session.languageSettings.answerPolicy, session.languageSettings.uiLocale)}</span>
@@ -224,7 +229,7 @@ export function ResultScreen({ repository }: ResultScreenProps) {
                 <label htmlFor="nickname"><span>{copy.saveName}</span><small>{copy.nicknameHint}</small></label>
                 <div><input id="nickname" value={nickname} onChange={(event) => setNickname(event.target.value)} maxLength={12} autoComplete="nickname" placeholder={copy.nicknamePlaceholder} aria-invalid={saveError ? 'true' : undefined} /><button className="button primary" type="submit" disabled={saving}>{saving ? copy.saving : saveError ? (uiLocale === 'ko' ? '다시 저장' : 'Try again') : copy.save}</button></div>
                 {saveError && <p className="field-error" role="alert">{saveError}</p>}
-                <p>{copy.saveHelp}</p>
+                <p>{storageHelp}</p>
               </form>
             ) : (
               <div className="saved-banner" role="status"><span>✓</span><div><strong>{copy.saved}</strong><small>{copy.savedHelp}</small></div></div>
