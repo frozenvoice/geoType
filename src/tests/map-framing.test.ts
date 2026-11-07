@@ -79,3 +79,38 @@ describe('map camera framing', () => {
     });
   });
 });
+
+describe('features across the antimeridian', () => {
+  const desktop = { viewport: { width: 1440, height: 900 } };
+  const box = (west: number, south: number, east: number, north: number): [number, number][][] => [[
+    [west, south], [east, south], [east, north], [west, north], [west, south],
+  ]];
+
+  it('frames the longitudes the feature occupies instead of the opposite hemisphere', () => {
+    const acrossAntimeridian = feature(
+      'country',
+      { type: 'MultiPolygon', coordinates: [box(166, -47, 178, -34), box(-178, -44, -176, -43)] },
+      [-178, -47, 178, -34],
+    );
+    const plan = createFeatureCameraPlan(acrossAntimeridian, 'question', desktop);
+    if (plan.method !== 'fitBounds') throw new Error('expected fitBounds');
+    const [west, , east] = plan.bounds;
+    expect(west).toBeGreaterThan(160);
+    expect(west).toBeLessThan(166);
+    expect(east).toBeGreaterThan(184);
+    expect(east).toBeLessThan(190);
+  });
+
+  it('keeps the bbox when the feature really circles the globe', () => {
+    const ring: [number, number][] = [-180, -120, -60, 0, 60, 120, 180].map((longitude) => [longitude, -70]);
+    const everywhere = feature(
+      'continent',
+      { type: 'Polygon', coordinates: [[...ring, [180, -85], [-180, -85], [-180, -70]]] },
+      [-180, -85, 180, -70],
+    );
+    const plan = createFeatureCameraPlan(everywhere, 'question', desktop);
+    if (plan.method !== 'fitBounds') throw new Error('expected fitBounds');
+    expect(plan.bounds[0]).toBe(-180);
+    expect(plan.bounds[2]).toBe(180);
+  });
+});

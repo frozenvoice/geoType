@@ -26,6 +26,8 @@ import {
   createHoverLayerSpecifications,
   createNoMatchFeatureFilter,
   createTargetFeatureCollection,
+  shouldShowTargetLocator,
+  targetOutlineProbe,
   createTargetLabelCollection,
   createTargetLayerSpecifications,
   createTargetNameExclusionFilter,
@@ -120,6 +122,8 @@ type TestMapController = {
     clickEvents: number;
     lastSelectionId: string | null;
     lastHoverSelectionId: string | null;
+    targetLocatorFeatureId: string | null;
+    targetRebuildCount: number;
     style: MapStyleDiagnostics | null;
     center: [number, number];
     zoom: number;
@@ -241,6 +245,9 @@ function addGeoJsonSourceIfMissing(map: MapInstance, sourceId: string) {
     });
   }
 }
+
+/** How long a question may wait for the map after its camera move has ended. */
+const TARGET_READINESS_GRACE_MS = 8_000;
 
 function replaceTargetLayers(map: MapInstance, mode: MapMode, allowTextLayers: boolean) {
   const knownLayerIds = Object.values(MAP_LAYER_IDS);
@@ -515,6 +522,9 @@ export function MapLibreRenderer({
     clickEvents: 0,
     lastSelectionId: null as string | null,
     lastHoverSelectionId: null as string | null,
+    targetLocatorFeatureId: null as string | null,
+    targetRebuildScope: null as string | null,
+    targetRebuildCount: 0,
   });
   const [mapInstance, setMapInstance] = useState<MapInstance | null>(null);
   const [capabilityState, setCapabilityState] = useState<CapabilityState | null>(null);
@@ -1017,7 +1027,17 @@ export function MapLibreRenderer({
       const transitionId = activeTransitionRef.current + 1;
       activeTransitionRef.current = transitionId;
       let idleObserved = map.loaded() && !map.isMoving();
+      let idleEventSeen = false;
+      let locatorShown = false;
+      let deadlineExpired = false;
       let reported = false;
+      testDiagnosticsRef.current.targetLocatorFeatureId = null;
+      const targetRebuildScope = `${mode}:${questionKey ?? ''}`;
+      if (testDiagnosticsRef.current.targetRebuildScope !== targetRebuildScope) {
+        testDiagnosticsRef.current.targetRebuildScope = targetRebuildScope;
+        testDiagnosticsRef.current.targetRebuildCount = 0;
+      }
+      testDiagnosticsRef.current.targetRebuildCount += 1;
       const requiredLayerIds = createTargetLayerSpecifications(mode)
         .filter((layer) => allowTextLayers || layer.type !== 'symbol')
         .map((layer) => layer.id);
@@ -1027,6 +1047,7 @@ export function MapLibreRenderer({
         const availableLayerIds = styleLayers(map).map((layer) => layer.id);
         const availableLayerSet = new Set(availableLayerIds);
         const layersExist = requiredLayerIds.every((layerId) => availableLayerSet.has(layerId));
+        const outlineProbe = targetFeature ? targetOutlineProbe(targetFeature) : null;
         const renderedTargetFeatures = !targetFeature || !layersExist
           ? []
           : [
@@ -1038,6 +1059,9 @@ export function MapLibreRenderer({
               ...map.queryRenderedFeatures(map.project(targetFeature.centroid), {
                 layers: requiredLayerIds,
               }),
+              ...(outlineProbe
+                ? map.queryRenderedFeatures(map.project(outlineProbe), { layers: requiredLayerIds })
+                : []),
             ];
         const targetRendered = !targetFeature || (
           layersExist && renderedTargetFeatures.some((rendered) => {
@@ -1049,6 +1073,30 @@ export function MapLibreRenderer({
             );
           })
         );
+        // A settled camera with a target that is too small to see, or that the
+        // render query cannot find, gets a marker. The marker's own circle then
+        // satisfies the same render check, so the ID guard above stays in force.
+        if (
+          targetFeature &&
+          layersExist &&
+          !locatorShown &&
+          !deadlineExpired &&
+          !map.isMoving() &&
+          (
+            (idleObserved && shouldShowTargetLocator(targetFeature, map.getZoom())) ||
+            (idleEventSeen && !targetRendered)
+          )
+        ) {
+          locatorShown = true;
+          testDiagnosticsRef.current.targetLocatorFeatureId = targetFeature.id;
+          idleObserved = false;
+          updateGeoJsonSource(
+            map,
+            MAP_SOURCE_IDS.target,
+            createTargetFeatureCollection(targetFeature, mode, targetDisplayName, { locator: true }),
+          );
+          return;
+        }
         const readiness = evaluateMapReadiness({
           mapIdle: idleObserved,
           mapMoving: map.isMoving(),
@@ -1056,6 +1104,7 @@ export function MapLibreRenderer({
           targetRendered,
           requiredLayerIds,
           availableLayerIds,
+          deadlineExpired,
         });
         if (!readiness.ready) return;
         reported = true;
@@ -1075,19 +1124,27 @@ export function MapLibreRenderer({
 
       const handleIdle = () => {
         idleObserved = true;
+        idleEventSeen = true;
         checkReadiness();
       };
       const handleSourceData = () => checkReadiness();
       map.on('idle', handleIdle);
       map.on('sourcedata', handleSourceData);
+      map.on('moveend', handleSourceData);
       queueMicrotask(checkReadiness);
+      const readinessDeadline = window.setTimeout(() => {
+        deadlineExpired = true;
+        checkReadiness();
+      }, cameraPlan.duration + TARGET_READINESS_GRACE_MS);
 
       return () => {
         map.off('mousemove', MAP_LAYER_IDS.countryHit, handleCountryMove);
         map.off('mouseleave', MAP_LAYER_IDS.countryHit, clearCountryHover);
         map.off('click', MAP_LAYER_IDS.countryHit, handleCountryClick);
+        window.clearTimeout(readinessDeadline);
         map.off('idle', handleIdle);
         map.off('sourcedata', handleSourceData);
+        map.off('moveend', handleSourceData);
       };
     } catch (error) {
       reportError(asMapResourceLoadError(error));
