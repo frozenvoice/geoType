@@ -14,6 +14,8 @@ import {
   deriveInteractiveLayerIds,
   MAP_LAYER_IDS,
   MAP_SOURCE_IDS,
+  shouldShowTargetLocator,
+  targetOutlineProbe,
 } from '../map/layers';
 
 const district: GeoFeature = {
@@ -195,5 +197,54 @@ describe('map geometry and label layers', () => {
         { id: 'background', type: 'background' },
       ]),
     ).toEqual([]);
+  });
+});
+
+describe('target locator', () => {
+  const square = (longitude: number, latitude: number, size: number): [number, number][][] => [[
+    [longitude, latitude],
+    [longitude + size, latitude],
+    [longitude + size, latitude + size],
+    [longitude, latitude + size],
+    [longitude, latitude],
+  ]];
+  const withGeometry = (geometry: GeoFeature['geometry']): GeoFeature => ({ ...district, geometry });
+
+  it('marks an area target that is too small to see at the camera zoom', () => {
+    const microstate = withGeometry({ type: 'Polygon', coordinates: square(12.44, 41.9, 0.01) });
+    expect(shouldShowTargetLocator(microstate, 6.2)).toBe(true);
+    expect(shouldShowTargetLocator(microstate, 16)).toBe(false);
+  });
+
+  it('judges an island nation by its largest part, not its overall spread', () => {
+    const islands = withGeometry({
+      type: 'MultiPolygon',
+      coordinates: [square(-175, 0, 0.3), square(170, 1, 0.3)],
+    });
+    expect(shouldShowTargetLocator(islands, 0.8)).toBe(true);
+  });
+
+  it('leaves a visible country and non-area targets alone', () => {
+    const country = withGeometry({ type: 'Polygon', coordinates: square(126, 34, 4) });
+    expect(shouldShowTargetLocator(country, 5)).toBe(false);
+    const point = withGeometry({ type: 'Point', coordinates: [127, 37.5] });
+    expect(shouldShowTargetLocator(point, 2)).toBe(false);
+  });
+
+  it('probes the outline of the largest part, which an archipelago centroid can miss', () => {
+    const archipelago = withGeometry({
+      type: 'MultiPolygon',
+      coordinates: [square(170, -40, 0.5), square(172, -44, 5)],
+    });
+    expect(targetOutlineProbe(archipelago)).toEqual([172, -44]);
+    expect(targetOutlineProbe(withGeometry({ type: 'Point', coordinates: [127, 37.5] }))).toBeNull();
+  });
+
+  it('adds a point with the same identity only when asked', () => {
+    expect(createTargetFeatureCollection(district, 'question').features).toHaveLength(1);
+    const features = createTargetFeatureCollection(district, 'question', undefined, { locator: true }).features;
+    expect(features.map((feature) => feature.geometry.type)).toEqual(['Polygon', 'Point']);
+    expect(features[1]?.geometry).toEqual({ type: 'Point', coordinates: district.centroid });
+    expect(features[1]?.properties.id).toBe(features[0]?.properties.id);
   });
 });

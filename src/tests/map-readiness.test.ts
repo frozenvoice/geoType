@@ -21,4 +21,21 @@ describe('map readiness gate', () => {
       evaluateMapReadiness({ ...readySnapshot, availableLayerIds: ['base', 'target-fill'] }).ready,
     ).toBe(false);
   });
+
+  it('never leaves a question locked once the deadline has passed', () => {
+    const lostSignals = {
+      ...readySnapshot,
+      mapIdle: false,
+      sourceLoaded: false,
+      targetRendered: false,
+    };
+    expect(evaluateMapReadiness(lostSignals).ready).toBe(false);
+    expect(evaluateMapReadiness({ ...lostSignals, deadlineExpired: true }).ready).toBe(true);
+  });
+
+  it('still waits for the camera and the layers after the deadline', () => {
+    const expired = { ...readySnapshot, deadlineExpired: true };
+    expect(evaluateMapReadiness({ ...expired, mapMoving: true }).ready).toBe(false);
+    expect(evaluateMapReadiness({ ...expired, availableLayerIds: ['base'] }).ready).toBe(false);
+  });
 });

@@ -1,3 +1,4 @@
+import type { GeoPosition } from '../geodata/types';
 import type {
   GeoFeature,
   GeoJsonFeature,
@@ -191,14 +192,70 @@ export function toMapGeoJsonFeature(
   };
 }
 
+/** Below this on-screen size a polygon cannot be read as a place on the map. */
+const TARGET_LOCATOR_MAX_PIXELS = 16;
+
+type TargetPart = { extentDegrees: number; firstVertex: GeoPosition };
+
+function largestTargetPart(feature: GeoFeature): TargetPart | null {
+  const { geometry } = feature;
+  const polygons = geometry.type === 'Polygon'
+    ? [geometry.coordinates]
+    : geometry.type === 'MultiPolygon'
+      ? geometry.coordinates
+      : [];
+  let largest: TargetPart | null = null;
+  for (const polygon of polygons) {
+    const positions = polygon.flat();
+    const firstVertex = positions[0];
+    if (!firstVertex) continue;
+    const longitudes = positions.map(([longitude]) => longitude);
+    const latitudes = positions.map(([, latitude]) => latitude);
+    const south = Math.min(...latitudes);
+    const north = Math.max(...latitudes);
+    const longitudeScale = Math.cos((((south + north) / 2) * Math.PI) / 180);
+    const extentDegrees = Math.max(
+      (Math.max(...longitudes) - Math.min(...longitudes)) * longitudeScale,
+      north - south,
+    );
+    if (!largest || extentDegrees > largest.extentDegrees) largest = { extentDegrees, firstVertex };
+  }
+  return largest;
+}
+
+/**
+ * Whether an area target is too small to see at this zoom. It measures the
+ * largest single part because an island nation can span half the globe while
+ * every island in it stays under a pixel.
+ */
+export function shouldShowTargetLocator(feature: GeoFeature, zoom: number): boolean {
+  const largest = largestTargetPart(feature);
+  if (!largest) return false;
+  const pixelsPerDegree = (512 * 2 ** zoom) / 360;
+  return largest.extentDegrees * pixelsPerDegree < TARGET_LOCATOR_MAX_PIXELS;
+}
+
+/**
+ * A position on the target's drawn outline. An archipelago's centroid is often
+ * open water, so a render check that only looks there misses a visible country.
+ */
+export function targetOutlineProbe(feature: GeoFeature): GeoPosition | null {
+  return largestTargetPart(feature)?.firstVertex ?? null;
+}
+
 export function createTargetFeatureCollection(
   feature: GeoFeature | null,
   mode: MapMode,
   displayName?: string,
+  options: { locator?: boolean } = {},
 ): GeoJsonFeatureCollection {
+  if (!feature) return { type: 'FeatureCollection', features: [] };
+  const target = toMapGeoJsonFeature(feature, mode, displayName);
   return {
     type: 'FeatureCollection',
-    features: feature ? [toMapGeoJsonFeature(feature, mode, displayName)] : [],
+    features: options.locator
+      ? [target, { ...target, geometry: { type: 'Point', coordinates: feature.centroid } }]
+      : [target],
   };
 }
 

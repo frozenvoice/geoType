@@ -136,11 +136,14 @@ export function App() {
   const currentIndex = useGameStore((state) => state.currentIndex);
   const selected = useSelectionStore((state) => state.selectedFeature);
   const replaceNavigationPath = useSelectionStore((state) => state.replaceNavigationPath);
+  // Depends on the menu flag, not the phase: a new object on every in-game phase
+  // change makes the map renderer rebuild its target layers for nothing.
+  const isMenu = phase === 'menu';
   const hudPadding = useMemo(() => viewport.width <= 880
-    ? { top: phase === 'menu' ? 78 : 140, right: 22, bottom: phase === 'menu' ? Math.round(viewport.height * 0.58) : 320, left: 22 }
-    : phase === 'menu'
+    ? { top: isMenu ? 78 : 140, right: 22, bottom: isMenu ? Math.round(viewport.height * 0.58) : 320, left: 22 }
+    : isMenu
       ? { top: 96, right: 510, bottom: 90, left: 56 }
-      : { top: 80, right: 72, bottom: 340, left: 72 }, [phase, viewport]);
+      : { top: 80, right: 72, bottom: 340, left: 72 }, [isMenu, viewport]);
 
   useEffect(() => {
     const resize = () => setViewport({ width: window.innerWidth, height: window.innerHeight });

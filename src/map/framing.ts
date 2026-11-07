@@ -71,9 +71,51 @@ function expandBounds(bounds: GeoBounds, ratio: number): GeoBounds {
   return [
     clamp(west - horizontal, -180, 180),
     clamp(south - vertical, -85, 85),
-    clamp(east + horizontal, -180, 180),
+    // An eastern edge past 180 is how bounds continue across the antimeridian.
+    clamp(east + horizontal, -180, east > 180 ? 540 : 180),
     clamp(north + vertical, -85, 85),
   ];
+}
+
+function collectLongitudes(coordinates: unknown, longitudes: number[]) {
+  if (!Array.isArray(coordinates)) return;
+  if (typeof coordinates[0] === 'number') {
+    longitudes.push(coordinates[0]);
+    return;
+  }
+  for (const item of coordinates) collectLongitudes(item, longitudes);
+}
+
+/** Empty longitude a feature must leave before it is treated as not circling the globe. */
+const MIN_ANTIMERIDIAN_GAP_DEGREES = 90;
+
+/**
+ * A feature on both sides of the antimeridian has a bbox that wraps most of the
+ * globe, and centering on that bbox aims the camera at the opposite hemisphere.
+ * Cutting the circle at the widest empty span of longitude gives the bounds the
+ * feature really occupies, with the eastern edge past 180 when it crosses.
+ */
+function boundsAcrossAntimeridian(feature: GeoFeature): GeoBounds {
+  const [west, south, east, north] = feature.bbox;
+  if (east - west <= 180) return feature.bbox;
+
+  const longitudes: number[] = [];
+  collectLongitudes(feature.geometry.coordinates, longitudes);
+  longitudes.sort((first, second) => first - second);
+
+  let widestGap = 0;
+  let gapStartIndex = longitudes.length - 1;
+  longitudes.forEach((longitude, index) => {
+    const next = index + 1 < longitudes.length ? longitudes[index + 1]! : longitudes[0]! + 360;
+    if (next - longitude > widestGap) {
+      widestGap = next - longitude;
+      gapStartIndex = index;
+    }
+  });
+  if (widestGap < MIN_ANTIMERIDIAN_GAP_DEGREES || gapStartIndex === longitudes.length - 1) {
+    return feature.bbox;
+  }
+  return [longitudes[gapStartIndex + 1]!, south, longitudes[gapStartIndex]! + 360, north];
 }
 
 function hasArea(feature: GeoFeature) {
@@ -199,7 +241,7 @@ export function createFeatureCameraPlan(
   if (hasArea(feature) || isLinear(feature)) {
     return {
       method: 'fitBounds',
-      bounds: expandBounds(feature.bbox, boundsExpansion(feature)),
+      bounds: expandBounds(boundsAcrossAntimeridian(feature), boundsExpansion(feature)),
       padding,
       maxZoom: maxZoomForFeature(feature),
       pitch: pitchForFeature(feature),

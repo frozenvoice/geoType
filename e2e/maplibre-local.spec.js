@@ -193,3 +193,50 @@ test('source attribution removes adjacent event handlers and keeps credit links 
   expect(await page.evaluate(() => window.attributionExecutions)).toBe(0);
   expect(requests).toEqual([]);
 });
+
+for (const { name, search, id, centroid, locator } of [
+  { name: '바티칸 시국', search: '바티칸', id: 'natural-earth:country:VAT', centroid: [12.45, 41.9], locator: true },
+  { name: '키리바시', search: '키리바시', id: 'natural-earth:country:KIR', centroid: [-157.38, 1.82], locator: true },
+  { name: '뉴질랜드', search: '뉴질랜드', id: 'natural-earth:country:NZL', centroid: [172.8, -41.3], locator: false },
+]) {
+  test(`${name} 문제는 목표가 보이는 카메라에서 입력이 열린다`, async ({ page }, testInfo) => {
+    const errors = [];
+    page.on('pageerror', (error) => errors.push(error.message));
+    await openLocalMap(page);
+
+    await page.getByPlaceholder('한국어, English, ISO 코드').fill(search);
+    await page.getByTestId('country-list').getByRole('button', { name: new RegExp(search) }).first().click();
+    await expect(page.getByTestId('selected-country-name')).toHaveText(name);
+
+    const types = page.locator('.geo-type-fieldset');
+    const checkboxes = types.getByRole('checkbox');
+    for (let index = 0; index < await checkboxes.count(); index += 1) {
+      const checkbox = checkboxes.nth(index);
+      const label = (await checkbox.locator('..').innerText()).trim();
+      if (label !== '국가' && await checkbox.isChecked()) await checkbox.locator('..').click();
+    }
+    const country = types.getByRole('checkbox', { name: /^국가$/ });
+    if (!(await country.isChecked())) await country.locator('..').click();
+    await expect(page.getByTestId('start-game')).toContainText('1문제 시작');
+    await page.getByTestId('start-game').click();
+
+    const answer = page.getByRole('textbox', { name: '목표 지명 입력' });
+    // 안전 시간 제한(8초)보다 짧게 기다려, 제한이 아니라 위치 표시로 열렸는지 확인한다.
+    await expect(answer).toBeEnabled({ timeout: 7_000 });
+    // 입력이 열리는 순간부터 마커가 계속 떠 있어야 한다. 사라졌다 돌아오면 안 된다.
+    await page.waitForTimeout(1_000);
+    const diagnostics = await page.evaluate(() => window.__GEOTYPE_E2E_MAP__.getDiagnostics());
+    expect(diagnostics.targetLocatorFeatureId).toBe(locator ? id : null);
+    // 입력이 열린다고 대상 레이어를 다시 만들면 마커와 강조가 깜빡인다.
+    expect(diagnostics.targetRebuildCount).toBe(1);
+    // 날짜변경선을 걸친 나라에서 카메라가 지구 반대편을 비추면 안 된다.
+    const center = await page.evaluate(() => window.__GEOTYPE_E2E_MAP__.getDiagnostics().center);
+    const longitudeGap = Math.abs(((center[0] - centroid[0] + 540) % 360) - 180);
+    expect(longitudeGap).toBeLessThan(60);
+    await page.screenshot({ path: testInfo.outputPath('tiny-target.png') });
+
+    await answer.fill(name);
+    await expect(page.locator('.result-screen')).toBeVisible({ timeout: 10_000 });
+    expect(errors).toEqual([]);
+  });
+}
